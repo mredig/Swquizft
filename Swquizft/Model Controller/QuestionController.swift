@@ -10,7 +10,20 @@ import Foundation
 
 class QuestionController {
 	var questions: [Question] = []
-	var selectedCategories: Set<Question.Category> = []
+	private(set) var selectedCategories: Set<Question.Category> = []
+
+
+	func select(category: Question.Category) {
+		selectedCategories.insert(category)
+	}
+
+	func deselect(category: Question.Category) {
+		selectedCategories.remove(category)
+	}
+
+	func categoryIsSelected(_ category: Question.Category) -> Bool {
+		return selectedCategories.contains(category)
+	}
 
 	
 }

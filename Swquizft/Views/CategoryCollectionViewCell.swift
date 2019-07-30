@@ -18,16 +18,12 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 			updateViews()
 		}
 	}
+	var questionsController: QuestionController?
 
-	private var _isSelected = false
 	override var isSelected: Bool {
-		get {
-			return _isSelected
-		}
-		set {
-			_isSelected = newValue
-			updateViews()
-		}
+		// this is a hack so that "didSelectItem" will *always* trigger upon touch
+		get { return false }
+		set {} // do nothing
 	}
 
 	override func awakeFromNib() {
@@ -37,17 +33,20 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 		contentsContainer.layer.cornerRadius = 10
 	}
 
-	private func updateViews() {
-		titleLabel.textColor = isSelected ? .black : .gray
-		if let category = category {
-			titleLabel.text = category.rawValue
+	func toggleSelection() {
+		guard let controller = questionsController, let category = category else { return }
+		if controller.categoryIsSelected(category) {
+			controller.deselect(category: category)
+		} else {
+			controller.select(category: category)
 		}
+		updateViews()
 	}
 
-	override func prepareForReuse() {
-		super.prepareForReuse()
-		category = nil
-		titleLabel.text = ""
-		isSelected = false
+	private func updateViews() {
+		if let category = category {
+			titleLabel.textColor = (questionsController?.categoryIsSelected(category) ?? false) ? .black : .gray
+			titleLabel.text = category.rawValue
+		}
 	}
 }

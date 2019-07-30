@@ -133,11 +133,11 @@
 		330842BB22EF932A00D62FFD /* Swquizft */ = {
 			isa = PBXGroup;
 			children = (
-				330842FE22EFCAC500D62FFD /* Helpers */,
-				330842E122EF943200D62FFD /* View Controllers */,
-				330842E022EF942E00D62FFD /* Views */,
-				330842DF22EF942A00D62FFD /* Model Controller */,
 				330842DE22EF942700D62FFD /* Model */,
+				330842DF22EF942A00D62FFD /* Model Controller */,
+				330842FE22EFCAC500D62FFD /* Helpers */,
+				330842E022EF942E00D62FFD /* Views */,
+				330842E122EF943200D62FFD /* View Controllers */,
 				330842E222EF943E00D62FFD /* Resources */,
 			);
 			path = Swquizft;

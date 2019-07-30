@@ -10,6 +10,11 @@ import UIKit
 
 
 class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
+	let questionController: QuestionController
+
+	init(questionController: QuestionController) {
+		self.questionController = questionController
+	}
 
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 2
@@ -40,8 +45,8 @@ class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 	private func categorySelectionCell(from collectionView: UICollectionView, at indexPath: IndexPath) -> CategoryCollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategorySelectionCell", for: indexPath)
 		guard let catCell = cell as? CategoryCollectionViewCell else { return CategoryCollectionViewCell() }
-		catCell.isSelected = false
-		catCell.titleLabel.text = Question.Category.allCases[indexPath.item].rawValue
+		catCell.questionsController = questionController
+		catCell.category = Question.Category.allCases[indexPath.item]
 		return catCell
 	}
 
@@ -49,7 +54,7 @@ class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 
 extension CategoryCollectionDelegate: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+		(collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell)?.toggleSelection()
 	}
 }
 

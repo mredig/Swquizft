@@ -14,10 +14,12 @@ class MainViewController: UIViewController, Storyboarded {
 	@IBOutlet var mediumButton: UIButton!
 	@IBOutlet var hardButton: UIButton!
 	@IBOutlet var categoryCollection: UICollectionView!
-	let categoryDelegate = CategoryCollectionDelegate()
+	var categoryDelegate: CategoryCollectionDelegate?
+	let questionsController = QuestionController()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController)
 		categoryCollection.delegate = categoryDelegate
 		categoryCollection.dataSource = categoryDelegate
 		categoryCollection.allowsMultipleSelection = true
@@ -33,6 +35,7 @@ class MainViewController: UIViewController, Storyboarded {
 	}
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {
+		print(questionsController.selectedCategories)
 	}
 }
 
