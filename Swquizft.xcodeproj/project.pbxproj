@@ -15,6 +15,10 @@
 		330842D222EF932B00D62FFD /* SwquizftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842D122EF932B00D62FFD /* SwquizftTests.swift */; };
 		330842DD22EF942300D62FFD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842DC22EF942300D62FFD /* Question.swift */; };
 		330842E422EF946900D62FFD /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842E322EF946900D62FFD /* Answer.swift */; };
+		330842FD22EFC15D00D62FFD /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842FC22EFC15D00D62FFD /* QuestionController.swift */; };
+		3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430022EFCAD300D62FFD /* Coordinator.swift */; };
+		3308430322EFCC1600D62FFD /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430222EFCC1600D62FFD /* Storyboarded.swift */; };
+		3308430522EFCDDD00D62FFD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430422EFCDDD00D62FFD /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		330842D322EF932B00D62FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		330842DC22EF942300D62FFD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		330842E322EF946900D62FFD /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		330842FC22EFC15D00D62FFD /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		3308430022EFCAD300D62FFD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3308430222EFCC1600D62FFD /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		3308430422EFCDDD00D62FFD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		330842BB22EF932A00D62FFD /* Swquizft */ = {
 			isa = PBXGroup;
 			children = (
+				330842FE22EFCAC500D62FFD /* Helpers */,
 				330842E122EF943200D62FFD /* View Controllers */,
 				330842E022EF942E00D62FFD /* Views */,
 				330842DF22EF942A00D62FFD /* Model Controller */,
@@ -111,6 +120,7 @@
 		330842DF22EF942A00D62FFD /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				330842FC22EFC15D00D62FFD /* QuestionController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -140,6 +150,24 @@
 				330842C822EF932B00D62FFD /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		330842FE22EFCAC500D62FFD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				330842FF22EFCAC900D62FFD /* Coordinator */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		330842FF22EFCAC900D62FFD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3308430022EFCAD300D62FFD /* Coordinator.swift */,
+				3308430222EFCC1600D62FFD /* Storyboarded.swift */,
+				3308430422EFCDDD00D62FFD /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330842FD22EFC15D00D62FFD /* QuestionController.swift in Sources */,
+				3308430522EFCDDD00D62FFD /* MainCoordinator.swift in Sources */,
 				330842E422EF946900D62FFD /* Answer.swift in Sources */,
+				3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */,
 				330842DD22EF942300D62FFD /* Question.swift in Sources */,
 				330842BF22EF932A00D62FFD /* ViewController.swift in Sources */,
 				330842BD22EF932A00D62FFD /* AppDelegate.swift in Sources */,
+				3308430322EFCC1600D62FFD /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

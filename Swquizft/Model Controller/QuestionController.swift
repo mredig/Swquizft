@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
+//  QuestionController.swift
 //  Swquizft
 //
 //  Created by Michael Redig on 7/29/19.
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController, Storyboarded {
+class QuestionController {
+	var questions: [Question] = []
 
+	
 }
-
