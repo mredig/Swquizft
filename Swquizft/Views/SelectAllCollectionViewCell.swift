@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol SelectionController: AnyObject {
+	func toggleAllSelection()
+}
+
 class SelectAllCollectionViewCell: UICollectionViewCell {
-    
+	weak var delegate: SelectionController?
 	@IBOutlet var contentsContainer: UIView!
+
+	@IBAction func selectAllButtonPressed(_ sender: UIButton) {
+		delegate?.toggleAllSelection()
+	}
 }

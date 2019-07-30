@@ -102,6 +102,9 @@
                                                                     <rect key="frame" x="25" y="-16" width="77" height="32"/>
                                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
                                                                     <state key="normal" title="Select All"/>
+                                                                    <connections>
+                                                                        <action selector="selectAllButtonPressed:" destination="ODN-aO-uzK" eventType="touchUpInside" id="KdP-Qu-qEw"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

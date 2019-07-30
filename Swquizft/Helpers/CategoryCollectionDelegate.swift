@@ -8,12 +8,13 @@
 
 import UIKit
 
-
 class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 	let questionController: QuestionController
+	let categoryCollection: UICollectionView
 
-	init(questionController: QuestionController) {
+	init(questionController: QuestionController, categoryCollection: UICollectionView) {
 		self.questionController = questionController
+		self.categoryCollection = categoryCollection
 	}
 
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -39,7 +40,9 @@ class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 
 	private func selectAllCell(from collectionView: UICollectionView, at indexPath: IndexPath) -> SelectAllCollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectAllCollectionViewCell", for: indexPath)
-		return (cell as? SelectAllCollectionViewCell) ?? SelectAllCollectionViewCell()
+		guard let selectCell = cell as? SelectAllCollectionViewCell else { return SelectAllCollectionViewCell() }
+		selectCell.delegate = self
+		return selectCell
 	}
 
 	private func categorySelectionCell(from collectionView: UICollectionView, at indexPath: IndexPath) -> CategoryCollectionViewCell {
@@ -59,6 +62,19 @@ extension CategoryCollectionDelegate: UICollectionViewDelegate {
 }
 
 extension CategoryCollectionDelegate: UICollectionViewDelegateFlowLayout {
+}
 
-
+extension CategoryCollectionDelegate: SelectionController {
+	func toggleAllSelection() {
+		if questionController.selectedCategories.count == Question.Category.allCases.count {
+			for category in Question.Category.allCases {
+				questionController.deselect(category: category)
+			}
+		} else {
+			for category in Question.Category.allCases {
+				questionController.select(category: category)
+			}
+		}
+		categoryCollection.reloadData()
+	}
 }

@@ -19,7 +19,7 @@ class MainViewController: UIViewController, Storyboarded {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController)
+		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController, categoryCollection: categoryCollection)
 		categoryCollection.delegate = categoryDelegate
 		categoryCollection.dataSource = categoryDelegate
 		categoryCollection.allowsMultipleSelection = true

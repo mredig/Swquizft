@@ -14,6 +14,14 @@ struct Question: Codable {
 		case types
 		case extensions
 		case vocab
+		case misc
+	}
+
+	static func category(from string: String) -> Category {
+		if let newCat = Category(rawValue: string.lowercased()) {
+			return newCat
+		}
+		return Category.misc
 	}
 
 	enum Difficulty: Int, Codable {
