@@ -13,6 +13,7 @@ struct Question: Codable {
 		case syntax
 		case types
 		case extensions
+		case vocab
 	}
 
 	enum Difficulty: Int, Codable {

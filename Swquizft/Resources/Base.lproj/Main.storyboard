@@ -16,18 +16,21 @@
         <array key="Raleway 600.ttf">
             <string>Raleway-SemiBold</string>
         </array>
+        <array key="Raleway 600italic.ttf">
+            <string>Raleway-SemiBoldItalic</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Swquizft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Swquizft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-ds-2Xm">
-                                <rect key="frame" x="20" y="141" width="374" height="798"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-ds-2Xm">
+                                <rect key="frame" x="20" y="44" width="374" height="798"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squizft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-cd-CKW">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="102"/>
@@ -35,65 +38,60 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="24N-Gh-krY">
-                                        <rect key="frame" x="0.0" y="177" width="374" height="128"/>
+                                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="24N-Gh-krY">
+                                        <rect key="frame" x="0.0" y="192.5" width="374" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="Tc9-dI-xQN"/>
+                                            <constraint firstAttribute="height" constant="52" id="Tc9-dI-xQN"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4dv-xQ-6pt">
-                                            <size key="itemSize" width="127" height="127"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4dv-xQ-6pt">
+                                            <size key="itemSize" width="127" height="52"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CategorySelectionCell" id="DRd-Gc-Cwc">
-                                                <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CategorySelectionCell" id="DRd-Gc-Cwc" customClass="CategoryCollectionViewCell" customModule="Swquizft" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="0.0" width="127" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="52"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC5-wP-SP6">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zI-wK-7JQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="127" height="0.0"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-DB-Tww">
-                                                                    <rect key="frame" x="16" y="-10.5" width="95" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EJ2-F4-g0e">
+                                                                    <rect key="frame" x="20" y="-10" width="87" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Raleway-SemiBoldItalic" family="Raleway" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kal-H5-eer">
-                                                                    <rect key="frame" x="84" y="-43" width="35" height="35"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="35" id="IM5-gB-BWE"/>
-                                                                        <constraint firstAttribute="width" secondItem="kal-H5-eer" secondAttribute="height" multiplier="1:1" id="pXw-N4-eZR"/>
-                                                                    </constraints>
-                                                                </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="kal-H5-eer" secondAttribute="trailing" constant="8" id="0T8-LF-K5U"/>
-                                                                <constraint firstAttribute="bottom" secondItem="kal-H5-eer" secondAttribute="bottom" constant="8" id="Gev-Da-s2z"/>
-                                                                <constraint firstItem="BKQ-DB-Tww" firstAttribute="centerY" secondItem="PC5-wP-SP6" secondAttribute="centerY" id="J7V-mN-njR"/>
-                                                                <constraint firstAttribute="trailing" secondItem="BKQ-DB-Tww" secondAttribute="trailing" constant="16" id="OWd-Iu-K6p"/>
-                                                                <constraint firstItem="BKQ-DB-Tww" firstAttribute="leading" secondItem="PC5-wP-SP6" secondAttribute="leading" constant="16" id="jUI-bD-gCf"/>
+                                                                <constraint firstItem="EJ2-F4-g0e" firstAttribute="centerY" secondItem="0zI-wK-7JQ" secondAttribute="centerY" id="Ax3-aO-WGj"/>
+                                                                <constraint firstItem="EJ2-F4-g0e" firstAttribute="leading" secondItem="0zI-wK-7JQ" secondAttribute="leading" constant="20" id="apB-sw-8a2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="EJ2-F4-g0e" secondAttribute="trailing" constant="20" id="qJC-tO-XeL"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="PC5-wP-SP6" secondAttribute="bottom" id="4q0-8i-4If"/>
-                                                    <constraint firstItem="PC5-wP-SP6" firstAttribute="leading" secondItem="DRd-Gc-Cwc" secondAttribute="leading" id="7jP-lm-RcR"/>
-                                                    <constraint firstItem="PC5-wP-SP6" firstAttribute="top" secondItem="DRd-Gc-Cwc" secondAttribute="top" id="JiE-FI-dxa"/>
-                                                    <constraint firstAttribute="trailing" secondItem="PC5-wP-SP6" secondAttribute="trailing" id="xk9-FP-LKF"/>
+                                                    <constraint firstItem="0zI-wK-7JQ" firstAttribute="top" secondItem="DRd-Gc-Cwc" secondAttribute="top" id="32G-DD-kYU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0zI-wK-7JQ" secondAttribute="bottom" id="Hip-uM-MkH"/>
+                                                    <constraint firstItem="0zI-wK-7JQ" firstAttribute="leading" secondItem="DRd-Gc-Cwc" secondAttribute="leading" id="ImZ-pj-iCl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0zI-wK-7JQ" secondAttribute="trailing" id="tEE-yc-9EK"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="contentsContainer" destination="0zI-wK-7JQ" id="0rP-GW-Aew"/>
+                                                    <outlet property="titleLabel" destination="EJ2-F4-g0e" id="EDp-hz-mcT"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-vc-rBj">
-                                        <rect key="frame" x="0.0" y="380.5" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="335" width="374" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Easy"/>
                                         <connections>
@@ -101,7 +99,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-q7-GYB">
-                                        <rect key="frame" x="0.0" y="503.5" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="473" width="374" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Medium"/>
                                         <connections>
@@ -109,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-5N-gy8">
-                                        <rect key="frame" x="0.0" y="627" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="611.5" width="374" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Hard"/>
                                         <connections>
@@ -137,6 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="categoryCollection" destination="24N-Gh-krY" id="WM7-or-NqJ"/>
                         <outlet property="easyButton" destination="uqB-vc-rBj" id="ZOj-7v-i0L"/>
                         <outlet property="hardButton" destination="2wE-5N-gy8" id="NGK-Zx-pRk"/>
                         <outlet property="mediumButton" destination="vKc-q7-GYB" id="3t0-Q0-aHg"/>
