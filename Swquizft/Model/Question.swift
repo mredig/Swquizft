@@ -9,7 +9,7 @@
 import Foundation
 
 struct Question: Codable {
-	enum Categories: String, Codable, CaseIterable {
+	enum Category: String, Codable, CaseIterable {
 		case syntax
 		case types
 		case extensions
@@ -24,6 +24,6 @@ struct Question: Codable {
 
 	let prompt: String
 	let answers: [Answer]
-	let categoryTags: Set<Categories>
+	let categoryTags: Set<Category>
 	let difficulty: String
 }

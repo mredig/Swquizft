@@ -88,6 +88,40 @@
                                                     <outlet property="titleLabel" destination="EJ2-F4-g0e" id="EDp-hz-mcT"/>
                                                 </connections>
                                             </collectionViewCell>
+                                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SelectAllCollectionViewCell" id="ODN-aO-uzK" customClass="SelectAllCollectionViewCell" customModule="Swquizft" customModuleProvider="target">
+                                                <rect key="frame" x="147" y="0.0" width="127" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahy-oY-FS4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="0.0"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-YR-CqK">
+                                                                    <rect key="frame" x="25" y="-16" width="77" height="32"/>
+                                                                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
+                                                                    <state key="normal" title="Select All"/>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="L9N-YR-CqK" firstAttribute="centerY" secondItem="ahy-oY-FS4" secondAttribute="centerY" id="4X6-dy-XYK"/>
+                                                                <constraint firstItem="L9N-YR-CqK" firstAttribute="centerX" secondItem="ahy-oY-FS4" secondAttribute="centerX" id="j7W-AC-d1A"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ahy-oY-FS4" secondAttribute="bottom" id="8Ig-tN-uik"/>
+                                                    <constraint firstItem="ahy-oY-FS4" firstAttribute="leading" secondItem="ODN-aO-uzK" secondAttribute="leading" id="9yu-0Z-amO"/>
+                                                    <constraint firstItem="ahy-oY-FS4" firstAttribute="top" secondItem="ODN-aO-uzK" secondAttribute="top" id="W1Q-jT-tGM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ahy-oY-FS4" secondAttribute="trailing" id="vV9-dy-d6M"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="contentsContainer" destination="ahy-oY-FS4" id="LbY-Sa-zkT"/>
+                                                </connections>
+                                            </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-vc-rBj">

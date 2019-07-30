@@ -9,7 +9,7 @@
 import UIKit
 
 
-class CategoryCollectionDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
+class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 2
@@ -20,22 +20,36 @@ class CategoryCollectionDelegate: NSObject, UICollectionViewDelegate, UICollecti
 		case 0:
 			return 1
 		default:
-			return Question.Categories.allCases.count
+			return Question.Category.allCases.count
 		}
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategorySelectionCell", for: indexPath)
-		guard let catCell = cell as? CategoryCollectionViewCell else { return cell }
-		catCell.isSelected = false
-
 		if indexPath.section == 0 {
-			catCell.titleLabel.text = "random"
+			return selectAllCell(from: collectionView, at: indexPath)
 		} else {
-			catCell.titleLabel.text = Question.Categories.allCases[indexPath.item].rawValue
+			return categorySelectionCell(from: collectionView, at: indexPath)
 		}
+	}
 
+	private func selectAllCell(from collectionView: UICollectionView, at indexPath: IndexPath) -> SelectAllCollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectAllCollectionViewCell", for: indexPath)
+		return (cell as? SelectAllCollectionViewCell) ?? SelectAllCollectionViewCell()
+	}
+
+	private func categorySelectionCell(from collectionView: UICollectionView, at indexPath: IndexPath) -> CategoryCollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategorySelectionCell", for: indexPath)
+		guard let catCell = cell as? CategoryCollectionViewCell else { return CategoryCollectionViewCell() }
+		catCell.isSelected = false
+		catCell.titleLabel.text = Question.Category.allCases[indexPath.item].rawValue
 		return catCell
+	}
+
+}
+
+extension CategoryCollectionDelegate: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
 	}
 }
 

@@ -40,6 +40,7 @@
 		3308435B22EFFB5000D62FFD /* Raleway 900italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3308434922EFFB5000D62FFD /* Raleway 900italic.ttf */; };
 		3308435E22EFFEC800D62FFD /* CategoryCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308435D22EFFEC800D62FFD /* CategoryCollectionDelegate.swift */; };
 		3308436022EFFF5900D62FFD /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308435F22EFFF5900D62FFD /* CategoryCollectionViewCell.swift */; };
+		3308436222F00CB100D62FFD /* SelectAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308436122F00CB100D62FFD /* SelectAllCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		3308434922EFFB5000D62FFD /* Raleway 900italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 900italic.ttf"; sourceTree = "<group>"; };
 		3308435D22EFFEC800D62FFD /* CategoryCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionDelegate.swift; sourceTree = "<group>"; };
 		3308435F22EFFF5900D62FFD /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3308436122F00CB100D62FFD /* SelectAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAllCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				3308435F22EFFF5900D62FFD /* CategoryCollectionViewCell.swift */,
+				3308436122F00CB100D62FFD /* SelectAllCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				3308430522EFCDDD00D62FFD /* MainCoordinator.swift in Sources */,
 				330842E422EF946900D62FFD /* Answer.swift in Sources */,
 				3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */,
+				3308436222F00CB100D62FFD /* SelectAllCollectionViewCell.swift in Sources */,
 				3308435E22EFFEC800D62FFD /* CategoryCollectionDelegate.swift in Sources */,
 				330842DD22EF942300D62FFD /* Question.swift in Sources */,
 				3308436022EFFF5900D62FFD /* CategoryCollectionViewCell.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 
 class QuestionController {
 	var questions: [Question] = []
+	var selectedCategories: Set<Question.Category> = []
 
 	
 }

@@ -13,6 +13,12 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 	@IBOutlet var contentsContainer: UIView!
 	@IBOutlet var titleLabel: UILabel!
 
+	var category: Question.Category? {
+		didSet {
+			updateViews()
+		}
+	}
+
 	private var _isSelected = false
 	override var isSelected: Bool {
 		get {
@@ -33,5 +39,15 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
 	private func updateViews() {
 		titleLabel.textColor = isSelected ? .black : .gray
+		if let category = category {
+			titleLabel.text = category.rawValue
+		}
+	}
+
+	override func prepareForReuse() {
+		super.prepareForReuse()
+		category = nil
+		titleLabel.text = ""
+		isSelected = false
 	}
 }
