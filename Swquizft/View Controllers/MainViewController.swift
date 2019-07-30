@@ -30,8 +30,6 @@ class MainViewController: UIViewController, Storyboarded {
 
 	@IBAction func difficultyPressed(_ sender: UIButton) {
 		difficultyButtons.forEach { $0.isSelected = sender == $0 }
-		categoryCollection.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .left)
-
 	}
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {

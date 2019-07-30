@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  QuizCoordinator.swift
 //  Swquizft
 //
 //  Created by Michael Redig on 7/29/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCoordinator: NSObject, Coordinator {
+class QuizCoordinator: NSObject, Coordinator {
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
 

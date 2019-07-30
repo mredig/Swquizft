@@ -9,7 +9,7 @@
 import Foundation
 
 class QuestionController {
-	var questions: [Question] = []
+	var questionBank: [Question.Category: Question] = [:]
 	private(set) var selectedCategories: Set<Question.Category> = []
 
 
