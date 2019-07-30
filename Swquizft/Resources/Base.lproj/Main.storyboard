@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pacifico regular.ttf">
+            <string>Pacifico-Regular</string>
+        </array>
+        <array key="Raleway 600.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,12 +25,129 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-ds-2Xm">
+                                <rect key="frame" x="20" y="141" width="374" height="798"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squizft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-cd-CKW">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="102"/>
+                                        <fontDescription key="fontDescription" name="Pacifico-Regular" family="Pacifico" pointSize="58"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="24N-Gh-krY">
+                                        <rect key="frame" x="0.0" y="177" width="374" height="128"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Tc9-dI-xQN"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4dv-xQ-6pt">
+                                            <size key="itemSize" width="127" height="127"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CategorySelectionCell" id="DRd-Gc-Cwc">
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC5-wP-SP6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="0.0"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKQ-DB-Tww">
+                                                                    <rect key="frame" x="16" y="-10.5" width="95" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kal-H5-eer">
+                                                                    <rect key="frame" x="84" y="-43" width="35" height="35"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="35" id="IM5-gB-BWE"/>
+                                                                        <constraint firstAttribute="width" secondItem="kal-H5-eer" secondAttribute="height" multiplier="1:1" id="pXw-N4-eZR"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="kal-H5-eer" secondAttribute="trailing" constant="8" id="0T8-LF-K5U"/>
+                                                                <constraint firstAttribute="bottom" secondItem="kal-H5-eer" secondAttribute="bottom" constant="8" id="Gev-Da-s2z"/>
+                                                                <constraint firstItem="BKQ-DB-Tww" firstAttribute="centerY" secondItem="PC5-wP-SP6" secondAttribute="centerY" id="J7V-mN-njR"/>
+                                                                <constraint firstAttribute="trailing" secondItem="BKQ-DB-Tww" secondAttribute="trailing" constant="16" id="OWd-Iu-K6p"/>
+                                                                <constraint firstItem="BKQ-DB-Tww" firstAttribute="leading" secondItem="PC5-wP-SP6" secondAttribute="leading" constant="16" id="jUI-bD-gCf"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="PC5-wP-SP6" secondAttribute="bottom" id="4q0-8i-4If"/>
+                                                    <constraint firstItem="PC5-wP-SP6" firstAttribute="leading" secondItem="DRd-Gc-Cwc" secondAttribute="leading" id="7jP-lm-RcR"/>
+                                                    <constraint firstItem="PC5-wP-SP6" firstAttribute="top" secondItem="DRd-Gc-Cwc" secondAttribute="top" id="JiE-FI-dxa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PC5-wP-SP6" secondAttribute="trailing" id="xk9-FP-LKF"/>
+                                                </constraints>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-vc-rBj">
+                                        <rect key="frame" x="0.0" y="380.5" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
+                                        <state key="normal" title="Easy"/>
+                                        <connections>
+                                            <action selector="difficultyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cqy-ag-Wbt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-q7-GYB">
+                                        <rect key="frame" x="0.0" y="503.5" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
+                                        <state key="normal" title="Medium"/>
+                                        <connections>
+                                            <action selector="difficultyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rj3-eU-klZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-5N-gy8">
+                                        <rect key="frame" x="0.0" y="627" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
+                                        <state key="normal" title="Hard"/>
+                                        <connections>
+                                            <action selector="difficultyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0u-7O-5WR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZz-Ym-Lf7">
+                                        <rect key="frame" x="0.0" y="750" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
+                                        <state key="normal" title="Go!"/>
+                                        <connections>
+                                            <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTh-7m-iHt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e1N-ds-2Xm" secondAttribute="trailing" constant="20" id="5f6-B1-fyk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e1N-ds-2Xm" secondAttribute="bottom" constant="20" id="6ae-zj-LbV"/>
+                            <constraint firstItem="e1N-ds-2Xm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TTx-8b-h2p"/>
+                            <constraint firstItem="e1N-ds-2Xm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x5b-tx-7a0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="easyButton" destination="uqB-vc-rBj" id="ZOj-7v-i0L"/>
+                        <outlet property="hardButton" destination="2wE-5N-gy8" id="NGK-Zx-pRk"/>
+                        <outlet property="mediumButton" destination="vKc-q7-GYB" id="3t0-Q0-aHg"/>
+                        <outletCollection property="difficultyButtons" destination="uqB-vc-rBj" collectionClass="NSMutableArray" id="ce6-cx-K5x"/>
+                        <outletCollection property="difficultyButtons" destination="vKc-q7-GYB" collectionClass="NSMutableArray" id="6TS-nl-kVC"/>
+                        <outletCollection property="difficultyButtons" destination="2wE-5N-gy8" collectionClass="NSMutableArray" id="cvQ-fc-7w7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
         </scene>
     </scenes>
 </document>

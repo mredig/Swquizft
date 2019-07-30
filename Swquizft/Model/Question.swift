@@ -9,7 +9,7 @@
 import Foundation
 
 struct Question: Codable {
-	enum Categories: String, Codable {
+	enum Categories: String, Codable, CaseIterable {
 		case syntax
 		case types
 		case extensions
