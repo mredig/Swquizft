@@ -13,6 +13,8 @@
 		330842C422EF932B00D62FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330842C322EF932B00D62FFD /* Assets.xcassets */; };
 		330842C722EF932B00D62FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330842C522EF932B00D62FFD /* LaunchScreen.storyboard */; };
 		330842D222EF932B00D62FFD /* SwquizftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842D122EF932B00D62FFD /* SwquizftTests.swift */; };
+		330842DD22EF942300D62FFD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842DC22EF942300D62FFD /* Question.swift */; };
+		330842E422EF946900D62FFD /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842E322EF946900D62FFD /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		330842CD22EF932B00D62FFD /* SwquizftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwquizftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		330842D122EF932B00D62FFD /* SwquizftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwquizftTests.swift; sourceTree = "<group>"; };
 		330842D322EF932B00D62FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330842DC22EF942300D62FFD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		330842E322EF946900D62FFD /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,11 @@
 		330842BB22EF932A00D62FFD /* Swquizft */ = {
 			isa = PBXGroup;
 			children = (
-				330842BC22EF932A00D62FFD /* AppDelegate.swift */,
-				330842BE22EF932A00D62FFD /* ViewController.swift */,
-				330842C022EF932A00D62FFD /* Main.storyboard */,
-				330842C322EF932B00D62FFD /* Assets.xcassets */,
-				330842C522EF932B00D62FFD /* LaunchScreen.storyboard */,
-				330842C822EF932B00D62FFD /* Info.plist */,
+				330842E122EF943200D62FFD /* View Controllers */,
+				330842E022EF942E00D62FFD /* Views */,
+				330842DF22EF942A00D62FFD /* Model Controller */,
+				330842DE22EF942700D62FFD /* Model */,
+				330842E222EF943E00D62FFD /* Resources */,
 			);
 			path = Swquizft;
 			sourceTree = "<group>";
@@ -94,6 +97,49 @@
 				330842D322EF932B00D62FFD /* Info.plist */,
 			);
 			path = SwquizftTests;
+			sourceTree = "<group>";
+		};
+		330842DE22EF942700D62FFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				330842DC22EF942300D62FFD /* Question.swift */,
+				330842E322EF946900D62FFD /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		330842DF22EF942A00D62FFD /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		330842E022EF942E00D62FFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		330842E122EF943200D62FFD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				330842BE22EF932A00D62FFD /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		330842E222EF943E00D62FFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				330842BC22EF932A00D62FFD /* AppDelegate.swift */,
+				330842C022EF932A00D62FFD /* Main.storyboard */,
+				330842C322EF932B00D62FFD /* Assets.xcassets */,
+				330842C522EF932B00D62FFD /* LaunchScreen.storyboard */,
+				330842C822EF932B00D62FFD /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330842E422EF946900D62FFD /* Answer.swift in Sources */,
+				330842DD22EF942300D62FFD /* Question.swift in Sources */,
 				330842BF22EF932A00D62FFD /* ViewController.swift in Sources */,
 				330842BD22EF932A00D62FFD /* AppDelegate.swift in Sources */,
 			);
@@ -362,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
-				INFOPLIST_FILE = Swquizft/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Swquizft/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
-				INFOPLIST_FILE = Swquizft/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Swquizft/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
