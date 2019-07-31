@@ -24,10 +24,21 @@ struct Question: Codable {
 		return Category.misc
 	}
 
-	enum Difficulty: Int, Codable {
+	enum Difficulty: Int, Codable, CaseIterable {
 		case beginner
 		case intermediate
 		case advanced
+
+		var stringValue: String {
+			switch self {
+			case .beginner:
+				return "beginner"
+			case .intermediate:
+				return "intermediate"
+			case .advanced:
+				return "advanced"
+			}
+		}
 	}
 
 	let prompt: String

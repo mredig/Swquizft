@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuizCoordinator: NSObject, Coordinator {
+class CreationCoordinator: NSObject, Coordinator {
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
 
@@ -17,7 +17,7 @@ class QuizCoordinator: NSObject, Coordinator {
 	}
 
 	func start() {
-		let vc = MainViewController.instantiate()
+		let vc = QuestionsManagerViewController.instantiate()
 		navigationController.pushViewController(vc, animated: false)
 	}
 }
