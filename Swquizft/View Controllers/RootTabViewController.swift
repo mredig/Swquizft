@@ -15,7 +15,7 @@ class RootTabViewController: UITabBarController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		questionCoordinator.rootTabController = self
 		questionCoordinator.start()
 //		creationCoordinator.start()
 		setViewControllers([questionCoordinator.navigationController], animated: false)

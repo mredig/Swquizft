@@ -11,6 +11,7 @@ import UIKit
 class CreationCoordinator: NSObject, Coordinator {
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
+	var rootTabController: UITabBarController?
 
 	init(navigationController: UINavigationController = UINavigationController()) {
 		self.navigationController = navigationController

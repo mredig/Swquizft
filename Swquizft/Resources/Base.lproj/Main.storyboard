@@ -21,6 +21,78 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Question Prompt View Controller-->
+        <scene sceneID="6Jk-oc-TfX">
+            <objects>
+                <viewController storyboardIdentifier="QuestionPromptViewController" id="8ZT-Lo-Kzi" customClass="QuestionPromptViewController" customModule="Swquizft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RRf-tF-SKd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-bf-YuL">
+                                <rect key="frame" x="20" y="64" width="374" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="17K-cC-hJ4"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hsy-v8-B4L">
+                                <rect key="frame" x="0.0" y="212" width="414" height="684"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="answerCell" rowHeight="61" id="iov-a4-Mqg" customClass="AnswerTableViewCell" customModule="Swquizft" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iov-a4-Mqg" id="QEs-Am-Fz0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8ut-gB-BsT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8ut-gB-BsT" secondAttribute="bottom" id="J4d-Y3-JIs"/>
+                                                <constraint firstItem="8ut-gB-BsT" firstAttribute="leading" secondItem="QEs-Am-Fz0" secondAttribute="leading" id="S6i-mc-LTb"/>
+                                                <constraint firstAttribute="trailing" secondItem="8ut-gB-BsT" secondAttribute="trailing" id="fxj-X9-fFZ"/>
+                                                <constraint firstItem="8ut-gB-BsT" firstAttribute="top" secondItem="QEs-Am-Fz0" secondAttribute="top" id="zNa-ep-O4d"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="answerTextView" destination="8ut-gB-BsT" id="W62-bH-Ih5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k3p-an-kPO" firstAttribute="trailing" secondItem="bVB-bf-YuL" secondAttribute="trailing" constant="20" id="689-ZS-Vq0"/>
+                            <constraint firstAttribute="bottom" secondItem="Hsy-v8-B4L" secondAttribute="bottom" id="8hb-Rx-QiM"/>
+                            <constraint firstItem="Hsy-v8-B4L" firstAttribute="top" secondItem="bVB-bf-YuL" secondAttribute="bottom" constant="20" id="HtM-Og-Wib"/>
+                            <constraint firstItem="bVB-bf-YuL" firstAttribute="top" secondItem="k3p-an-kPO" secondAttribute="top" constant="20" id="Qfq-xa-GMH"/>
+                            <constraint firstItem="bVB-bf-YuL" firstAttribute="leading" secondItem="k3p-an-kPO" secondAttribute="leading" constant="20" id="SHB-bO-VgE"/>
+                            <constraint firstItem="k3p-an-kPO" firstAttribute="trailing" secondItem="Hsy-v8-B4L" secondAttribute="trailing" id="XHI-kb-EB4"/>
+                            <constraint firstItem="Hsy-v8-B4L" firstAttribute="leading" secondItem="k3p-an-kPO" secondAttribute="leading" id="c52-gi-uMx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k3p-an-kPO"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTableView" destination="Hsy-v8-B4L" id="jBW-VG-pla"/>
+                        <outlet property="questionTextView" destination="bVB-bf-YuL" id="EhI-zF-P4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4e-UE-GW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="-660.26785714285711"/>
+        </scene>
         <!--This is a test!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -185,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.072463768116" y="18.75"/>
+            <point key="canvasLocation" x="1741" y="19"/>
         </scene>
         <!--Questions Manager-->
         <scene sceneID="R6w-gf-h9Y">

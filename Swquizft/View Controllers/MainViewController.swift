@@ -17,6 +17,8 @@ class MainViewController: UIViewController, Storyboarded {
 	var categoryDelegate: CategoryCollectionDelegate?
 	let questionsController = QuestionController()
 
+	var coordinator: QuizCoordinator?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController, categoryCollection: categoryCollection)
@@ -41,7 +43,7 @@ class MainViewController: UIViewController, Storyboarded {
 	}
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {
-		print(questionsController.selectedCategories)
+		coordinator?.startQuiz(question: questionsController.questionBank.first!)
 	}
 }
 
