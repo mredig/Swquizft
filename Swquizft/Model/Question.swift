@@ -44,5 +44,5 @@ struct Question: Codable {
 	let prompt: String
 	let answers: [Answer]
 	let categoryTags: Set<Category>
-	let difficulty: String
+	let difficulty: Difficulty
 }
