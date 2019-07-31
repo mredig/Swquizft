@@ -24,9 +24,17 @@ class MainViewController: UIViewController, Storyboarded {
 		categoryCollection.dataSource = categoryDelegate
 		categoryCollection.allowsMultipleSelection = true
 
-		easyButton.isSelected = true
+		setupDifficultyButtons()
+
+		difficultyButtons.first?.isSelected = true
 	}
 
+	func setupDifficultyButtons() {
+		for (index, button) in difficultyButtons.enumerated() {
+			let difficulty = Question.Difficulty.allCases[index].stringValue
+			button.setTitle(difficulty, for: .normal)
+		}
+	}
 
 	@IBAction func difficultyPressed(_ sender: UIButton) {
 		difficultyButtons.forEach { $0.isSelected = sender == $0 }

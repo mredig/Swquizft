@@ -10,15 +10,17 @@ import UIKit
 
 class RootTabViewController: UITabBarController, Storyboarded {
 
-	var questionCoordinator: QuizCoordinator?
+	let questionCoordinator = QuizCoordinator()
+//	let creationCoordinator = CreationCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		let navController = UINavigationController()
 
-		questionCoordinator = QuizCoordinator(navigationController: navController)
-		questionCoordinator?.start()
-		setViewControllers([navController], animated: false)
+		questionCoordinator.start()
+//		creationCoordinator.start()
+		setViewControllers([questionCoordinator.navigationController], animated: false)
+
+		tabBar.tintColor = UIColor(named: "swiftlikeOrange")
     }
 
 }
