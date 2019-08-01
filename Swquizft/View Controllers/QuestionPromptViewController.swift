@@ -10,7 +10,8 @@ import UIKit
 
 class QuestionPromptViewController: UIViewController, Storyboarded {
 	@IBOutlet var questionTextView: UITextView!
-	@IBOutlet var answerTableView: UITableView!
+	@IBOutlet var scrollView: UIScrollView!
+	@IBOutlet var answerStackView: UIStackView!
 
 	var question: Question? {
 		didSet {
@@ -22,8 +23,20 @@ class QuestionPromptViewController: UIViewController, Storyboarded {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		answerTableView.dataSource = self
-		answerTableView.delegate = self
+
+		setupScrollView()
+	}
+
+	private func setupScrollView() {
+
+		scrollView.addSubview(answerStackView)
+		answerStackView.translatesAutoresizingMaskIntoConstraints = false
+
+		answerStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+		answerStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+		answerStackView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+		answerStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+		answerStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
 	}
 
 	private func updateViews() {
@@ -35,20 +48,14 @@ class QuestionPromptViewController: UIViewController, Storyboarded {
 	private func updateAnswers() {
 		guard let question = question else { return }
 		answers = question.answers.shuffled()
-		answerTableView.reloadData()
+
+		for answer in answers {
+			let answerView = AnswerView(answer: answer)
+			answerView.edgeInsets.left = 50
+			answerView.edgeInsets.right = 20
+			answerStackView.addArrangedSubview(answerView)
+			print("added \(answerView)")
+		}
 	}
 }
 
-
-extension QuestionPromptViewController: UITableViewDataSource, UITableViewDelegate {
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return answers.count
-	}
-
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for: indexPath)
-		guard let answerCell = cell as? AnswerTableViewCell else { return cell }
-		answerCell.answer = answers[indexPath.row]
-		return answerCell
-	}
-}

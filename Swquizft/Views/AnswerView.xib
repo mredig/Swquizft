@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerView" customModule="Swquizft" customModuleProvider="target">
+            <connections>
+                <outlet property="answerLabel" destination="zt3-rG-ilT" id="3bT-eg-S3h"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="96O-ev-k2O"/>
+                <outlet property="reasonLabel" destination="1vi-RN-Rye" id="tke-za-4cH"/>
+                <outlet property="stackBottomConstraint" destination="FbS-0j-PDo" id="1wV-RH-xcH"/>
+                <outlet property="stackLeadingConstraint" destination="TZn-Yf-G3P" id="Fba-Un-uHj"/>
+                <outlet property="stackTopConstraint" destination="Ogz-gg-IiG" id="0Aa-s5-gsj"/>
+                <outlet property="stackTrailingConstraint" destination="eq8-Yf-4yi" id="jKT-5c-sjb"/>
+                <outlet property="stackView" destination="zUb-wD-IgA" id="bTi-3i-QBV"/>
+                <outletCollection property="xibConstraints" destination="FbS-0j-PDo" collectionClass="NSMutableArray" id="YdT-qV-K3s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="ContentView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zUb-wD-IgA">
+                    <rect key="frame" x="20" y="0.0" width="374" height="52"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Answer Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt3-rG-ilT">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correctness/reason" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vi-RN-Rye">
+                            <rect key="frame" x="0.0" y="28.5" width="374" height="23.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89272421599999996" green="0.47186851499999999" blue="0.29438829420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="Vsf-Tb-PbM"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Vsf-Tb-PbM"/>
+                        </mask>
+                    </variation>
+                </stackView>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zUb-wD-IgA" secondAttribute="bottom" id="FbS-0j-PDo"/>
+                <constraint firstItem="zUb-wD-IgA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ogz-gg-IiG"/>
+                <constraint firstItem="zUb-wD-IgA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="TZn-Yf-G3P"/>
+                <constraint firstAttribute="trailing" secondItem="zUb-wD-IgA" secondAttribute="trailing" constant="20" id="eq8-Yf-4yi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Yju-Ya-aAv" appends="YES" id="23W-pT-5aI"/>
+            </connections>
+            <point key="canvasLocation" x="17.39130434782609" y="-300.33482142857139"/>
+        </view>
+        <tapGestureRecognizer id="Yju-Ya-aAv">
+            <connections>
+                <action selector="answerViewTapped:" destination="-1" id="sAy-eq-PnT"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
