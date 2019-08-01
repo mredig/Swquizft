@@ -30,13 +30,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-bf-YuL">
-                                <rect key="frame" x="20" y="64" width="374" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-4j-w5T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="64B-od-c8N"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-bf-YuL" customClass="SwiftCodeTextView" customModule="Swquizft" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="414" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="17K-cC-hJ4"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -46,9 +52,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k3p-an-kPO" firstAttribute="trailing" secondItem="bVB-bf-YuL" secondAttribute="trailing" constant="20" id="689-ZS-Vq0"/>
+                            <constraint firstItem="ReI-4j-w5T" firstAttribute="leading" secondItem="RRf-tF-SKd" secondAttribute="leading" id="1j2-WK-5eM"/>
+                            <constraint firstItem="k3p-an-kPO" firstAttribute="trailing" secondItem="bVB-bf-YuL" secondAttribute="trailing" id="689-ZS-Vq0"/>
+                            <constraint firstItem="ReI-4j-w5T" firstAttribute="top" secondItem="RRf-tF-SKd" secondAttribute="top" id="Fwb-oa-InF"/>
                             <constraint firstItem="bVB-bf-YuL" firstAttribute="top" secondItem="k3p-an-kPO" secondAttribute="top" constant="20" id="Qfq-xa-GMH"/>
-                            <constraint firstItem="bVB-bf-YuL" firstAttribute="leading" secondItem="k3p-an-kPO" secondAttribute="leading" constant="20" id="SHB-bO-VgE"/>
+                            <constraint firstItem="bVB-bf-YuL" firstAttribute="leading" secondItem="k3p-an-kPO" secondAttribute="leading" id="SHB-bO-VgE"/>
+                            <constraint firstAttribute="trailing" secondItem="ReI-4j-w5T" secondAttribute="trailing" id="T7A-Gw-GsV"/>
                             <constraint firstItem="k3p-an-kPO" firstAttribute="bottom" secondItem="Lv5-dp-bpv" secondAttribute="bottom" id="csZ-ko-bz6"/>
                             <constraint firstItem="k3p-an-kPO" firstAttribute="trailing" secondItem="Lv5-dp-bpv" secondAttribute="trailing" id="hAP-oy-Adz"/>
                             <constraint firstItem="Lv5-dp-bpv" firstAttribute="top" secondItem="bVB-bf-YuL" secondAttribute="bottom" id="jZ9-cN-AoY"/>
@@ -58,6 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="answerStackView" destination="NGB-qN-BiI" id="t4T-0n-Cdt"/>
+                        <outlet property="headerBackgroundView" destination="ReI-4j-w5T" id="7G9-kB-kK1"/>
                         <outlet property="questionTextView" destination="bVB-bf-YuL" id="EhI-zF-P4m"/>
                         <outlet property="scrollView" destination="Lv5-dp-bpv" id="Yuu-rP-4qH"/>
                     </connections>

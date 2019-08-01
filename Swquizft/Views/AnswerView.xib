@@ -57,12 +57,22 @@
                         </mask>
                     </variation>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67d-VP-IYW">
+                    <rect key="frame" x="16" y="51" width="398" height="1"/>
+                    <color key="backgroundColor" white="0.94794417546948351" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lOZ-6e-6w8"/>
+                    </constraints>
+                </view>
             </subviews>
             <gestureRecognizers/>
             <constraints>
+                <constraint firstItem="67d-VP-IYW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Emr-sx-zuY"/>
                 <constraint firstAttribute="bottom" secondItem="zUb-wD-IgA" secondAttribute="bottom" id="FbS-0j-PDo"/>
                 <constraint firstItem="zUb-wD-IgA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ogz-gg-IiG"/>
                 <constraint firstItem="zUb-wD-IgA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="TZn-Yf-G3P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="67d-VP-IYW" secondAttribute="trailing" id="ZQQ-fw-EWw"/>
+                <constraint firstAttribute="bottom" secondItem="67d-VP-IYW" secondAttribute="bottom" id="aCe-sB-txm"/>
                 <constraint firstAttribute="trailing" secondItem="zUb-wD-IgA" secondAttribute="trailing" constant="20" id="eq8-Yf-4yi"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

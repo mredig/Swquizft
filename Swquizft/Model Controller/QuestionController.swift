@@ -30,7 +30,8 @@ class QuestionController {
 	}
 
 	func loadFromPersistence() {
-		let fileURL = Bundle.main.url(forResource: "sample questions", withExtension: "json")!
+		let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+			.appendingPathComponent("sample questions").appendingPathExtension("json")
 		do {
 			let data = try Data(contentsOf: fileURL)
 			questionBank = try JSONDecoder().decode([Question].self, from: data)
@@ -49,11 +50,10 @@ class QuestionController {
 		let equalAnswer = Answer(answerText: "`=`", isCorrect: false, reason: nil)
 
 		let question1 = Question(prompt: """
-							Identify the name of the variable in this snippet:
+							// Identify the name of the variable in the following code:
 
-							```swift
 							let aDocument = Document()
-							```
+
 							""", answers: [aDocumentAnswer, documentAnswer, letAnswer, equalAnswer], categoryTags: [.syntax, .vocab], difficulty: .beginner)
 
 		let aDocumentAnswer2 = Answer(answerText: "`aDocument`", isCorrect: false, reason: nil)

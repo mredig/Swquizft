@@ -64,7 +64,7 @@ class AnswerView: UIView {
 		stackTrailingConstraint.constant = edgeInsets.right
 
 		guard let answer = answer else { return }
-		answerLabel.attributedText = MarkdownHelper.convertFromMarkdown(answer.answerText)
+		answerLabel.attributedText = CodeFormatHelper.convertFromMarkdown(answer.answerText)
 		let correctnessString = answer.isCorrect ? "Yep!" : "Nope 🥺"
 		let reasonString: String
 		if let reason = answer.reason {
@@ -72,7 +72,7 @@ class AnswerView: UIView {
 		} else {
 			reasonString = ""
 		}
-		reasonLabel.attributedText = MarkdownHelper.convertFromMarkdown("***\(correctnessString)***\(reasonString)")
+		reasonLabel.attributedText = CodeFormatHelper.convertFromMarkdown("***\(correctnessString)***\(reasonString)")
 	}
 
 	@IBAction func answerViewTapped(_ sender: UITapGestureRecognizer) {

@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Sourceful
 
 class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	var coordinator: Coordinator?
 	
-	@IBOutlet var questionTextView: UITextView!
+	@IBOutlet var questionTextView: SwiftCodeTextView!
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var answerStackView: UIStackView!
+	@IBOutlet var headerBackgroundView: UIView!
+	
+	let lexer = SwiftLexer()
 
 	var question: Question? {
 		didSet {
@@ -25,6 +29,8 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		headerBackgroundView.backgroundColor = questionTextView.backgroundColor
 
 		setupScrollView()
 	}
@@ -44,7 +50,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	private func updateViews() {
 		guard let question = question else { return }
 		loadViewIfNeeded()
-		questionTextView.attributedText = MarkdownHelper.convertFromMarkdown(question.prompt)
+		questionTextView.text = question.prompt
 	}
 
 	private func updateAnswers() {
@@ -56,8 +62,6 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 			answerView.edgeInsets.left = 50
 			answerView.edgeInsets.right = 20
 			answerStackView.addArrangedSubview(answerView)
-			print("added \(answerView)")
 		}
 	}
 }
-

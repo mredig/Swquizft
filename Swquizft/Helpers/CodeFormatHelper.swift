@@ -1,5 +1,5 @@
 //
-//  MarkdownHelper.swift
+//  CodeFormatHelper.swift
 //  Swquizft
 //
 //  Created by Michael Redig on 7/31/19.
@@ -8,8 +8,9 @@
 
 import Foundation
 import Down
+import Sourceful
 
-enum MarkdownHelper {
+enum CodeFormatHelper {
 	static func convertFromMarkdown(_ markdownString: String) -> NSAttributedString {
 		let down = Down(markdownString: markdownString)
 
