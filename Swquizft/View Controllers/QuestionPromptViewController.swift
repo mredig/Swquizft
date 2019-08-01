@@ -8,7 +8,9 @@
 
 import UIKit
 
-class QuestionPromptViewController: UIViewController, Storyboarded {
+class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
+	var coordinator: Coordinator?
+	
 	@IBOutlet var questionTextView: UITextView!
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var answerStackView: UIStackView!

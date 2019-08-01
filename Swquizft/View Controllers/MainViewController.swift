@@ -8,19 +8,29 @@
 
 import UIKit
 
-class MainViewController: UIViewController, Storyboarded {
+class MainViewController: UIViewController, CoordinatedStoryboard {
 	@IBOutlet var difficultyButtons: [UIButton]!
 	@IBOutlet var easyButton: UIButton!
 	@IBOutlet var mediumButton: UIButton!
 	@IBOutlet var hardButton: UIButton!
 	@IBOutlet var categoryCollection: UICollectionView!
 	var categoryDelegate: CategoryCollectionDelegate?
-	let questionsController = QuestionController()
 
-	var coordinator: QuizCoordinator?
+	var questionsController: QuestionController?
+	var coordinator: Coordinator? {
+		didSet {
+			guard let quizCoordinator = quizCoordinator else { return }
+			questionsController = quizCoordinator.questionController
+		}
+	}
+	var quizCoordinator: QuizCoordinator? {
+		return coordinator as? QuizCoordinator
+	}
+
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		guard let questionsController = quizCoordinator?.questionController else { return }
 		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController, categoryCollection: categoryCollection)
 		categoryCollection.delegate = categoryDelegate
 		categoryCollection.dataSource = categoryDelegate
@@ -43,7 +53,8 @@ class MainViewController: UIViewController, Storyboarded {
 	}
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {
-		coordinator?.startQuiz(question: questionsController.questionBank.first!)
+		guard let question = questionsController?.questionBank.first else { return }
+		quizCoordinator?.startQuiz(question: question)
 	}
 }
 

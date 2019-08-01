@@ -10,15 +10,26 @@ import UIKit
 
 class RootTabViewController: UITabBarController, Storyboarded {
 
-	let questionCoordinator = QuizCoordinator()
-//	let creationCoordinator = CreationCoordinator()
+	let questionsController: QuestionController
+
+	let quizCoordinator: QuizCoordinator
+
+	init() {
+		let aQuestionsController = QuestionController()
+		self.questionsController = aQuestionsController
+		self.quizCoordinator = QuizCoordinator(questionController: aQuestionsController)
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		questionCoordinator.rootTabController = self
-		questionCoordinator.start()
-//		creationCoordinator.start()
-		setViewControllers([questionCoordinator.navigationController], animated: false)
+		quizCoordinator.rootTabController = self
+		quizCoordinator.start()
+		setViewControllers([quizCoordinator.navigationController], animated: false)
 
 		tabBar.tintColor = UIColor(named: "swiftlikeOrange")
     }

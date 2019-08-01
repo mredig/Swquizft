@@ -18,7 +18,7 @@ class CreationCoordinator: NSObject, Coordinator {
 	}
 
 	func start() {
-		let vc = QuestionsManagerViewController.instantiate()
+		let vc = QuestionsManagerViewController.instantiate(coordinator: self)
 		navigationController.pushViewController(vc, animated: false)
 	}
 }

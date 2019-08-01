@@ -8,7 +8,9 @@
 
 import UIKit
 
-class QuestionsManagerViewController: UIViewController, Storyboarded {
+class QuestionsManagerViewController: UIViewController, CoordinatedStoryboard {
+	var coordinator: Coordinator?
+	
 	@IBOutlet var difficultySegmentedControl: UISegmentedControl!
 
 	override func viewDidLoad() {

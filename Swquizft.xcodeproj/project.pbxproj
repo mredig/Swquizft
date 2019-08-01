@@ -205,9 +205,9 @@
 		330842E122EF943200D62FFD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				33506D2622F15D52008E906E /* QuestionPromptViewController.swift */,
 				3379F4BA22F0F72700339E62 /* RootTabViewController.swift */,
 				330842BE22EF932A00D62FFD /* MainViewController.swift */,
+				33506D2622F15D52008E906E /* QuestionPromptViewController.swift */,
 				3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */,
 			);
 			path = "View Controllers";
