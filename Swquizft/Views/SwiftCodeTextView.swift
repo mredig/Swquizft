@@ -21,6 +21,7 @@ class SwiftCodeTextView: SyntaxTextView {
 	}
 
 	private let swiftLexer = SwiftLexer()
+	var heightConstraint: NSLayoutConstraint?
 
 	override func awakeFromNib() {
 		super.awakeFromNib()

@@ -17,7 +17,8 @@ class AnswerView: UIView {
 	@IBOutlet private var stackLeadingConstraint: NSLayoutConstraint!
 	@IBOutlet private var stackTrailingConstraint: NSLayoutConstraint!
 	@IBOutlet private(set) var answerLabel: UILabel!
-	@IBOutlet private(set) var reasonLabel: UILabel!
+	@IBOutlet private(set) var correctnessLabel: UILabel!
+	@IBOutlet private(set) var reasonView: SwiftCodeTextView!
 
 	var edgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8) {
 		didSet {
@@ -54,7 +55,8 @@ class AnswerView: UIView {
 		contentView.frame = bounds
 		addSubview(contentView)
 		updateViews()
-		reasonLabel.isHidden = true
+		reasonView.isHidden = true
+		correctnessLabel.isHidden = true
 	}
 
 	private func updateViews() {
@@ -66,19 +68,25 @@ class AnswerView: UIView {
 		guard let answer = answer else { return }
 		answerLabel.attributedText = CodeFormatHelper.convertFromMarkdown(answer.answerText)
 		let correctnessString = answer.isCorrect ? "Yep!" : "Nope 🥺"
-		let reasonString: String
-		if let reason = answer.reason {
-			reasonString = ": \(reason)"
-		} else {
-			reasonString = ""
-		}
-		reasonLabel.attributedText = CodeFormatHelper.convertFromMarkdown("***\(correctnessString)***\(reasonString)")
+		correctnessLabel.text = correctnessString
+		correctnessLabel.textColor = answer.isCorrect ? .green : .red
+		reasonView.text = answer.reason ?? ""
 	}
 
 	@IBAction func answerViewTapped(_ sender: UITapGestureRecognizer) {
-		print("tapped \(answerLabel.text) \(reasonLabel.text)")
 		UIView.animate(withDuration: 0.2) {
-			self.reasonLabel.isHidden.toggle()
+			self.correctnessLabel.isHidden.toggle()
+			self.reasonView.isHidden = self.correctnessLabel.isHidden
+			if !self.reasonView.isHidden && !self.reasonView.text.isEmpty {
+				self.reasonView.contentTextView.sizeToFit()
+				self.reasonView.sizeToFit()
+				self.reasonView.heightConstraint = self.reasonView.heightAnchor.constraint(equalToConstant: self.reasonView.contentTextView.frame.size.height)
+				self.reasonView.heightConstraint?.isActive = true
+			} else {
+				self.reasonView.heightConstraint?.isActive = false
+				self.reasonView.heightConstraint = nil
+			}
+
 			self.stackView.layoutSubviews()
 		}
 	}

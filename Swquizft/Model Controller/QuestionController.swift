@@ -13,7 +13,7 @@ class QuestionController {
 	private(set) var selectedCategories: Set<Question.Category> = []
 
 	init() {
-//		saveToPersistence()
+		saveToPersistence()
 		loadFromPersistence()
 	}
 
@@ -46,7 +46,7 @@ class QuestionController {
 
 		let aDocumentAnswer = Answer(answerText: "`aDocument`", isCorrect: true, reason: nil)
 		let documentAnswer = Answer(answerText: "`Document`", isCorrect: false, reason: nil)
-		let letAnswer = Answer(answerText: "`let`", isCorrect: false, reason: nil)
+		let letAnswer = Answer(answerText: "`let`", isCorrect: false, reason: "// because that's dumb!\nand so is your face!\nEAT IT!")
 		let equalAnswer = Answer(answerText: "`=`", isCorrect: false, reason: nil)
 
 		let question1 = Question(prompt: """
