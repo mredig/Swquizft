@@ -74,4 +74,8 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	@IBAction func nextButtonPressed(_ sender: UIBarButtonItem) {
 		quizCoordinator?.nextQuestion()
 	}
+
+	@IBAction func quitButtonPressed(_ sender: UIBarButtonItem) {
+		quizCoordinator?.quitQuiz()
+	}
 }

@@ -54,6 +54,10 @@ class QuizCoordinator: NSObject, Coordinator {
 		currentQuestionIndex = max(currentQuestionIndex, 0)
 	}
 
+	func quitQuiz() {
+		rootTabController?.dismiss(animated: true)
+	}
+
 	private func generateVCTitle() -> String {
 		return "\(currentQuestionIndex + 1) / \(questionController.currentQuestions.count)"
 	}

@@ -47,7 +47,11 @@
                                 <rect key="frame" x="0.0" y="862" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Quit" id="gW0-MP-qP5"/>
+                                    <barButtonItem title="Quit" id="gW0-MP-qP5">
+                                        <connections>
+                                            <action selector="quitButtonPressed:" destination="8ZT-Lo-Kzi" id="zaS-eJ-mv1"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
