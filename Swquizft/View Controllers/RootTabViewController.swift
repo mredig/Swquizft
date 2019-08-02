@@ -12,12 +12,12 @@ class RootTabViewController: UITabBarController, Storyboarded {
 
 	let questionsController: QuestionController
 
-	let quizCoordinator: QuizCoordinator
+	let quizCoordinator: MainCoordinator
 
 	init() {
 		let aQuestionsController = QuestionController()
 		self.questionsController = aQuestionsController
-		self.quizCoordinator = QuizCoordinator(questionController: aQuestionsController)
+		self.quizCoordinator = MainCoordinator(questionController: aQuestionsController)
 		super.init(nibName: nil, bundle: nil)
 	}
 

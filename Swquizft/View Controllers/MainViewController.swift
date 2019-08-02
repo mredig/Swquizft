@@ -19,18 +19,18 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 	var questionsController: QuestionController?
 	var coordinator: Coordinator? {
 		didSet {
-			guard let quizCoordinator = quizCoordinator else { return }
+			guard let quizCoordinator = mainCoordinator else { return }
 			questionsController = quizCoordinator.questionController
 		}
 	}
-	var quizCoordinator: QuizCoordinator? {
-		return coordinator as? QuizCoordinator
+	var mainCoordinator: MainCoordinator? {
+		return coordinator as? MainCoordinator
 	}
 
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		guard let questionsController = quizCoordinator?.questionController else { return }
+		guard let questionsController = mainCoordinator?.questionController else { return }
 		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController, categoryCollection: categoryCollection)
 		categoryCollection.delegate = categoryDelegate
 		categoryCollection.dataSource = categoryDelegate
@@ -54,7 +54,7 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {
 		guard let question = questionsController?.questionBank.first else { return }
-		quizCoordinator?.startQuiz(question: question)
+		mainCoordinator?.startQuiz(questions: [question])
 	}
 }
 

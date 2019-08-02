@@ -1,5 +1,5 @@
 //
-//  QuizCoordinator.swift
+//  MainCoordinator.swift
 //  Swquizft
 //
 //  Created by Michael Redig on 7/29/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuizCoordinator: NSObject, Coordinator {
+class MainCoordinator: NSObject, Coordinator {
 	var childCoordinators: [Coordinator] = []
 	var navigationController: UINavigationController
 	var rootTabController: UITabBarController?
@@ -27,9 +27,9 @@ class QuizCoordinator: NSObject, Coordinator {
 	}
 
 	// pass in an array of questions, not just one
-	func startQuiz(question: Question) {
+	func startQuiz(questions: [Question]) {
 		let vc = QuestionPromptViewController.instantiate(coordinator: self)
-		vc.question = question
+		vc.question = questions.first
 		rootTabController?.present(vc, animated: true)
 	}
 }
