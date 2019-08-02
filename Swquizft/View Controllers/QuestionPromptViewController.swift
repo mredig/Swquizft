@@ -11,10 +11,16 @@ import Sourceful
 
 class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	var coordinator: Coordinator?
+	var quizCoordinator: QuizCoordinator? {
+		return coordinator as? QuizCoordinator
+	}
 	
 	@IBOutlet var questionTextView: SwiftCodeTextView!
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var answerStackView: UIStackView!
+	@IBOutlet var nextButton: UIBarButtonItem!
+
+	var questionController: QuestionController?
 
 	let lexer = SwiftLexer()
 
@@ -47,6 +53,10 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 		guard let question = question else { return }
 		loadViewIfNeeded()
 		questionTextView.text = question.prompt
+
+		if question == questionController?.currentQuestions.last {
+			nextButton.isEnabled = false
+		}
 	}
 
 	private func updateAnswers() {
@@ -59,5 +69,9 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 			answerView.edgeInsets.right = 20
 			answerStackView.addArrangedSubview(answerView)
 		}
+	}
+
+	@IBAction func nextButtonPressed(_ sender: UIBarButtonItem) {
+		quizCoordinator?.nextQuestion()
 	}
 }

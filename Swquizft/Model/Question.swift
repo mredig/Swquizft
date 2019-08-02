@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Question: Codable {
+struct Question: Codable, Equatable {
 	enum Category: String, Codable, CaseIterable {
 		case syntax
 		case types
