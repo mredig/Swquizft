@@ -44,10 +44,10 @@ class QuestionController {
 		let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 						.appendingPathComponent("sample questions").appendingPathExtension("json")
 
-		let aDocumentAnswer = Answer(answerText: "`aDocument`", isCorrect: true, reason: nil)
-		let documentAnswer = Answer(answerText: "`Document`", isCorrect: false, reason: nil)
-		let letAnswer = Answer(answerText: "`let`", isCorrect: false, reason: "// because that's dumb!\nand so is your face!\nEAT IT!")
-		let equalAnswer = Answer(answerText: "`=`", isCorrect: false, reason: nil)
+		let aDocumentAnswer = Answer(answerText: "aDocument", isCorrect: true, reason: nil)
+		let documentAnswer = Answer(answerText: "Document", isCorrect: false, reason: "// this is a short reason")
+		let letAnswer = Answer(answerText: "let", isCorrect: false, reason: "// because that's dumb!\nand so is your face!\nEAT IT!")
+		let equalAnswer = Answer(answerText: "=\nthis is a long answer\non multiple lines\nsee?\nthere are several", isCorrect: false, reason: nil)
 
 		let question1 = Question(prompt: """
 							// Identify the name of the variable in the following code:

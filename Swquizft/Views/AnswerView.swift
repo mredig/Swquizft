@@ -16,9 +16,10 @@ class AnswerView: UIView {
 	@IBOutlet private var stackTopConstraint: NSLayoutConstraint!
 	@IBOutlet private var stackLeadingConstraint: NSLayoutConstraint!
 	@IBOutlet private var stackTrailingConstraint: NSLayoutConstraint!
-	@IBOutlet private(set) var answerLabel: UILabel!
+	@IBOutlet private(set) var answerView: SwiftCodeTextView!
 	@IBOutlet private(set) var correctnessLabel: UILabel!
 	@IBOutlet private(set) var reasonView: SwiftCodeTextView!
+	private var answerHeight: NSLayoutConstraint?
 
 	var edgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8) {
 		didSet {
@@ -51,9 +52,13 @@ class AnswerView: UIView {
 	private func commonInit() {
 		let nib = UINib(nibName: "AnswerView", bundle: nil)
 		nib.instantiate(withOwner: self, options: nil)
-
 		contentView.frame = bounds
 		addSubview(contentView)
+
+		answerHeight = answerView.heightAnchor.constraint(equalToConstant: 20.5)
+		answerHeight?.isActive = true
+		answerView.isUserInteractionEnabled = false
+
 		updateViews()
 		reasonView.isHidden = true
 		correctnessLabel.isHidden = true
@@ -66,7 +71,9 @@ class AnswerView: UIView {
 		stackTrailingConstraint.constant = edgeInsets.right
 
 		guard let answer = answer else { return }
-		answerLabel.attributedText = CodeFormatHelper.convertFromMarkdown(answer.answerText)
+		answerView.text = answer.answerText
+		answerView.contentTextView.sizeToFit()
+		answerHeight?.constant = answerView.contentTextView.frame.size.height
 		let correctnessString = answer.isCorrect ? "Yep!" : "Nope 🥺"
 		correctnessLabel.text = correctnessString
 		correctnessLabel.textColor = answer.isCorrect ? .green : .red

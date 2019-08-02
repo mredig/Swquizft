@@ -18,7 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerView" customModule="Swquizft" customModuleProvider="target">
             <connections>
-                <outlet property="answerLabel" destination="zt3-rG-ilT" id="3bT-eg-S3h"/>
+                <outlet property="answerView" destination="bIw-WG-Qag" id="tcr-1e-dvn"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="96O-ev-k2O"/>
                 <outlet property="correctnessLabel" destination="a3e-H7-q7V" id="6mt-1W-NYF"/>
                 <outlet property="reasonView" destination="QfX-dn-sZj" id="XQE-X4-L69"/>
@@ -38,21 +38,18 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zUb-wD-IgA">
                     <rect key="frame" x="20" y="0.0" width="394" height="155"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Answer Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt3-rG-ilT">
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIw-WG-Qag" customClass="SwiftCodeTextView" customModule="Swquizft" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Correctness Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-H7-q7V">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" ambiguous="YES" text="Correctness Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-H7-q7V">
                             <rect key="frame" x="0.0" y="28.5" width="394" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Raleway-BoldItalic" family="Raleway" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-dn-sZj" customClass="SwiftCodeTextView" customModule="Swquizft" customModuleProvider="target">
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-dn-sZj" customClass="SwiftCodeTextView" customModule="Swquizft" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="56.5" width="394" height="98.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
