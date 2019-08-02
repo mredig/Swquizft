@@ -18,7 +18,7 @@
 		330842FD22EFC15D00D62FFD /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842FC22EFC15D00D62FFD /* QuestionController.swift */; };
 		3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430022EFCAD300D62FFD /* Coordinator.swift */; };
 		3308430322EFCC1600D62FFD /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430222EFCC1600D62FFD /* Storyboarded.swift */; };
-		3308430522EFCDDD00D62FFD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430422EFCDDD00D62FFD /* MainCoordinator.swift */; };
+		3308430522EFCDDD00D62FFD /* QuizCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308430422EFCDDD00D62FFD /* QuizCoordinator.swift */; };
 		3308433722EFF84200D62FFD /* Pacifico regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3308433622EFF84100D62FFD /* Pacifico regular.ttf */; };
 		3308434A22EFFB5000D62FFD /* Raleway 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3308433822EFFB4E00D62FFD /* Raleway 600.ttf */; };
 		3308434B22EFFB5000D62FFD /* Raleway 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3308433922EFFB4E00D62FFD /* Raleway 500.ttf */; };
@@ -51,6 +51,8 @@
 		3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */; };
 		33B762D222F346B900395090 /* Sourceful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B762D122F346B900395090 /* Sourceful.framework */; };
 		33B762D422F3512C00395090 /* SwiftCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D322F3512C00395090 /* SwiftCodeTextView.swift */; };
+		33B762D622F4029800395090 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D522F4029800395090 /* MainCoordinator.swift */; };
+		33B762D922F406BD00395090 /* CategoryStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D822F406BD00395090 /* CategoryStatistics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +81,7 @@
 		330842FC22EFC15D00D62FFD /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		3308430022EFCAD300D62FFD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3308430222EFCC1600D62FFD /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
-		3308430422EFCDDD00D62FFD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainCoordinator.swift; path = Coordinator/MainCoordinator.swift; sourceTree = "<group>"; };
+		3308430422EFCDDD00D62FFD /* QuizCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizCoordinator.swift; path = Coordinator/QuizCoordinator.swift; sourceTree = "<group>"; };
 		3308433622EFF84100D62FFD /* Pacifico regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico regular.ttf"; sourceTree = "<group>"; };
 		3308433822EFFB4E00D62FFD /* Raleway 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 600.ttf"; sourceTree = "<group>"; };
 		3308433922EFFB4E00D62FFD /* Raleway 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 500.ttf"; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 		3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManagerViewController.swift; sourceTree = "<group>"; };
 		33B762D122F346B900395090 /* Sourceful.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sourceful.framework; path = Carthage/Build/iOS/Sourceful.framework; sourceTree = "<group>"; };
 		33B762D322F3512C00395090 /* SwiftCodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCodeTextView.swift; sourceTree = "<group>"; };
+		33B762D522F4029800395090 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCoordinator.swift; path = Coordinator/MainCoordinator.swift; sourceTree = "<group>"; };
+		33B762D822F406BD00395090 /* CategoryStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStatistics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		330842DE22EF942700D62FFD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33B762D822F406BD00395090 /* CategoryStatistics.swift */,
 				330842DC22EF942300D62FFD /* Question.swift */,
 				330842E322EF946900D62FFD /* Answer.swift */,
 			);
@@ -233,7 +238,8 @@
 		330842FE22EFCAC500D62FFD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3308430422EFCDDD00D62FFD /* MainCoordinator.swift */,
+				33B762D522F4029800395090 /* MainCoordinator.swift */,
+				3308430422EFCDDD00D62FFD /* QuizCoordinator.swift */,
 				3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */,
 				330842FF22EFCAC900D62FFD /* Coordinator */,
 				3308435D22EFFEC800D62FFD /* CategoryCollectionDelegate.swift */,
@@ -435,7 +441,7 @@
 			files = (
 				3379F4BB22F0F72700339E62 /* RootTabViewController.swift in Sources */,
 				330842FD22EFC15D00D62FFD /* QuestionController.swift in Sources */,
-				3308430522EFCDDD00D62FFD /* MainCoordinator.swift in Sources */,
+				3308430522EFCDDD00D62FFD /* QuizCoordinator.swift in Sources */,
 				330842E422EF946900D62FFD /* Answer.swift in Sources */,
 				3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */,
 				3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */,
@@ -444,10 +450,12 @@
 				330842DD22EF942300D62FFD /* Question.swift in Sources */,
 				3308436022EFFF5900D62FFD /* CategoryCollectionViewCell.swift in Sources */,
 				33B762D422F3512C00395090 /* SwiftCodeTextView.swift in Sources */,
+				33B762D622F4029800395090 /* MainCoordinator.swift in Sources */,
 				330842BF22EF932A00D62FFD /* MainViewController.swift in Sources */,
 				33506D2B22F16252008E906E /* CodeFormatHelper.swift in Sources */,
 				3379F4BD22F13B7700339E62 /* CreationCoordinator.swift in Sources */,
 				33506D2D22F24D27008E906E /* AnswerView.swift in Sources */,
+				33B762D922F406BD00395090 /* CategoryStatistics.swift in Sources */,
 				330842BD22EF932A00D62FFD /* AppDelegate.swift in Sources */,
 				33506D2722F15D52008E906E /* QuestionPromptViewController.swift in Sources */,
 				3308430322EFCC1600D62FFD /* Storyboarded.swift in Sources */,

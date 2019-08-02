@@ -53,8 +53,7 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 	}
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {
-		guard let question = questionsController?.questionBank.first else { return }
-		mainCoordinator?.startQuiz(questions: [question])
+		mainCoordinator?.startQuiz()
 	}
 }
 

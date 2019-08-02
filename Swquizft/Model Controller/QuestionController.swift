@@ -15,6 +15,9 @@ class QuestionController {
 	/// categories selected is pulled from the master list and presented to the user
 	private(set) var selectedCategories: Set<Question.Category> = []
 
+	/// The current quiz questions
+	var currentQuestions: [Question] = []
+
 	/// Statistics tracker for performance within categories
 	private(set) var categoryStatistics = CategoryStatistics() {
 		didSet {
@@ -41,6 +44,12 @@ class QuestionController {
 	/// Returns a boolean indicating if the input category is currently in the `selectedCategories`
 	func categoryIsSelected(_ category: Question.Category) -> Bool {
 		return selectedCategories.contains(category)
+	}
+
+	/// Filter through all available questions, selecting only ones that conform to the matching selected categories, then compile a reasonable amount of them into `currentQuestions`
+	func prepareCurrentQuizQuestions() {
+		// TODO: needs full implementation - this is just a hacky test value
+		currentQuestions = questionBank
 	}
 
 	func loadFromPersistence() {

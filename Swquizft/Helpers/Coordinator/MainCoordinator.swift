@@ -27,9 +27,11 @@ class MainCoordinator: NSObject, Coordinator {
 	}
 
 	// pass in an array of questions, not just one
-	func startQuiz(questions: [Question]) {
-		let vc = QuestionPromptViewController.instantiate(coordinator: self)
-		vc.question = questions.first
-		rootTabController?.present(vc, animated: true)
+	func startQuiz() {
+		questionController.prepareCurrentQuizQuestions()
+		let quizCoord = QuizCoordinator(questionController: questionController)
+		quizCoord.rootTabController = rootTabController
+		childCoordinators.append(quizCoord)
+		quizCoord.start()
 	}
 }
