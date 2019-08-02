@@ -9,22 +9,32 @@
 import Foundation
 
 class QuestionController {
+	/// bank of all questions. Probably not a long term solution
 	var questionBank: [Question] = []
+	/// Set indicating selected categories. When a quiz is started, a random selection of questions pertaining only to
+	/// categories selected is pulled from the master list and presented to the user
 	private(set) var selectedCategories: Set<Question.Category> = []
+
+	typealias CategoryStatistics = [Question.Category: (presented: Int, correct: Int)]
+	/// Statistics tracker for performance within categories
+	private(set) var categoryStatistics = CategoryStatistics()
 
 	init() {
 		saveToPersistence()
 		loadFromPersistence()
 	}
 
+	/// Adds a category to `selectedCategories`
 	func select(category: Question.Category) {
 		selectedCategories.insert(category)
 	}
 
+	/// Removes a category from `selectedCategories`
 	func deselect(category: Question.Category) {
 		selectedCategories.remove(category)
 	}
 
+	/// Returns a boolean indicating if the input category is currently in the `selectedCategories`
 	func categoryIsSelected(_ category: Question.Category) -> Bool {
 		return selectedCategories.contains(category)
 	}
@@ -40,6 +50,7 @@ class QuestionController {
 		}
 	}
 
+	// currently has a lot of hardcoded stuff for testing
 	func saveToPersistence() {
 		let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 						.appendingPathComponent("sample questions").appendingPathExtension("json")
