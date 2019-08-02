@@ -31,6 +31,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 		}
 	}
 	var answers: [Answer] = []
+	var firstAttempt = true
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -65,8 +66,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 
 		for answer in answers {
 			let answerView = AnswerView(answer: answer)
-			answerView.edgeInsets.left = 50
-			answerView.edgeInsets.right = 20
+			answerView.delegate = self
 			answerStackView.addArrangedSubview(answerView)
 		}
 	}
@@ -77,5 +77,16 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 
 	@IBAction func quitButtonPressed(_ sender: UIBarButtonItem) {
 		quizCoordinator?.quitQuiz()
+	}
+}
+
+extension QuestionPromptViewController: AnswerViewDelegate {
+	func answerView(_ answerView: AnswerView, revealedAnswer answer: Answer) {
+		if firstAttempt {
+			// update question controller
+		}
+		if answer.isCorrect {
+			nextButton.isEnabled = true
+		}
 	}
 }

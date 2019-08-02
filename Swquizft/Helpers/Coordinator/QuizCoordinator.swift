@@ -17,10 +17,12 @@ class QuizCoordinator: NSObject, Coordinator {
 
 	init(navigationController: UINavigationController = UINavigationController(), questionController: QuestionController) {
 		self.navigationController = navigationController
-		navigationController.navigationBar.prefersLargeTitles = true
 		self.questionController = questionController
 		super.init()
+		navigationController.navigationBar.prefersLargeTitles = true
+		navigationController.navigationBar.barStyle = .blackTranslucent
 		navigationController.delegate = self
+		navigationController.navigationBar.tintColor = UIColor(named: "swiftlikeOrange")
 	}
 
 	private(set) var currentQuestionIndex = 0

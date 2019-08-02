@@ -1,6 +1,6 @@
 # TODO
 
-* deactivate next button until an answer is chosen
+* quiz prompt controller
 	* turn into finish button on last question
 	* show results on final page - include statistics for run
 	* dismiss final page

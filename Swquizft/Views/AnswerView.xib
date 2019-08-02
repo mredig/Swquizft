@@ -67,9 +67,9 @@
                         </mask>
                     </variation>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67d-VP-IYW">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67d-VP-IYW" userLabel="Bottom Border">
                     <rect key="frame" x="16" y="154" width="418" height="1"/>
-                    <color key="backgroundColor" white="0.94794417546948351" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.21620561860000001" green="0.2231799934" blue="0.28594936650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="lOZ-6e-6w8"/>
                     </constraints>

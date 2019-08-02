@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AnswerViewDelegate: AnyObject {
+	func answerView(_ answerView: AnswerView, revealedAnswer answer: Answer)
+}
+
 class AnswerView: UIView {
 	@IBOutlet var contentView: UIView!
 	@IBOutlet private var xibConstraints: [NSLayoutConstraint]!
@@ -20,6 +24,11 @@ class AnswerView: UIView {
 	@IBOutlet private(set) var correctnessLabel: UILabel!
 	@IBOutlet private(set) var reasonView: SwiftCodeTextView!
 	private var answerHeight: NSLayoutConstraint?
+
+	weak var delegate: AnswerViewDelegate?
+	var isCurrentlyRevealed: Bool {
+		return !correctnessLabel.isHidden
+	}
 
 	var edgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8) {
 		didSet {
@@ -93,9 +102,10 @@ class AnswerView: UIView {
 				self.reasonView.heightConstraint?.isActive = false
 				self.reasonView.heightConstraint = nil
 			}
-
 			self.stackView.layoutSubviews()
 		}
+		guard let answer = answer, !self.correctnessLabel.isHidden else { return }
+		delegate?.answerView(self, revealedAnswer: answer)
 	}
 
 }

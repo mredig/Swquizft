@@ -68,7 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="k3p-an-kPO"/>
                     </view>
                     <navigationItem key="navigationItem" id="dkb-DX-cGB">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="8Fo-sk-OjG">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="8Fo-sk-OjG">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="8ZT-Lo-Kzi" id="IOS-Ak-sKd"/>
                             </connections>
