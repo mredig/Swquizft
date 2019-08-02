@@ -15,13 +15,17 @@ class QuestionController {
 	/// categories selected is pulled from the master list and presented to the user
 	private(set) var selectedCategories: Set<Question.Category> = []
 
-	typealias CategoryStatistics = [Question.Category: (presented: Int, correct: Int)]
 	/// Statistics tracker for performance within categories
-	private(set) var categoryStatistics = CategoryStatistics()
+	private(set) var categoryStatistics = CategoryStatistics() {
+		didSet {
+			saveCategoryStatistics()
+		}
+	}
 
 	init() {
 		saveToPersistence()
 		loadFromPersistence()
+		loadCategoryStatistics()
 	}
 
 	/// Adds a category to `selectedCategories`
@@ -84,7 +88,26 @@ class QuestionController {
 		} catch {
 			NSLog("error saving: \(error)")
 		}
+	}
 
+	private func saveCategoryStatistics() {
+		let encoder = PropertyListEncoder()
+		do {
+			let data = try encoder.encode(categoryStatistics)
+			UserDefaults.standard.set(data, forKey: "categoryStatistics")
+		} catch {
+			NSLog("Statistics saving failed: \(error)")
+		}
+	}
 
+	private func loadCategoryStatistics() {
+		guard let data = UserDefaults.standard.data(forKey: "categoryStatistics") else { return }
+		let decoder = PropertyListDecoder()
+		do {
+			let stats = try decoder.decode(CategoryStatistics.self, from: data)
+			categoryStatistics = stats
+		} catch {
+			NSLog("Statistics loading failed: \(error)")
+		}
 	}
 }

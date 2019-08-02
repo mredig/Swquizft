@@ -15,8 +15,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	@IBOutlet var questionTextView: SwiftCodeTextView!
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var answerStackView: UIStackView!
-	@IBOutlet var headerBackgroundView: UIView!
-	
+
 	let lexer = SwiftLexer()
 
 	var question: Question? {
@@ -29,9 +28,6 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		headerBackgroundView.backgroundColor = questionTextView.backgroundColor
-
 		setupScrollView()
 	}
 
