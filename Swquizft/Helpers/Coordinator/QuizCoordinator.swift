@@ -25,7 +25,11 @@ class QuizCoordinator: NSObject, Coordinator {
 		navigationController.navigationBar.tintColor = UIColor(named: "swiftlikeOrange")
 	}
 
-	private(set) var currentQuestionIndex = 0
+	private(set) var currentQuestionIndex = 0 {
+		didSet {
+			NotificationCenter.default.post(name: .quizIndexChanged, object: nil)
+		}
+	}
 	func start() {
 		showNextViewController(incrementingIndex: false)
 		rootTabController?.present(navigationController, animated: true)
@@ -45,7 +49,6 @@ class QuizCoordinator: NSObject, Coordinator {
 		let quizVC = QuestionPromptViewController.instantiate(coordinator: self)
 		quizVC.questionController = questionController
 		quizVC.question = questionController.currentQuestions[currentQuestionIndex]
-//		quizVC.title = generateVCTitle()
 		navigationController.pushViewController(quizVC, animated: true)
 	}
 
@@ -76,4 +79,8 @@ extension QuizCoordinator: UINavigationControllerDelegate {
 		// if we are still here, that means we are popping the top vc
 		backButtonPressed()
 	}
+}
+
+extension NSNotification.Name {
+	static let quizIndexChanged = NSNotification.Name(rawValue: "com.redeggproductions.quizIndexChanged")
 }

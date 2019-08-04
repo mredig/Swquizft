@@ -20,6 +20,8 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	@IBOutlet var answerStackView: UIStackView!
 	@IBOutlet var nextButton: UIBarButtonItem!
 
+	private var quizChangedNotification: NSObjectProtocol?
+
 	var questionController: QuestionController?
 
 	let lexer = SwiftLexer()
@@ -41,6 +43,14 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupScrollView()
+
+		quizChangedNotification = NotificationCenter.default.addObserver(forName: .quizIndexChanged, object: nil, queue: nil) { _ in
+			self.updateViews()
+		}
+	}
+
+	deinit {
+		quizChangedNotification = nil
 	}
 
 	private func setupScrollView() {
@@ -89,6 +99,7 @@ extension QuestionPromptViewController: AnswerViewDelegate {
 		if firstAttempt {
 			// update question controller
 			questionController?.question(question, answeredCorrectly: answer.isCorrect)
+			firstAttempt = false
 		}
 		if answer.isCorrect {
 			nextButton.isEnabled = true
