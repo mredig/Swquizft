@@ -37,12 +37,25 @@ class QuizCoordinator: NSObject, Coordinator {
 
 	func showNextViewController(incrementingIndex: Bool) {
 		currentQuestionIndex = incrementingIndex ? currentQuestionIndex + 1 : currentQuestionIndex
-		if currentQuestionIndex > questionController.currentQuestions.count - 1 {
-			// reached end of questions
-			currentQuestionIndex -= 1
-		} else {
+		switch currentQuestionIndex {
+		case 0...lastQuestionIndex: // show next question, even if it's the last question
 			showQuestionVC()
+		case resultsScreenIndex: // show results screen
+			break // until this is set up, there's a risk of a mismatch between the index count and the number of vcs on the stack
+		case resultsScreenIndex + 1: // we are done!
+			quitQuiz()
+		default:
+			break
 		}
+
+	}
+
+	private var lastQuestionIndex: Int {
+		return questionController.currentQuestions.count - 1
+	}
+
+	private var resultsScreenIndex: Int {
+		return questionController.currentQuestions.count
 	}
 
 	func showQuestionVC() {
@@ -63,6 +76,17 @@ class QuizCoordinator: NSObject, Coordinator {
 
 	func generateVCTitle() -> String {
 		return "\(currentQuestionIndex + 1) / \(questionController.currentQuestions.count)"
+	}
+
+	func generateNextButtonText() -> String {
+		switch currentQuestionIndex {
+		case lastQuestionIndex:
+			return "Show Results"
+		case resultsScreenIndex:
+			return "Finish"
+		default:
+			return "Next"
+		}
 	}
 }
 

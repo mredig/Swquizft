@@ -65,6 +65,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 		loadViewIfNeeded()
 		questionTextView.text = question.prompt
 		navigationItem.title = quizCoordinator?.generateVCTitle()
+		nextButton.title = quizCoordinator?.generateNextButtonText()
 	}
 
 	private func updateAnswers() {
@@ -99,5 +100,6 @@ extension QuestionPromptViewController: AnswerViewDelegate {
 		if answer.isCorrect {
 			nextButton.isEnabled = true
 		}
+		updateViews()
 	}
 }
