@@ -31,6 +31,7 @@ class QuestionController {
 		loadCategoryStatistics()
 	}
 
+	// MARK: - Category Selection
 	/// Adds a category to `selectedCategories`
 	func select(category: Question.Category) {
 		selectedCategories.insert(category)
@@ -46,12 +47,24 @@ class QuestionController {
 		return selectedCategories.contains(category)
 	}
 
+	// MARK: - Quiz Controlling
 	/// Filter through all available questions, selecting only ones that conform to the matching selected categories, then compile a reasonable amount of them into `currentQuestions`
 	func prepareCurrentQuizQuestions() {
 		// TODO: needs full implementation - this is just a hacky test value
 		currentQuestions = questionBank
 	}
 
+	func question(_ question: Question, answeredCorrectly correct: Bool) {
+		for category in question.categoryTags {
+			categoryStatistics.presented(category: category, correct: correct)
+		}
+		if !correct {
+			// append to end of current question list for immediate review
+			currentQuestions.append(question)
+		}
+	}
+
+	// MARK: - persistence
 	func loadFromPersistence() {
 		let fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 			.appendingPathComponent("sample questions").appendingPathExtension("json")

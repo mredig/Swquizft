@@ -27,28 +27,26 @@ class QuizCoordinator: NSObject, Coordinator {
 
 	private(set) var currentQuestionIndex = 0
 	func start() {
-		nextQuestion(index: 0)
+		showNextViewController(incrementingIndex: false)
 		rootTabController?.present(navigationController, animated: true)
 	}
 
-	func nextQuestion(index: Int? = nil) {
-		var animate = true
-		if let index = index {
-			currentQuestionIndex = index
-			animate = false
+	func showNextViewController(incrementingIndex: Bool) {
+		currentQuestionIndex = incrementingIndex ? currentQuestionIndex + 1 : currentQuestionIndex
+		if currentQuestionIndex > questionController.currentQuestions.count - 1 {
+			// reached end of questions
+			currentQuestionIndex -= 1
 		} else {
-			currentQuestionIndex += 1
+			showQuestionVC()
 		}
+	}
+
+	func showQuestionVC() {
 		let quizVC = QuestionPromptViewController.instantiate(coordinator: self)
 		quizVC.questionController = questionController
 		quizVC.question = questionController.currentQuestions[currentQuestionIndex]
-		quizVC.title = generateVCTitle()
-		navigationController.pushViewController(quizVC, animated: animate)
-
-	}
-
-	func presentingQuestion(_ index: Int) {
-		currentQuestionIndex = index
+//		quizVC.title = generateVCTitle()
+		navigationController.pushViewController(quizVC, animated: true)
 	}
 
 	func backButtonPressed() {
@@ -60,7 +58,7 @@ class QuizCoordinator: NSObject, Coordinator {
 		rootTabController?.dismiss(animated: true)
 	}
 
-	private func generateVCTitle() -> String {
+	func generateVCTitle() -> String {
 		return "\(currentQuestionIndex + 1) / \(questionController.currentQuestions.count)"
 	}
 }

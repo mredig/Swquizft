@@ -33,6 +33,11 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	var answers: [Answer] = []
 	var firstAttempt = true
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		updateViews()
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupScrollView()
@@ -54,10 +59,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 		guard let question = question else { return }
 		loadViewIfNeeded()
 		questionTextView.text = question.prompt
-
-		if question == questionController?.currentQuestions.last {
-			nextButton.isEnabled = false
-		}
+		navigationItem.title = quizCoordinator?.generateVCTitle()
 	}
 
 	private func updateAnswers() {
@@ -72,18 +74,21 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	}
 
 	@IBAction func nextButtonPressed(_ sender: UIBarButtonItem) {
-		quizCoordinator?.nextQuestion()
+		quizCoordinator?.showNextViewController(incrementingIndex: true)
 	}
 
 	@IBAction func quitButtonPressed(_ sender: UIBarButtonItem) {
 		quizCoordinator?.quitQuiz()
 	}
+
 }
 
 extension QuestionPromptViewController: AnswerViewDelegate {
 	func answerView(_ answerView: AnswerView, revealedAnswer answer: Answer) {
+		guard let question = question else { return }
 		if firstAttempt {
 			// update question controller
+			questionController?.question(question, answeredCorrectly: answer.isCorrect)
 		}
 		if answer.isCorrect {
 			nextButton.isEnabled = true
