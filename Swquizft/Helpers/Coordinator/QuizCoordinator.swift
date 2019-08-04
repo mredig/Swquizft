@@ -30,6 +30,7 @@ class QuizCoordinator: NSObject, Coordinator {
 			NotificationCenter.default.post(name: .quizIndexChanged, object: nil)
 		}
 	}
+
 	func start() {
 		showNextViewController(incrementingIndex: false)
 		rootTabController?.present(navigationController, animated: true)
@@ -41,7 +42,10 @@ class QuizCoordinator: NSObject, Coordinator {
 		case 0...lastQuestionIndex: // show next question, even if it's the last question
 			showQuestionVC()
 		case resultsScreenIndex: // show results screen
-			break // until this is set up, there's a risk of a mismatch between the index count and the number of vcs on the stack
+			if incrementingIndex {
+				currentQuestionIndex -= 1
+			}
+			break
 		case resultsScreenIndex + 1: // we are done!
 			quitQuiz()
 		default:
