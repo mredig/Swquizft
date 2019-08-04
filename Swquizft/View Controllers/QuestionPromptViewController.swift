@@ -35,11 +35,6 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	var answers: [Answer] = []
 	var firstAttempt = true
 
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		updateViews()
-	}
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupScrollView()
