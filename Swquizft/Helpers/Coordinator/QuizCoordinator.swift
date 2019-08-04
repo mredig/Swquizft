@@ -39,7 +39,7 @@ class QuizCoordinator: NSObject, Coordinator {
 	func showNextViewController(incrementingIndex: Bool) {
 		currentQuestionIndex = incrementingIndex ? currentQuestionIndex + 1 : currentQuestionIndex
 		switch currentQuestionIndex {
-		case 0...lastQuestionIndex: // show next question, even if it's the last question
+		case 0...lastQuestionIndex: // show next question, including the last question
 			showQuestionVC()
 		case resultsScreenIndex: // show results screen
 			if incrementingIndex {
