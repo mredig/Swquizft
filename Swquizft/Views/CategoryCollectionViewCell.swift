@@ -45,7 +45,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
 	private func updateViews() {
 		if let category = category {
-			titleLabel.textColor = (questionsController?.categoryIsSelected(category) ?? false) ? .black : .gray
+			let categoryIsSelected = questionsController?.categoryIsSelected(category) ?? false
+			titleLabel.textColor = categoryIsSelected ? .black : .gray
+			contentsContainer.layer.borderColor = categoryIsSelected ? UIColor(named: "swiftlikeOrange")?.cgColor : UIColor.gray.cgColor
+			contentsContainer.layer.borderWidth = categoryIsSelected ? 3 : 1
 			titleLabel.text = category.rawValue
 		}
 	}

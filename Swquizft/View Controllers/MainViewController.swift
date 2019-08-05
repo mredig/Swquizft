@@ -45,6 +45,7 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 		for (index, button) in difficultyButtons.enumerated() {
 			let difficulty = Question.Difficulty.allCases[index].stringValue
 			button.setTitle(difficulty, for: .normal)
+			button.isHidden = true
 		}
 	}
 

@@ -99,8 +99,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-ds-2Xm">
-                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-ds-2Xm">
+                                <rect key="frame" x="20" y="64" width="374" height="458"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swquizft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-cd-CKW">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="102"/>
@@ -109,7 +109,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="24N-Gh-krY">
-                                        <rect key="frame" x="0.0" y="178.5" width="374" height="52"/>
+                                        <rect key="frame" x="0.0" y="142" width="374" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Tc9-dI-xQN"/>
@@ -198,7 +198,7 @@
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqB-vc-rBj">
-                                        <rect key="frame" x="0.0" y="307" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="234" width="374" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Easy"/>
                                         <connections>
@@ -206,7 +206,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-q7-GYB">
-                                        <rect key="frame" x="0.0" y="432" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="322" width="374" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Medium"/>
                                         <connections>
@@ -214,15 +214,20 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wE-5N-gy8">
-                                        <rect key="frame" x="0.0" y="556.5" width="374" height="48"/>
+                                        <rect key="frame" x="0.0" y="410" width="374" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Hard"/>
                                         <connections>
                                             <action selector="difficultyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0u-7O-5WR"/>
                                         </connections>
                                     </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="133-c6-Kuc">
+                                <rect key="frame" x="0.0" y="538" width="414" height="259"/>
+                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZz-Ym-Lf7">
-                                        <rect key="frame" x="0.0" y="681" width="374" height="48"/>
+                                        <rect key="frame" x="182.5" y="105.5" width="49" height="48"/>
                                         <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="30"/>
                                         <state key="normal" title="Go!"/>
                                         <connections>
@@ -230,13 +235,21 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fZz-Ym-Lf7" firstAttribute="centerY" secondItem="133-c6-Kuc" secondAttribute="centerY" id="6zg-I8-84w"/>
+                                    <constraint firstItem="fZz-Ym-Lf7" firstAttribute="centerX" secondItem="133-c6-Kuc" secondAttribute="centerX" id="TTN-M8-oqH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="133-c6-Kuc" secondAttribute="trailing" id="0dR-8x-tus"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e1N-ds-2Xm" secondAttribute="trailing" constant="20" id="5f6-B1-fyk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e1N-ds-2Xm" secondAttribute="bottom" constant="20" id="6ae-zj-LbV"/>
+                            <constraint firstItem="133-c6-Kuc" firstAttribute="top" secondItem="e1N-ds-2Xm" secondAttribute="bottom" constant="16" id="NRd-pr-WLc"/>
                             <constraint firstItem="e1N-ds-2Xm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TTx-8b-h2p"/>
+                            <constraint firstItem="133-c6-Kuc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e9b-Tn-0GB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="133-c6-Kuc" secondAttribute="bottom" constant="16" id="rUh-1X-L49"/>
                             <constraint firstItem="e1N-ds-2Xm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x5b-tx-7a0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -346,7 +359,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qT-jn-Cz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3520" y="19"/>
+            <point key="canvasLocation" x="3470" y="26"/>
         </scene>
         <!--Create Question-->
         <scene sceneID="byy-AH-Ze5">
