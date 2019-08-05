@@ -63,8 +63,53 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 	func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
 		let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("LabelView"), owner: self) as? NSTableCellView
 		guard let column = tableColumn else { return nil }
+		let question = questionController.questionBank[row]
 
-		cell?.textField?.stringValue = "test label\n\nand another line"
+		var text = ""
+		let answerCount = question.answers.count
+		var textColor = NSColor.white
+
+		switch column {
+		case questionColumn:
+			text = question.prompt
+		case answer1Column:
+			guard answerCount >= 1 else { break }
+			text = question.answers[0].answerText
+			textColor = question.answers[0].isCorrect ? .green : .red
+		case reason1Column:
+			guard answerCount >= 1 else { break }
+			text = question.answers[0].reason ?? ""
+		case answer2Column:
+			guard answerCount >= 2 else { break }
+			text = question.answers[1].answerText
+			textColor = question.answers[1].isCorrect ? .green : .red
+		case reason2Column:
+			guard answerCount >= 2 else { break }
+			text = question.answers[1].reason ?? ""
+		case answer3Column:
+			guard answerCount >= 3 else { break }
+			text = question.answers[2].answerText
+			textColor = question.answers[2].isCorrect ? .green : .red
+		case reason3Column:
+			guard answerCount >= 3 else { break }
+			text = question.answers[2].reason ?? ""
+		case answer4Column:
+			guard answerCount >= 4 else { break }
+			text = question.answers[3].answerText
+			textColor = question.answers[3].isCorrect ? .green : .red
+		case reason4Column:
+			guard answerCount >= 4 else { break }
+			text = question.answers[3].reason ?? ""
+		case difficultyColumn:
+			text = question.difficulty.stringValue
+		case categoriesColumn:
+			text = question.categoryTags.map { $0.rawValue }.joined(separator: " ")
+		default:
+			text = ""
+		}
+
+		cell?.textField?.stringValue = text
+		cell?.textField?.textColor = textColor
 
 		return cell
 	}
