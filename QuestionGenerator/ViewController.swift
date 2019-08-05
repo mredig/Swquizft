@@ -52,6 +52,7 @@ class ViewController: NSViewController {
 		tableSelectionChangeNotification = NotificationCenter.default.addObserver(forName: NSTableView.selectionDidChangeNotification, object: nil, queue: nil, using: { _ in
 			self.updateViews()
 		})
+		updateViews()
 	}
 
 	deinit {
@@ -150,6 +151,17 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 		}
 		return minSize
 	}
+}
+
+// MARK: - view setup stuff
+
+extension ViewController {
+	private func clearQuestionFields() {
+		clearAnswers()
+		questionTextView.string = ""
+		difficultySegments.selectedSegment = -1
+		categoriesTextField.stringValue = ""
+	}
 
 	private func clearAnswers() {
 		for answerView in answerStackView.arrangedSubviews {
@@ -165,18 +177,22 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 	}
 
 	func updateViews() {
-		clearAnswers()
+		clearQuestionFields()
 		let selection = questionTableView.selectedRow
 		switch selection {
 		case 0..<questionController.questionBank.count:
-			clearAnswers()
-			print("selected \(selection)")
 			let question = questionController.questionBank[selection]
+			questionTextView.string = question.prompt
+			difficultySegments.selectedSegment = question.difficulty.rawValue
+			categoriesTextField.stringValue = question.categoryTags.map { $0.rawValue }.joined(separator: " ")
 			for answer in question.answers {
 				addAnswerToStack(answer)
 			}
 		default:
-			print("deselected")
+			let dummyAnswer = Answer(answerText: "", isCorrect: false, reason: nil)
+			for _ in 1...4 {
+				addAnswerToStack(dummyAnswer)
+			}
 		}
 	}
 }
