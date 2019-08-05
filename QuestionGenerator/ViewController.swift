@@ -13,6 +13,8 @@ class ViewController: NSViewController {
 	@IBOutlet var questionTextView: NSTextView!
 
 	@IBOutlet var answerStackView: NSStackView!
+	@IBOutlet var answerScrollView: NSScrollView!
+
 	@IBOutlet var difficultySegments: NSSegmentedControl!
 	@IBOutlet var categoriesTextField: NSTextField!
 
@@ -36,12 +38,36 @@ class ViewController: NSViewController {
 	let questionController = QuestionController()
 	private let testLabel = NSTextField(labelWithString: "")
 
+	var tableSelectionChangeNotification: NSObjectProtocol?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		setupStackScrollView()
 
 		questionTableView.delegate = self
 		questionTableView.dataSource = self
 		labelHeaders()
+
+		tableSelectionChangeNotification = NotificationCenter.default.addObserver(forName: NSTableView.selectionDidChangeNotification, object: nil, queue: nil, using: { _ in
+			self.updateViews()
+		})
+	}
+
+	deinit {
+		tableSelectionChangeNotification = nil
+	}
+
+	private func setupStackScrollView() {
+		answerScrollView.contentView.addSubview(answerStackView)
+		answerStackView.translatesAutoresizingMaskIntoConstraints = false
+		answerStackView.leadingAnchor.constraint(equalTo: answerScrollView.contentView.leadingAnchor).isActive = true
+		answerStackView.trailingAnchor.constraint(equalTo: answerScrollView.contentView.trailingAnchor).isActive = true
+		answerStackView.topAnchor.constraint(equalTo: answerScrollView.contentView.topAnchor).isActive = true
+		let bottomAnchor = answerStackView.bottomAnchor.constraint(equalTo: answerScrollView.contentView.bottomAnchor)
+		bottomAnchor.priority = .defaultHigh
+		bottomAnchor.isActive = true
+		answerStackView.widthAnchor.constraint(equalTo: answerScrollView.contentView.widthAnchor).isActive = true
 	}
 
 	private func labelHeaders() {
@@ -123,5 +149,34 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 			minSize = max(testLabel.fittingSize.height, minSize)
 		}
 		return minSize
+	}
+
+	private func clearAnswers() {
+		for answerView in answerStackView.arrangedSubviews {
+			answerView.removeFromSuperview()
+		}
+	}
+
+	private func addAnswerToStack(_ answer: Answer) {
+		let answerView = CreateAnswerView(frame: CGRect(origin: .zero, size: NSSize(width: view.frame.size.width, height: 20)))
+		answerView.answer = answer
+		answerView.layer = CALayer()
+		answerStackView.addArrangedSubview(answerView)
+	}
+
+	func updateViews() {
+		clearAnswers()
+		let selection = questionTableView.selectedRow
+		switch selection {
+		case 0..<questionController.questionBank.count:
+			clearAnswers()
+			print("selected \(selection)")
+			let question = questionController.questionBank[selection]
+			for answer in question.answers {
+				addAnswerToStack(answer)
+			}
+		default:
+			print("deselected")
+		}
 	}
 }
