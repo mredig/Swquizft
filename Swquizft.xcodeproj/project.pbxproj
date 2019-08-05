@@ -41,6 +41,14 @@
 		3308435E22EFFEC800D62FFD /* CategoryCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308435D22EFFEC800D62FFD /* CategoryCollectionDelegate.swift */; };
 		3308436022EFFF5900D62FFD /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308435F22EFFF5900D62FFD /* CategoryCollectionViewCell.swift */; };
 		3308436222F00CB100D62FFD /* SelectAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3308436122F00CB100D62FFD /* SelectAllCollectionViewCell.swift */; };
+		33094C9C22F7EB110000A4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33094C9B22F7EB110000A4AE /* AppDelegate.swift */; };
+		33094C9E22F7EB110000A4AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33094C9D22F7EB110000A4AE /* ViewController.swift */; };
+		33094CA022F7EB110000A4AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33094C9F22F7EB110000A4AE /* Assets.xcassets */; };
+		33094CA322F7EB110000A4AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33094CA122F7EB110000A4AE /* Main.storyboard */; };
+		33094CA922F7F46F0000A4AE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842DC22EF942300D62FFD /* Question.swift */; };
+		33094CAA22F7F46F0000A4AE /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842E322EF946900D62FFD /* Answer.swift */; };
+		33094CAB22F7F46F0000A4AE /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330842FC22EFC15D00D62FFD /* QuestionController.swift */; };
+		33094CAC22F7F4AE0000A4AE /* CategoryStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D822F406BD00395090 /* CategoryStatistics.swift */; };
 		33506D2522F15D0C008E906E /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33506D2422F15D0C008E906E /* Down.framework */; };
 		33506D2722F15D52008E906E /* QuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2622F15D52008E906E /* QuestionPromptViewController.swift */; };
 		33506D2B22F16252008E906E /* CodeFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2A22F16252008E906E /* CodeFormatHelper.swift */; };
@@ -104,6 +112,13 @@
 		3308435D22EFFEC800D62FFD /* CategoryCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionDelegate.swift; sourceTree = "<group>"; };
 		3308435F22EFFF5900D62FFD /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3308436122F00CB100D62FFD /* SelectAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAllCollectionViewCell.swift; sourceTree = "<group>"; };
+		33094C9922F7EB110000A4AE /* QuestionGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33094C9B22F7EB110000A4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33094C9D22F7EB110000A4AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33094C9F22F7EB110000A4AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33094CA222F7EB110000A4AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33094CA422F7EB110000A4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33094CA522F7EB110000A4AE /* QuestionGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuestionGenerator.entitlements; sourceTree = "<group>"; };
 		33506D2022F15B92008E906E /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
 		33506D2422F15D0C008E906E /* Down.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Down.framework; path = Carthage/Build/iOS/Down.framework; sourceTree = "<group>"; };
 		33506D2622F15D52008E906E /* QuestionPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPromptViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +152,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33094C9622F7EB110000A4AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -147,6 +169,7 @@
 				33506D2022F15B92008E906E /* cartfile */,
 				330842BB22EF932A00D62FFD /* Swquizft */,
 				330842D022EF932B00D62FFD /* SwquizftTests */,
+				33094C9A22F7EB110000A4AE /* QuestionGenerator */,
 				330842BA22EF932A00D62FFD /* Products */,
 				33506D2322F15D0C008E906E /* Frameworks */,
 			);
@@ -157,6 +180,7 @@
 			children = (
 				330842B922EF932A00D62FFD /* Swquizft.app */,
 				330842CD22EF932B00D62FFD /* SwquizftTests.xctest */,
+				33094C9922F7EB110000A4AE /* QuestionGenerator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +309,19 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		33094C9A22F7EB110000A4AE /* QuestionGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				33094C9B22F7EB110000A4AE /* AppDelegate.swift */,
+				33094C9D22F7EB110000A4AE /* ViewController.swift */,
+				33094C9F22F7EB110000A4AE /* Assets.xcassets */,
+				33094CA122F7EB110000A4AE /* Main.storyboard */,
+				33094CA422F7EB110000A4AE /* Info.plist */,
+				33094CA522F7EB110000A4AE /* QuestionGenerator.entitlements */,
+			);
+			path = QuestionGenerator;
+			sourceTree = "<group>";
+		};
 		33506D2322F15D0C008E906E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +370,23 @@
 			productReference = 330842CD22EF932B00D62FFD /* SwquizftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		33094C9822F7EB110000A4AE /* QuestionGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33094CA622F7EB110000A4AE /* Build configuration list for PBXNativeTarget "QuestionGenerator" */;
+			buildPhases = (
+				33094C9522F7EB110000A4AE /* Sources */,
+				33094C9622F7EB110000A4AE /* Frameworks */,
+				33094C9722F7EB110000A4AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuestionGenerator;
+			productName = QuestionGenerator;
+			productReference = 33094C9922F7EB110000A4AE /* QuestionGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -349,6 +403,9 @@
 					330842CC22EF932B00D62FFD = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 330842B822EF932A00D62FFD;
+					};
+					33094C9822F7EB110000A4AE = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -367,6 +424,7 @@
 			targets = (
 				330842B822EF932A00D62FFD /* Swquizft */,
 				330842CC22EF932B00D62FFD /* SwquizftTests */,
+				33094C9822F7EB110000A4AE /* QuestionGenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -406,6 +464,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33094C9722F7EB110000A4AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33094CA022F7EB110000A4AE /* Assets.xcassets in Resources */,
+				33094CA322F7EB110000A4AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +539,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33094C9522F7EB110000A4AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33094CAB22F7F46F0000A4AE /* QuestionController.swift in Sources */,
+				33094CA922F7F46F0000A4AE /* Question.swift in Sources */,
+				33094CAC22F7F4AE0000A4AE /* CategoryStatistics.swift in Sources */,
+				33094C9E22F7EB110000A4AE /* ViewController.swift in Sources */,
+				33094C9C22F7EB110000A4AE /* AppDelegate.swift in Sources */,
+				33094CAA22F7F46F0000A4AE /* Answer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -497,6 +577,14 @@
 				330842C622EF932B00D62FFD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		33094CA122F7EB110000A4AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33094CA222F7EB110000A4AE /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -704,6 +792,50 @@
 			};
 			name = Release;
 		};
+		33094CA722F7EB110000A4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuestionGenerator/QuestionGenerator.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = QuestionGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.QuestionGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		33094CA822F7EB110000A4AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuestionGenerator/QuestionGenerator.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = QuestionGenerator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.QuestionGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -730,6 +862,15 @@
 			buildConfigurations = (
 				330842DA22EF932B00D62FFD /* Debug */,
 				330842DB22EF932B00D62FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33094CA622F7EB110000A4AE /* Build configuration list for PBXNativeTarget "QuestionGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33094CA722F7EB110000A4AE /* Debug */,
+				33094CA822F7EB110000A4AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
