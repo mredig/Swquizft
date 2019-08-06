@@ -80,6 +80,48 @@ class ViewController: NSViewController {
 		difficultyColumn.title = "Difficulty"
 		categoriesColumn.title = "Categories"
 	}
+
+	func createQuestion() {
+//		questionController.create
+	}
+
+	func openFile() {
+		let openPanel = NSOpenPanel()
+		openPanel.canChooseDirectories = false
+		openPanel.canChooseFiles = true
+		openPanel.allowedFileTypes = ["swquiz"]
+
+		openPanel.begin { response in
+			if response == .OK {
+				guard let fileURL = openPanel.url else { return }
+
+				self.questionController.questionBankURL = fileURL
+				self.questionTableView.reloadData()
+			}
+		}
+	}
+
+	func saveFile() {
+		if questionController.questionBankURL == nil {
+			let savePanel = NSSavePanel()
+			savePanel.allowedFileTypes = ["swquiz"]
+			savePanel.isExtensionHidden = false
+
+			savePanel.begin { response in
+				if response == .OK {
+					guard let fileURL = savePanel.url else { return }
+
+					if FileManager.default.fileExists(atPath: fileURL.path) {
+						print("should probably delete...")
+					}
+					self.questionController.questionBankURL = fileURL
+					self.questionController.saveToPersistence()
+				}
+			}
+		} else {
+			questionController.saveToPersistence()
+		}
+	}
 }
 
 extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
@@ -154,7 +196,6 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 }
 
 // MARK: - view setup stuff
-
 extension ViewController {
 	private func clearQuestionFields() {
 		clearAnswers()
@@ -194,5 +235,22 @@ extension ViewController {
 				addAnswerToStack(dummyAnswer)
 			}
 		}
+	}
+}
+
+// MARK: - IBActions {
+extension ViewController {
+	@IBAction func openMenuItemPressed(_ sender: NSMenuItem) {
+		openFile()
+	}
+
+	@IBAction func saveMenuItemPressed(_ sender: NSMenuItem) {
+		saveFile()
+	}
+
+	@IBAction func createNewQuestionPressed(_ sender: NSButton) {
+	}
+
+	@IBAction func updateQuestionPressed(_ sender: NSButton) {
 	}
 }
