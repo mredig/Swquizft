@@ -69,7 +69,20 @@ class QuestionController {
 		}
 	}
 
+	// MARK: - Question CRUD
+	func createQuestionWith(prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty) {
+		let question = Question(prompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
+		questionBank.append(question)
+	}
+
+	func update(question: Question, withPrompt prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty) {
+		guard let questionIndex = questionBank.firstIndex(of: question) else { return }
+		let updatedQuestion = Question(prompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
+		questionBank[questionIndex] = updatedQuestion
+	}
+
 	// MARK: - persistence
+
 	func loadFromPersistence() {
 		questionBank = []
 		guard let fileURL = questionBankURL, FileManager.default.fileExists(atPath: fileURL.path) else { return }

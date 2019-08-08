@@ -249,8 +249,43 @@ extension ViewController {
 	}
 
 	@IBAction func createNewQuestionPressed(_ sender: NSButton) {
+		let prompt = questionTextView.string
+		let categories = categoriesTextField.stringValue
+		guard !prompt.isEmpty, !categories.isEmpty,
+			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return }
+
+		var answers = [Answer]()
+		for view in answerStackView.arrangedSubviews {
+			if let answerView = view as? CreateAnswerView {
+				answers.append(answerView.answer)
+			}
+		}
+
+		let categoryTags = Set(categories.components(separatedBy: " ").compactMap { Question.category(from: $0) })
+
+		questionController.createQuestionWith(prompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
+		questionTableView.reloadData()
 	}
 
 	@IBAction func updateQuestionPressed(_ sender: NSButton) {
+		let prompt = questionTextView.string
+		let categories = categoriesTextField.stringValue
+		guard !prompt.isEmpty, !categories.isEmpty,
+			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return }
+
+		var answers = [Answer]()
+		for view in answerStackView.arrangedSubviews {
+			if let answerView = view as? CreateAnswerView {
+				answers.append(answerView.answer)
+			}
+		}
+
+		let categoryTags = Set(categories.components(separatedBy: " ").compactMap { Question.category(from: $0) })
+
+		let selectedItem = questionTableView.selectedRow
+		guard (0..<questionController.questionBank.count).contains(selectedItem) else { return }
+		let oldQuestion = questionController.questionBank[selectedItem]
+		questionController.update(question: oldQuestion, withPrompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
+		questionTableView.reloadData()
 	}
 }
