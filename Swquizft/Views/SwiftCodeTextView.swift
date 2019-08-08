@@ -6,7 +6,11 @@
 //  Copyright © 2019 Red_Egg Productions. All rights reserved.
 //
 
+#if os(macOS)
+import Cocoa
+#else
 import UIKit
+#endif
 import Sourceful
 
 class SwiftCodeTextView: SyntaxTextView {

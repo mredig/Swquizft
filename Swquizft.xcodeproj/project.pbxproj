@@ -56,6 +56,9 @@
 		33506D2B22F16252008E906E /* CodeFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2A22F16252008E906E /* CodeFormatHelper.swift */; };
 		33506D2D22F24D27008E906E /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2C22F24D27008E906E /* AnswerView.swift */; };
 		33506D2F22F24D35008E906E /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33506D2E22F24D35008E906E /* AnswerView.xib */; };
+		3359B51322FCC154006EC895 /* Sourceful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3359B50E22FCB5FA006EC895 /* Sourceful.framework */; };
+		3359B51422FCC154006EC895 /* Sourceful.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3359B50E22FCB5FA006EC895 /* Sourceful.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3359B51622FCC1C4006EC895 /* SwiftCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D322F3512C00395090 /* SwiftCodeTextView.swift */; };
 		3379F4BB22F0F72700339E62 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BA22F0F72700339E62 /* RootTabViewController.swift */; };
 		3379F4BD22F13B7700339E62 /* CreationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */; };
 		3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */; };
@@ -74,6 +77,20 @@
 			remoteInfo = Swquizft;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3359B51522FCC154006EC895 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3359B51422FCC154006EC895 /* Sourceful.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		330842B922EF932A00D62FFD /* Swquizft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swquizft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +146,7 @@
 		33506D2A22F16252008E906E /* CodeFormatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFormatHelper.swift; sourceTree = "<group>"; };
 		33506D2C22F24D27008E906E /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		33506D2E22F24D35008E906E /* AnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
+		3359B50E22FCB5FA006EC895 /* Sourceful.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sourceful.framework; path = Carthage/Build/Mac/Sourceful.framework; sourceTree = "<group>"; };
 		3379F4BA22F0F72700339E62 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreationCoordinator.swift; sourceTree = "<group>"; };
 		3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManagerViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3359B51322FCC154006EC895 /* Sourceful.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				33B762D122F346B900395090 /* Sourceful.framework */,
+				3359B50E22FCB5FA006EC895 /* Sourceful.framework */,
 				33506D2422F15D0C008E906E /* Down.framework */,
 			);
 			name = Frameworks;
@@ -383,6 +403,7 @@
 				33094C9522F7EB110000A4AE /* Sources */,
 				33094C9622F7EB110000A4AE /* Frameworks */,
 				33094C9722F7EB110000A4AE /* Resources */,
+				3359B51522FCC154006EC895 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -557,6 +578,7 @@
 			files = (
 				33094CAB22F7F46F0000A4AE /* QuestionController.swift in Sources */,
 				33094CA922F7F46F0000A4AE /* Question.swift in Sources */,
+				3359B51622FCC1C4006EC895 /* SwiftCodeTextView.swift in Sources */,
 				33094CAE22F7FBD10000A4AE /* CreateAnswerView.swift in Sources */,
 				33094CAC22F7F4AE0000A4AE /* CategoryStatistics.swift in Sources */,
 				33094C9E22F7EB110000A4AE /* ViewController.swift in Sources */,
@@ -814,6 +836,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QuestionGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -822,6 +849,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.QuestionGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -836,6 +864,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QuestionGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -844,6 +877,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.QuestionGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};

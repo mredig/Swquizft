@@ -10,8 +10,8 @@ import Cocoa
 
 class CreateAnswerView: NSView {
 	@IBOutlet var contentView: NSView!
-	@IBOutlet var answerView: NSTextView!
-	@IBOutlet var reasonView: NSTextView!
+	@IBOutlet var answerView: SwiftCodeTextView!
+	@IBOutlet var reasonView: SwiftCodeTextView!
 	@IBOutlet var isCorrectButton: NSButton!
 
 	var answer: Answer {
@@ -44,18 +44,21 @@ class CreateAnswerView: NSView {
 		contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 		contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
 		contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+		answerView.isEditable = true
+		reasonView.isEditable = true
 	}
 
 	private func createAnswerFromFields() -> Answer {
-		let answerText = answerView.string
-		let reasonText = reasonView.string.isEmpty ? nil : reasonView.string
+		let answerText = answerView.text
+		let reasonText = reasonView.text.isEmpty ? nil : reasonView.text
 		let isCorrect = isCorrectButton.state == .on
 		return Answer(answerText: answerText, isCorrect: isCorrect, reason: reasonText)
 	}
 
 	private func setAnswerFields(answerText: String, reasonText: String?, isCorrect: Bool) {
-		answerView.string = answerText
-		reasonView.string = reasonText ?? ""
+		answerView.text = answerText
+		reasonView.text = reasonText ?? ""
 		isCorrectButton.state = isCorrect ? .on : .off
 	}
 }
