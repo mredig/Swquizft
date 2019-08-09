@@ -59,6 +59,7 @@
 		3359B51322FCC154006EC895 /* Sourceful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3359B50E22FCB5FA006EC895 /* Sourceful.framework */; };
 		3359B51422FCC154006EC895 /* Sourceful.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3359B50E22FCB5FA006EC895 /* Sourceful.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3359B51622FCC1C4006EC895 /* SwiftCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D322F3512C00395090 /* SwiftCodeTextView.swift */; };
+		3359B51822FD3DD8006EC895 /* QuizQuestions.swquiz in Resources */ = {isa = PBXBuildFile; fileRef = 3359B51722FD3DD8006EC895 /* QuizQuestions.swquiz */; };
 		3379F4BB22F0F72700339E62 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BA22F0F72700339E62 /* RootTabViewController.swift */; };
 		3379F4BD22F13B7700339E62 /* CreationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */; };
 		3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */; };
@@ -147,6 +148,7 @@
 		33506D2C22F24D27008E906E /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		33506D2E22F24D35008E906E /* AnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 		3359B50E22FCB5FA006EC895 /* Sourceful.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sourceful.framework; path = Carthage/Build/Mac/Sourceful.framework; sourceTree = "<group>"; };
+		3359B51722FD3DD8006EC895 /* QuizQuestions.swquiz */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QuizQuestions.swquiz; sourceTree = "<group>"; };
 		3379F4BA22F0F72700339E62 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreationCoordinator.swift; sourceTree = "<group>"; };
 		3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManagerViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 		330842E222EF943E00D62FFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3359B51722FD3DD8006EC895 /* QuizQuestions.swquiz */,
 				3308435C22EFFB5600D62FFD /* Fonts */,
 				330842BC22EF932A00D62FFD /* AppDelegate.swift */,
 				330842C022EF932A00D62FFD /* Main.storyboard */,
@@ -475,6 +478,7 @@
 				330842C422EF932B00D62FFD /* Assets.xcassets in Resources */,
 				3308435622EFFB5000D62FFD /* Raleway 800italic.ttf in Resources */,
 				3308434A22EFFB5000D62FFD /* Raleway 600.ttf in Resources */,
+				3359B51822FD3DD8006EC895 /* QuizQuestions.swquiz in Resources */,
 				3308435122EFFB5000D62FFD /* Raleway regular.ttf in Resources */,
 				3308435B22EFFB5000D62FFD /* Raleway 900italic.ttf in Resources */,
 				3308435A22EFFB5000D62FFD /* Raleway italic.ttf in Resources */,

@@ -19,6 +19,8 @@ class RootTabViewController: UITabBarController, Storyboarded {
 		self.questionsController = aQuestionsController
 		self.quizCoordinator = MainCoordinator(questionController: aQuestionsController)
 		super.init(nibName: nil, bundle: nil)
+
+		aQuestionsController.questionBankURL = Bundle.main.url(forResource: "QuizQuestions", withExtension: "swquiz")
 	}
 
 	required init?(coder aDecoder: NSCoder) {

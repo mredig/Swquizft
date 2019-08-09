@@ -10,7 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController {
 	@IBOutlet var questionTableView: NSTableView!
-	@IBOutlet var questionTextView: NSTextView!
+	@IBOutlet var questionTextView: SwiftCodeTextView!
 
 	@IBOutlet var answerStackView: NSStackView!
 	@IBOutlet var answerScrollView: NSScrollView!
@@ -44,6 +44,8 @@ class ViewController: NSViewController {
 		super.viewDidLoad()
 
 		setupStackScrollView()
+
+		questionTextView.isEditable = true
 
 		questionTableView.delegate = self
 		questionTableView.dataSource = self
@@ -199,7 +201,7 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 extension ViewController {
 	private func clearQuestionFields() {
 		clearAnswers()
-		questionTextView.string = ""
+		questionTextView.text = ""
 		difficultySegments.selectedSegment = -1
 		categoriesTextField.stringValue = ""
 	}
@@ -223,7 +225,7 @@ extension ViewController {
 		switch selection {
 		case 0..<questionController.questionBank.count:
 			let question = questionController.questionBank[selection]
-			questionTextView.string = question.prompt
+			questionTextView.text = question.prompt
 			difficultySegments.selectedSegment = question.difficulty.rawValue
 			categoriesTextField.stringValue = question.categoryTags.map { $0.rawValue }.joined(separator: " ")
 			for answer in question.answers {
@@ -249,7 +251,7 @@ extension ViewController {
 	}
 
 	@IBAction func createNewQuestionPressed(_ sender: NSButton) {
-		let prompt = questionTextView.string
+		let prompt = questionTextView.text
 		let categories = categoriesTextField.stringValue
 		guard !prompt.isEmpty, !categories.isEmpty,
 			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return }
@@ -268,7 +270,7 @@ extension ViewController {
 	}
 
 	@IBAction func updateQuestionPressed(_ sender: NSButton) {
-		let prompt = questionTextView.string
+		let prompt = questionTextView.text
 		let categories = categoriesTextField.stringValue
 		guard !prompt.isEmpty, !categories.isEmpty,
 			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return }
