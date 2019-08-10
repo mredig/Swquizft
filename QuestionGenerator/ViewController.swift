@@ -83,10 +83,6 @@ class ViewController: NSViewController {
 		categoriesColumn.title = "Categories"
 	}
 
-	func createQuestion() {
-//		questionController.create
-	}
-
 	func openFile() {
 		let openPanel = NSOpenPanel()
 		openPanel.canChooseDirectories = false
@@ -250,11 +246,11 @@ extension ViewController {
 		saveFile()
 	}
 
-	@IBAction func createNewQuestionPressed(_ sender: NSButton) {
+	func gatherQuestionParts() -> (prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty)? {
 		let prompt = questionTextView.text
 		let categories = categoriesTextField.stringValue
 		guard !prompt.isEmpty, !categories.isEmpty,
-			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return }
+			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return nil }
 
 		var answers = [Answer]()
 		for view in answerStackView.arrangedSubviews {
@@ -264,30 +260,23 @@ extension ViewController {
 		}
 
 		let categoryTags = Set(categories.components(separatedBy: " ").compactMap { Question.category(from: $0) })
+		return (prompt, answers, categoryTags, difficulty)
+	}
 
-		questionController.createQuestionWith(prompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
+	@IBAction func createNewQuestionPressed(_ sender: NSButton) {
+		guard let parts = gatherQuestionParts() else { return }
+
+		questionController.createQuestionWith(prompt: parts.prompt, answers: parts.answers, categoryTags: parts.categoryTags, difficulty: parts.difficulty)
 		questionTableView.reloadData()
 	}
 
 	@IBAction func updateQuestionPressed(_ sender: NSButton) {
-		let prompt = questionTextView.text
-		let categories = categoriesTextField.stringValue
-		guard !prompt.isEmpty, !categories.isEmpty,
-			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return }
-
-		var answers = [Answer]()
-		for view in answerStackView.arrangedSubviews {
-			if let answerView = view as? CreateAnswerView {
-				answers.append(answerView.answer)
-			}
-		}
-
-		let categoryTags = Set(categories.components(separatedBy: " ").compactMap { Question.category(from: $0) })
+		guard let parts = gatherQuestionParts() else { return }
 
 		let selectedItem = questionTableView.selectedRow
 		guard (0..<questionController.questionBank.count).contains(selectedItem) else { return }
 		let oldQuestion = questionController.questionBank[selectedItem]
-		questionController.update(question: oldQuestion, withPrompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
+		questionController.update(question: oldQuestion, withPrompt: parts.prompt, answers: parts.answers, categoryTags: parts.categoryTags, difficulty: parts.difficulty)
 		questionTableView.reloadData()
 	}
 }
