@@ -1,1 +1,54 @@
-[{"difficulty":0,"answers":[{"answerText":"aDocument","isCorrect":true},{"answerText":"Document","isCorrect":false},{"answerText":"let","isCorrect":false},{"answerText":"=","isCorrect":false}],"categoryTags":["vocab","syntax"],"prompt":"\/\/ Identify the name of the variable in the following code:\n\nlet aDocument = Document()\n"},{"difficulty":0,"answers":[{"answerText":"aDocument","isCorrect":false},{"answerText":"Document","isCorrect":true},{"answerText":"let","isCorrect":false},{"answerText":"=","isCorrect":false}],"categoryTags":["vocab","syntax"],"prompt":"\/\/ Identify the type of the variable in this snippet:\n\nlet aDocument = Document()"}]
+[
+  {
+    "answers" : [
+      {
+        "answerText" : "aDocument",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "Document",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "=",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "vocab",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet aDocument = Document()\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "aDocument",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Document",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "=",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in this snippet:\n\nlet aDocument = Document()"
+  }
+]

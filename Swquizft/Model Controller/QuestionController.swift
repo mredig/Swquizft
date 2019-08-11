@@ -98,8 +98,10 @@ class QuestionController {
 	func saveToPersistence() {
 		guard let fileURL = questionBankURL else { return }
 
+		let encoder = JSONEncoder()
+		encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
 		do {
-			let data = try JSONEncoder().encode(questionBank)
+			let data = try encoder.encode(questionBank)
 			try data.write(to: fileURL)
 		} catch {
 			NSLog("error saving: \(error)")
