@@ -33,6 +33,32 @@
       },
       {
         "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\"Steve\"",
+        "isCorrect" : true
+      }
+    ],
+    "categoryTags" : [
+      "vocab",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "value",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
         "isCorrect" : true
       },
       {
@@ -45,8 +71,9 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "types",
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
