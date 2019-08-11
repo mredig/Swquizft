@@ -779,22 +779,22 @@
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                             <prototypeCellViews>
-                                                                                <tableCellView id="TeP-YV-Vpt">
+                                                                                <tableCellView identifier="SwiftView" id="TeP-YV-Vpt" customClass="SwiftTableCellView" customModule="QuestionGenerator" customModuleProvider="target">
                                                                                     <rect key="frame" x="103" y="1" width="99" height="42"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <subviews>
-                                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FM1-U9-bGQ">
-                                                                                            <rect key="frame" x="0.0" y="25" width="99" height="17"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="umj-AK-pKC">
-                                                                                                <font key="font" metaFont="system"/>
-                                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                                            </textFieldCell>
-                                                                                        </textField>
+                                                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Krr-bf-I53" customClass="SwiftCodeTextView" customModule="QuestionGenerator" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="99" height="42"/>
+                                                                                        </customView>
                                                                                     </subviews>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="bottom" secondItem="Krr-bf-I53" secondAttribute="bottom" id="OeA-WM-2Tj"/>
+                                                                                        <constraint firstItem="Krr-bf-I53" firstAttribute="top" secondItem="TeP-YV-Vpt" secondAttribute="top" id="YHs-Jk-BNw"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="Krr-bf-I53" secondAttribute="trailing" id="xno-do-kGC"/>
+                                                                                        <constraint firstItem="Krr-bf-I53" firstAttribute="leading" secondItem="TeP-YV-Vpt" secondAttribute="leading" id="zgJ-qa-Pne"/>
+                                                                                    </constraints>
                                                                                     <connections>
-                                                                                        <outlet property="textField" destination="FM1-U9-bGQ" id="efu-x2-ASq"/>
+                                                                                        <outlet property="swiftCodeView" destination="Krr-bf-I53" id="Eh8-5o-SnP"/>
                                                                                     </connections>
                                                                                 </tableCellView>
                                                                             </prototypeCellViews>
@@ -1318,7 +1318,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="-849" y="1076.5"/>
+            <point key="canvasLocation" x="-767" y="821"/>
         </scene>
     </scenes>
 </document>

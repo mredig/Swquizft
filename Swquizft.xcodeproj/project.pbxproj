@@ -56,7 +56,6 @@
 		331D82392300793100C9E74B /* CategoriesCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331D82372300793100C9E74B /* CategoriesCollectionViewItem.xib */; };
 		33506D2522F15D0C008E906E /* Down.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33506D2422F15D0C008E906E /* Down.framework */; };
 		33506D2722F15D52008E906E /* QuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2622F15D52008E906E /* QuestionPromptViewController.swift */; };
-		33506D2B22F16252008E906E /* CodeFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2A22F16252008E906E /* CodeFormatHelper.swift */; };
 		33506D2D22F24D27008E906E /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2C22F24D27008E906E /* AnswerView.swift */; };
 		33506D2F22F24D35008E906E /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33506D2E22F24D35008E906E /* AnswerView.xib */; };
 		3359B51322FCC154006EC895 /* Sourceful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3359B50E22FCB5FA006EC895 /* Sourceful.framework */; };
@@ -66,6 +65,9 @@
 		3379F4BB22F0F72700339E62 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BA22F0F72700339E62 /* RootTabViewController.swift */; };
 		3379F4BD22F13B7700339E62 /* CreationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */; };
 		3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */; };
+		337BB5D12300B537001E913B /* CodeFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2A22F16252008E906E /* CodeFormatHelper.swift */; };
+		337BB5D32300B561001E913B /* SwiftTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337BB5D22300B561001E913B /* SwiftTableCellView.swift */; };
+		337BB5D62300B821001E913B /* SmallerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337BB5D52300B821001E913B /* SmallerTheme.swift */; };
 		33B762D222F346B900395090 /* Sourceful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B762D122F346B900395090 /* Sourceful.framework */; };
 		33B762D422F3512C00395090 /* SwiftCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D322F3512C00395090 /* SwiftCodeTextView.swift */; };
 		33B762D622F4029800395090 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D522F4029800395090 /* MainCoordinator.swift */; };
@@ -158,6 +160,8 @@
 		3379F4BA22F0F72700339E62 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		3379F4BC22F13B7700339E62 /* CreationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreationCoordinator.swift; sourceTree = "<group>"; };
 		3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManagerViewController.swift; sourceTree = "<group>"; };
+		337BB5D22300B561001E913B /* SwiftTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTableCellView.swift; sourceTree = "<group>"; };
+		337BB5D52300B821001E913B /* SmallerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallerTheme.swift; sourceTree = "<group>"; };
 		33B762D122F346B900395090 /* Sourceful.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sourceful.framework; path = Carthage/Build/iOS/Sourceful.framework; sourceTree = "<group>"; };
 		33B762D322F3512C00395090 /* SwiftCodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCodeTextView.swift; sourceTree = "<group>"; };
 		33B762D522F4029800395090 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCoordinator.swift; path = Coordinator/MainCoordinator.swift; sourceTree = "<group>"; };
@@ -345,12 +349,10 @@
 			isa = PBXGroup;
 			children = (
 				33094C9B22F7EB110000A4AE /* AppDelegate.swift */,
-				33094C9D22F7EB110000A4AE /* ViewController.swift */,
-				331D8234230077D200C9E74B /* CategoriesCollectionController.swift */,
-				331D82362300793100C9E74B /* CategoriesCollectionViewItem.swift */,
-				331D82372300793100C9E74B /* CategoriesCollectionViewItem.xib */,
-				33094CAD22F7FBD10000A4AE /* CreateAnswerView.swift */,
-				33094CAF22F7FC1F0000A4AE /* CreateAnswerView.xib */,
+				337BB5CE2300B489001E913B /* View Controllers */,
+				337BB5D02300B4A9001E913B /* Controllers */,
+				337BB5CF2300B499001E913B /* Views */,
+				337BB5D42300B7BA001E913B /* Sourceful Themes */,
 				33094C9F22F7EB110000A4AE /* Assets.xcassets */,
 				33094CA122F7EB110000A4AE /* Main.storyboard */,
 				33094CA422F7EB110000A4AE /* Info.plist */,
@@ -367,6 +369,42 @@
 				33506D2422F15D0C008E906E /* Down.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		337BB5CE2300B489001E913B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33094C9D22F7EB110000A4AE /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		337BB5CF2300B499001E913B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				331D82362300793100C9E74B /* CategoriesCollectionViewItem.swift */,
+				331D82372300793100C9E74B /* CategoriesCollectionViewItem.xib */,
+				33094CAD22F7FBD10000A4AE /* CreateAnswerView.swift */,
+				33094CAF22F7FC1F0000A4AE /* CreateAnswerView.xib */,
+				337BB5D22300B561001E913B /* SwiftTableCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		337BB5D02300B4A9001E913B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				331D8234230077D200C9E74B /* CategoriesCollectionController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		337BB5D42300B7BA001E913B /* Sourceful Themes */ = {
+			isa = PBXGroup;
+			children = (
+				337BB5D52300B821001E913B /* SmallerTheme.swift */,
+			);
+			path = "Sourceful Themes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +598,7 @@
 				3308430522EFCDDD00D62FFD /* QuizCoordinator.swift in Sources */,
 				330842E422EF946900D62FFD /* Answer.swift in Sources */,
 				3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */,
+				337BB5D12300B537001E913B /* CodeFormatHelper.swift in Sources */,
 				3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */,
 				3308436222F00CB100D62FFD /* SelectAllCollectionViewCell.swift in Sources */,
 				3308435E22EFFEC800D62FFD /* CategoryCollectionDelegate.swift in Sources */,
@@ -568,7 +607,6 @@
 				33B762D422F3512C00395090 /* SwiftCodeTextView.swift in Sources */,
 				33B762D622F4029800395090 /* MainCoordinator.swift in Sources */,
 				330842BF22EF932A00D62FFD /* MainViewController.swift in Sources */,
-				33506D2B22F16252008E906E /* CodeFormatHelper.swift in Sources */,
 				3379F4BD22F13B7700339E62 /* CreationCoordinator.swift in Sources */,
 				33506D2D22F24D27008E906E /* AnswerView.swift in Sources */,
 				33B762D922F406BD00395090 /* CategoryStatistics.swift in Sources */,
@@ -591,12 +629,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				33094CAB22F7F46F0000A4AE /* QuestionController.swift in Sources */,
+				337BB5D32300B561001E913B /* SwiftTableCellView.swift in Sources */,
 				33094CA922F7F46F0000A4AE /* Question.swift in Sources */,
 				3359B51622FCC1C4006EC895 /* SwiftCodeTextView.swift in Sources */,
 				33094CAE22F7FBD10000A4AE /* CreateAnswerView.swift in Sources */,
 				33094CAC22F7F4AE0000A4AE /* CategoryStatistics.swift in Sources */,
 				331D82382300793100C9E74B /* CategoriesCollectionViewItem.swift in Sources */,
 				33094C9E22F7EB110000A4AE /* ViewController.swift in Sources */,
+				337BB5D62300B821001E913B /* SmallerTheme.swift in Sources */,
 				331D8235230077D200C9E74B /* CategoriesCollectionController.swift in Sources */,
 				33094C9C22F7EB110000A4AE /* AppDelegate.swift in Sources */,
 				33094CAA22F7F46F0000A4AE /* Answer.swift in Sources */,

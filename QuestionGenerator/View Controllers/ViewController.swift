@@ -133,7 +133,9 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 	}
 
 	func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-		let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("LabelView"), owner: self) as? NSTableCellView
+//		let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("LabelView"), owner: self) as? NSTableCellView
+//		let swiftCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("SwiftView"), owner: self) as? SwiftTableCellView
+
 		guard let column = tableColumn else { return nil }
 		let question = questionController.questionBank[row]
 
@@ -180,8 +182,19 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 			text = ""
 		}
 
-		cell?.textField?.stringValue = text
-		cell?.textField?.textColor = textColor
+		let cell: NSTableCellView?
+		if textColor == .white {
+			let swiftCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("SwiftView"), owner: self) as? SwiftTableCellView
+			swiftCell?.swiftCodeView.text = text
+//			let theme = SourceCodeTheem
+			swiftCell?.swiftCodeView.theme = SmallerTheme()
+			cell = swiftCell
+		} else {
+			cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("LabelView"), owner: self) as? NSTableCellView
+			cell?.textField?.stringValue = text
+			cell?.textField?.textColor = textColor
+		}
+
 
 		return cell
 	}
