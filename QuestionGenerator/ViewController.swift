@@ -16,8 +16,8 @@ class ViewController: NSViewController {
 	@IBOutlet var answerScrollView: NSScrollView!
 
 	@IBOutlet var difficultySegments: NSSegmentedControl!
-	@IBOutlet var categoriesTextField: NSTextField!
-
+	@IBOutlet var categoriesCollectionView: NSCollectionView!
+	
 	@IBOutlet var editExistingButton: NSButton!
 	@IBOutlet var createNewButton: NSButton!
 
@@ -36,6 +36,7 @@ class ViewController: NSViewController {
 
 
 	let questionController = QuestionController()
+	var collectionController: CategoriesCollectionController?
 	private let testLabel = NSTextField(labelWithString: "")
 
 	var tableSelectionChangeNotification: NSObjectProtocol?
@@ -50,6 +51,10 @@ class ViewController: NSViewController {
 		questionTableView.delegate = self
 		questionTableView.dataSource = self
 		labelHeaders()
+		categoriesCollectionView.register(CategoriesCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("CategoriesCell"))
+		collectionController = CategoriesCollectionController(questionController: questionController)
+		categoriesCollectionView.dataSource = collectionController
+		categoriesCollectionView.delegate = collectionController
 
 		tableSelectionChangeNotification = NotificationCenter.default.addObserver(forName: NSTableView.selectionDidChangeNotification, object: nil, queue: nil, using: {[weak self] _ in
 			self?.updateViews()
@@ -199,7 +204,7 @@ extension ViewController {
 		clearAnswers()
 		questionTextView.text = ""
 		difficultySegments.selectedSegment = -1
-		categoriesTextField.stringValue = ""
+//		categoriesTextField.stringValue = ""
 	}
 
 	private func clearAnswers() {
@@ -223,7 +228,7 @@ extension ViewController {
 			let question = questionController.questionBank[selection]
 			questionTextView.text = question.prompt
 			difficultySegments.selectedSegment = question.difficulty.rawValue
-			categoriesTextField.stringValue = question.categoryTags.map { $0.rawValue }.joined(separator: " ")
+//			categoriesTextField.stringValue = question.categoryTags.map { $0.rawValue }.joined(separator: " ")
 			for answer in question.answers {
 				addAnswerToStack(answer)
 			}
@@ -248,7 +253,8 @@ extension ViewController {
 
 	func gatherQuestionParts() -> (prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty)? {
 		let prompt = questionTextView.text
-		let categories = categoriesTextField.stringValue
+		// FIXME: Categories will always be blank like this
+		let categories = ""// categoriesTextField.stringValue
 		guard !prompt.isEmpty, !categories.isEmpty,
 			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return nil }
 
