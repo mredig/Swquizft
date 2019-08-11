@@ -8,8 +8,21 @@
 
 import Cocoa
 
+protocol CategoryItemDelegate: AnyObject {
+	func categoryCollectionViewItem(_ categoryCollectionViewItem: CategoriesCollectionViewItem, updatedSelection selection: Bool)
+	func categoryCollectionViewItemShouldBeSelected(_ categoryCollectionViewItem: CategoriesCollectionViewItem) -> Bool
+}
+
 class CategoriesCollectionViewItem: NSCollectionViewItem {
 	@IBOutlet var checkButton: NSButton!
+
+	weak var delegate: CategoryItemDelegate?
+
+	var category: Question.Category? {
+		didSet {
+			updateViews()
+		}
+	}
 
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
@@ -24,6 +37,17 @@ class CategoriesCollectionViewItem: NSCollectionViewItem {
 	private func commonInit() {
 		let nib = NSNib(nibNamed: "CategoriesCollectionViewItem", bundle: nil)
 		nib?.instantiate(withOwner: self, topLevelObjects: nil)
+
 	}
 
+	private func updateViews() {
+		guard let category = category else { return }
+		checkButton.title = category.rawValue
+		checkButton.state = (delegate?.categoryCollectionViewItemShouldBeSelected(self) ?? false) ? .on : .off
+	}
+
+	@IBAction func checkButtonToggled(_ sender: NSButton) {
+		delegate?.categoryCollectionViewItem(self, updatedSelection: sender.state == .on)
+		print(sender)
+	}
 }

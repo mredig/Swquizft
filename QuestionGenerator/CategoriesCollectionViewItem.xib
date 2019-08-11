@@ -23,6 +23,9 @@
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="checkButtonToggled:" target="-2" id="SaO-kR-WIJ"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>

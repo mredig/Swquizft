@@ -52,12 +52,12 @@ class ViewController: NSViewController {
 		questionTableView.dataSource = self
 		labelHeaders()
 		categoriesCollectionView.register(CategoriesCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("CategoriesCell"))
-		collectionController = CategoriesCollectionController(questionController: questionController)
+		collectionController = CategoriesCollectionController(questionController: questionController, collectionView: categoriesCollectionView)
 		categoriesCollectionView.dataSource = collectionController
 		categoriesCollectionView.delegate = collectionController
 
 		tableSelectionChangeNotification = NotificationCenter.default.addObserver(forName: NSTableView.selectionDidChangeNotification, object: nil, queue: nil, using: {[weak self] _ in
-			self?.updateViews()
+			self?.selectedQuestionChanged()
 		})
 		updateViews()
 	}
@@ -220,19 +220,24 @@ extension ViewController {
 		answerStackView.addArrangedSubview(answerView)
 	}
 
+	func selectedQuestionChanged() {
+		updateViews()
+	}
+
 	func updateViews() {
 		clearQuestionFields()
 		let selection = questionTableView.selectedRow
 		switch selection {
 		case 0..<questionController.questionBank.count:
 			let question = questionController.questionBank[selection]
+			collectionController?.selectedQuestion = selection
 			questionTextView.text = question.prompt
 			difficultySegments.selectedSegment = question.difficulty.rawValue
-//			categoriesTextField.stringValue = question.categoryTags.map { $0.rawValue }.joined(separator: " ")
 			for answer in question.answers {
 				addAnswerToStack(answer)
 			}
 		default:
+			collectionController?.selectedQuestion = nil
 			let dummyAnswer = Answer(answerText: "", isCorrect: false, reason: nil)
 			for _ in 1...4 {
 				addAnswerToStack(dummyAnswer)
@@ -253,9 +258,7 @@ extension ViewController {
 
 	func gatherQuestionParts() -> (prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty)? {
 		let prompt = questionTextView.text
-		// FIXME: Categories will always be blank like this
-		let categories = ""// categoriesTextField.stringValue
-		guard !prompt.isEmpty, !categories.isEmpty,
+		guard !prompt.isEmpty,
 			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return nil }
 
 		var answers = [Answer]()
@@ -265,7 +268,7 @@ extension ViewController {
 			}
 		}
 
-		let categoryTags = Set(categories.components(separatedBy: " ").compactMap { Question.category(from: $0) })
+		let categoryTags = questionController.selectedCategories
 		return (prompt, answers, categoryTags, difficulty)
 	}
 
