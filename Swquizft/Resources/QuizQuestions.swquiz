@@ -2,11 +2,11 @@
   {
     "answers" : [
       {
-        "answerText" : "aDocument",
+        "answerText" : "value",
         "isCorrect" : true
       },
       {
-        "answerText" : "Document",
+        "answerText" : "String",
         "isCorrect" : false
       },
       {
@@ -14,33 +14,7 @@
         "isCorrect" : false
       },
       {
-        "answerText" : "=",
-        "isCorrect" : false
-      }
-    ],
-    "categoryTags" : [
-      "vocab",
-      "syntax"
-    ],
-    "difficulty" : 0,
-    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet aDocument = Document()\n"
-  },
-  {
-    "answers" : [
-      {
-        "answerText" : "aDocument",
-        "isCorrect" : false
-      },
-      {
-        "answerText" : "Document",
-        "isCorrect" : true
-      },
-      {
-        "answerText" : "let",
-        "isCorrect" : false
-      },
-      {
-        "answerText" : "=",
+        "answerText" : "\"Steve\"",
         "isCorrect" : false
       }
     ],
@@ -49,6 +23,32 @@
       "vocab"
     ],
     "difficulty" : 0,
-    "prompt" : "\/\/ Identify the type of the variable in this snippet:\n\nlet aDocument = Document()"
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "value",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\"Steve\"",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
   }
 ]
