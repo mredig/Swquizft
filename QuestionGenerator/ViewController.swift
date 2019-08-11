@@ -51,8 +51,8 @@ class ViewController: NSViewController {
 		questionTableView.dataSource = self
 		labelHeaders()
 
-		tableSelectionChangeNotification = NotificationCenter.default.addObserver(forName: NSTableView.selectionDidChangeNotification, object: nil, queue: nil, using: { _ in
-			self.updateViews()
+		tableSelectionChangeNotification = NotificationCenter.default.addObserver(forName: NSTableView.selectionDidChangeNotification, object: nil, queue: nil, using: {[weak self] _ in
+			self?.updateViews()
 		})
 		updateViews()
 	}
