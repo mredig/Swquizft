@@ -14,12 +14,12 @@ class CreateAnswerView: NSView {
 	@IBOutlet var reasonView: SwiftCodeTextView!
 	@IBOutlet var isCorrectButton: NSButton!
 
-	var answer: Answer {
+	var answer: Answer? {
 		get {
 			return createAnswerFromFields()
 		}
 		set {
-			setAnswerFields(answerText: newValue.answerText, reasonText: newValue.reason, isCorrect: newValue.isCorrect)
+			setAnswerFields(answerText: newValue?.answerText ?? "", reasonText: newValue?.reason, isCorrect: newValue?.isCorrect ?? false)
 		}
 	}
 
@@ -49,7 +49,8 @@ class CreateAnswerView: NSView {
 		reasonView.isEditable = true
 	}
 
-	private func createAnswerFromFields() -> Answer {
+	private func createAnswerFromFields() -> Answer? {
+		guard !answerView.text.isEmpty else { return nil }
 		let answerText = answerView.text
 		let reasonText = reasonView.text.isEmpty ? nil : reasonView.text
 		let isCorrect = isCorrectButton.state == .on

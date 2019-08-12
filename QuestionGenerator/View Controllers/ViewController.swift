@@ -218,7 +218,6 @@ extension ViewController {
 		clearAnswers()
 		questionTextView.text = ""
 		difficultySegments.selectedSegment = -1
-//		categoriesTextField.stringValue = ""
 	}
 
 	private func clearAnswers() {
@@ -277,8 +276,8 @@ extension ViewController {
 
 		var answers = [Answer]()
 		for view in answerStackView.arrangedSubviews {
-			if let answerView = view as? CreateAnswerView {
-				answers.append(answerView.answer)
+			if let answerView = view as? CreateAnswerView, let answer = answerView.answer {
+				answers.append(answer)
 			}
 		}
 
