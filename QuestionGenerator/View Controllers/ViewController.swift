@@ -242,6 +242,8 @@ extension ViewController {
 
 	private func updateViews() {
 		clearQuestionFields()
+		let dummyAnswer = Answer(answerText: "", isCorrect: false, reason: nil)
+
 		let selection = questionTableView.selectedRow
 		switch selection {
 		case 0..<questionController.questionBank.count:
@@ -252,9 +254,9 @@ extension ViewController {
 			for answer in question.answers {
 				addAnswerToStack(answer)
 			}
+			addAnswerToStack(dummyAnswer)
 		default:
 			collectionController?.selectedQuestion = nil
-			let dummyAnswer = Answer(answerText: "", isCorrect: false, reason: nil)
 			for _ in 1...4 {
 				addAnswerToStack(dummyAnswer)
 			}
