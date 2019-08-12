@@ -19,8 +19,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
@@ -45,8 +45,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
@@ -124,8 +124,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -150,9 +150,9 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "vocab",
-      "types"
+      "types",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -308,8 +308,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
@@ -372,8 +372,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet stairs = 1000\n"
@@ -398,9 +398,9 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "types",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet stairs = 1000\n"
@@ -425,8 +425,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet stairs = 1000\n"
@@ -530,8 +530,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -556,8 +556,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -592,7 +592,7 @@
   {
     "answers" : [
       {
-        "answerText" : "inches",
+        "answerText" : "centimeters",
         "isCorrect" : true
       },
       {
@@ -613,7 +613,7 @@
       "vocab"
     ],
     "difficulty" : 0,
-    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar inches = 2.54\n"
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar centimeters = 2.54\n"
   },
   {
     "answers" : [
@@ -622,7 +622,7 @@
         "isCorrect" : true
       },
       {
-        "answerText" : "inches",
+        "answerText" : "centimeters",
         "isCorrect" : false
       },
       {
@@ -640,7 +640,7 @@
       "types"
     ],
     "difficulty" : 0,
-    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar inches = 2.54\n"
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar centimeters = 2.54\n"
   },
   {
     "answers" : [
@@ -649,7 +649,7 @@
         "isCorrect" : true
       },
       {
-        "answerText" : "inches",
+        "answerText" : "centimeters",
         "isCorrect" : false
       },
       {
@@ -666,7 +666,7 @@
       "vocab"
     ],
     "difficulty" : 0,
-    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar inches = 2.54\n"
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar centimeters = 2.54\n"
   },
   {
     "answers" : [
@@ -690,9 +690,9 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "vocab",
-      "types"
+      "types",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -747,9 +747,9 @@
       }
     ],
     "categoryTags" : [
+      "types",
       "syntax",
-      "vocab",
-      "types"
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -775,8 +775,8 @@
     ],
     "categoryTags" : [
       "syntax",
-      "vocab",
-      "types"
+      "types",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet daysInYear: Float = 365.25\n"
@@ -801,8 +801,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet daysInYear: Float = 365.25\n"
@@ -879,8 +879,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet understandsBinary = true\n"
@@ -905,11 +905,586 @@
       }
     ],
     "categoryTags" : [
+      "vocab",
+      "types",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet understandsBinary = true\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ Start with\nlet\n\/\/ and just change it later if necessary",
+        "isCorrect" : true,
+        "reason" : "\/\/ Yes! The compiler will warn you if you try to change the value of a constant, at which point you can decide for yourself if you just want to change it to a `var` or approach your problem in a different way. Additionally, the compiler can optimize the code with constants, so it's a very easy way to "
+      },
+      {
+        "answerText" : "\/\/ Start with\nvar\n\/\/ and just change it later if necessary",
+        "isCorrect" : false,
+        "reason" : "\/\/ The compiler isn't nearly as smart at detecting things that are variable, but don't need to be."
+      },
+      {
+        "answerText" : "\/\/ Just do both and let the compiler figure it out!\nlet var",
+        "isCorrect" : false,
+        "reason" : "\/\/ This just won't work."
+      },
+      {
+        "answerText" : "\/\/ Neither! `let` and `var` are javascript!",
+        "isCorrect" : false,
+        "reason" : "\/\/ It's true that both exist in javascript, but Swift uses them as well."
+      }
+    ],
+    "categoryTags" : [
+      "vocab",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ When in doubt, what is the best practice when it comes to using `let` and `var`?\nvar myDudes\nlet myDudettes"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ A constant is a named value that cannot be changed  (immutable) once created. It is declared like this:\n\nlet myNewConstant = \"Some Value\"",
+        "isCorrect" : true,
+        "reason" : "\/\/ Correct! A constant cannot be changed once it's been created and is declared with the `let` keyword."
+      },
+      {
+        "answerText" : "\/\/ A constant is a named value that cannot be changed (immutable) once created. It is declared like this:\n\nvar myNewConstant = \"Some Value\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close! Look closely at line 3"
+      },
+      {
+        "answerText" : "\/\/ A constant is a named value that can be changed (mutable) once created. It is declared like this:\n\nvar myNewConstant = \"Some Value\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close! However, a constant is just like it sounds: it cannot be changed! It also doesn't use `var` as its keyword"
+      },
+      {
+        "answerText" : "\/\/ A constant is a named value that can be changed (mutable) once created. It is declared like this:\n\nlet myNewConstant = \"Some Value\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close! However, a constant is just like it sounds: it cannot be changed! "
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a constant and how would you create one?\n\/\/ hint: read the answers *very* closely"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ A variable is a named value that can be changed  (mutable) once created. It is declared like this:\n\nvar myNewVariable = \"Some Value\"",
+        "isCorrect" : true,
+        "reason" : "\/\/ Correct! A variable can be changed as much as needed and is declared with the `var` keyword."
+      },
+      {
+        "answerText" : "\/\/ A variable is a named value that can be changed  (mutable) once created. It is declared like this:\n\nlet myNewVariable = \"Some Value\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close! Look closely at line 3"
+      },
+      {
+        "answerText" : "\/\/ A variable is a named value that cannot be changed  (immutable) once created. It is declared like this:\n\nlet myNewVariable = \"Some Value\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close! However, a variable is just like it sounds: it can vary after its creation! It also doesn't use `let` as its keyword"
+      },
+      {
+        "answerText" : "\/\/ A variable is a named value that cannot be changed  (immutable) once created. It is declared like this:\n\nvar myNewVariable = \"Some Value\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close! However, a variable is just like it sounds: it can vary after its creation!"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a variable and how would you create one?\n\/\/ hint: read the answers *very* closely"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "false",
+        "isCorrect" : true,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      },
+      {
+        "answerText" : "true",
+        "isCorrect" : false,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a constant is mutable"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "true",
+        "isCorrect" : true,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      },
+      {
+        "answerText" : "false",
+        "isCorrect" : false,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a variable is mutable"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "true",
+        "isCorrect" : true,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      },
+      {
+        "answerText" : "false",
+        "isCorrect" : false,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a constant is immutable"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "false",
+        "isCorrect" : true,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      },
+      {
+        "answerText" : "true",
+        "isCorrect" : false,
+        "reason" : "\/\/ if something is \"mutable\" it means that it can \"mutate\" or change, whereas \"immutable\" means that it *cannot* change"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a variable is immutable"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ Mutability is the concept of whether a given item can change (mutate) or not. If an item can change, it is considered \"mutable\", whereas if it cannot, it is considered \"immutable\".",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ Mutability refers to the level to which a mutant in Xmen has deviated from the human genome.",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is \"mutability\"?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ The item can change",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ The item cannot change",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ The item is stable",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ The item is unstable",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What does it mean if an item is \"mutable\"?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ The item cannot change",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ The item can change",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ The item is stable",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ The item is unstable",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What does it mean if an item is \"immutable\"?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "let hours = 24",
+        "isCorrect" : true,
+        "reason" : "\/\/ The following variations would also work:\nlet hours: Int = 24\nlet hours = Int(24)\nlet hours: Int = Int(24)\nlet hours = 12 * 2"
+      },
+      {
+        "answerText" : "var hours = 24",
+        "isCorrect" : false,
+        "reason" : "\/\/ while not technically wrong, best practice is to start with a constant (let) and fall back to a variable (var) if necessary"
+      },
+      {
+        "answerText" : "let 24 = hours",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "hours(24) = let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If you were told to create a new integer called \"hours\" with a value of 24, how would you do that?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "let theMeaningOfLife = 42",
+        "isCorrect" : true,
+        "reason" : "\/\/ The following variations would also work:\nlet theMeaningOfLife: Int = 42\nlet theMeaningOfLife = Int(42)\nlet theMeaningOfLife: Int = Int(42)\nlet theMeaningOfLife = 7 * 6"
+      },
+      {
+        "answerText" : "var theMeaningOfLife = 42",
+        "isCorrect" : false,
+        "reason" : "\/\/ while not technically wrong, best practice is to start with a constant (let) and fall back to a variable (var) if necessary. Additionally, the meaning of life is unchanging!"
+      },
+      {
+        "answerText" : "let 42 = theMeaningOfLife",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "theMeaningOfLife(42) = let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If you were told to create a new integer called \"theMeaningOfLife\" with a value of 42, how would you do that?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "let bestProgrammingLanguage = \"Swift\"",
+        "isCorrect" : true,
+        "reason" : "\/\/ The following variations would also work:\nlet bestProgrammingLanguage: String = \"Swift\"\nlet bestProgrammingLanguage = String(\"Swift\")\nlet bestProgrammingLanguage: String = String(\"Swift\")\nlet bestProgrammingLanguage = \"Swi\" + \"ft\""
+      },
+      {
+        "answerText" : "var bestProgrammingLanguage = \"Swift\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ while not technically wrong, best practice is to start with a constant (let) and fall back to a variable (var) if necessary."
+      },
+      {
+        "answerText" : "let \"Swift\" = bestProgrammingLanguage",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "bestProgrammingLanguage(\"Swift\") = let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If you were told to create a new string called `bestProgrammingLanguage` with a value of \"Swift\", how would you do that?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ no",
+        "isCorrect" : true,
+        "reason" : "\/\/ \"Variable\" is actually an umbrella term that refer to both constants and variables. You will either have to make a guess based on context, or clarify with the person who made the statement."
+      },
+      {
+        "answerText" : "\/\/ yes",
+        "isCorrect" : false,
+        "reason" : "\/\/ While it CAN, variable is actually an umbrella term that refer to both constants and variables. You will either have to make a guess based on context, or clarify with the person who made the statement."
+      }
+    ],
+    "categoryTags" : [
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If someone refers to a `variable`, does that explicitly mean that they are talking about a mutable value?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ yes",
+        "isCorrect" : true,
+        "reason" : "\/\/ While variable is an umbrella term that can generically refer to both mutable and immutable (constant and variable) values, constant is very specific and explicitly means \"an immutable value\"."
+      },
+      {
+        "answerText" : "\/\/ no",
+        "isCorrect" : false,
+        "reason" : "\/\/ While variable is an umbrella term that can generically refer to both mutable and immutable (constant and variable) values, constant is very specific and explicitly means \"an immutable value\"."
+      }
+    ],
+    "categoryTags" : [
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If someone refers to a `constant`, does that explicitly mean that they are talking about an immutable value?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "let originalTrilogy = [\"A New Hope\", \"Empire Strikes Back\", \"Return of the Jedi\"]",
+        "isCorrect" : true,
+        "reason" : "\/\/ The following variations would also work:\nlet originalTrilogy: [String] = [\"A New Hope\", \"Empire Strikes Back\", \"Return of the Jedi\"]\n\nlet originalTrilogy = Array([\"A New Hope\", \"Empire Strikes Back\", \"Return of the Jedi\"])\n\nlet originalTrilogy: [String] = Array([\"A New Hope\", \"Empire Strikes Back\", \"Return of the Jedi\"])\n\nlet originalTrilogy = [\"A New Hope\"] + [\"Empire Strikes Back\"] + [\"Return of the Jedi\"]\n"
+      },
+      {
+        "answerText" : "let originalTrilogy = \"A New Hope\", \"Empire Strikes Back\", \"Return of the Jedi\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ Array literals need to be wrapped in square brackets []"
+      },
+      {
+        "answerText" : "originalTrilogy = [\"A New Hope\", \"Empire Strikes Back\", \"Return of the Jedi\"]",
+        "isCorrect" : false,
+        "reason" : "\/\/ Are you creating this or does `originalTrilogy` already exist? (the question asks you to create one)\n\/\/ You need to either provide `let` or `var` to let the compiler know if you want it to be a constant or variable when creating a new instance of something"
+      },
+      {
+        "answerText" : "let originalTrilogy = \"A New Hope, Empire Strikes Back, Return of the Jedi\"",
+        "isCorrect" : false,
+        "reason" : "\/\/ This isn't an array, but a String"
+      }
+    ],
+    "categoryTags" : [
       "syntax",
       "vocab",
       "types"
     ],
     "difficulty" : 0,
-    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet understandsBinary = true\n"
+    "prompt" : "\/\/ If you were told to create a new array called `originalTrilogy` listing the titles of the original Star Wars films, how would you do that?\n\n\/\/ (for those of you who may not be a jedi, the films are \"A New Hope\", \"Empire Strikes Back\", and \"Return of the Jedi\"."
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ an integer is a whole number value that can be negative as well as positive. Some examples are:\n5\n10\n-100\n1_000_000\n-500_000",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ an integer is a fractional number value that can be negative as well as positive. Some examples are:\n3.14\n-532.6\n100\n1_000_000.2",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ an integer is a whole number value that can only be positive. Some examples are:\n5\n10\n0\n1_000_000\n500_000",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ an integer is a fractional number value that can only be positive. Some examples are:\n3.14\n532.6\n100\n1_000_000.2",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is an integer (Int)?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ a Double is a fractional number value that can be negative as well as positive. Its precision is 64 bits. Some examples are:\n3.14\n-532.6\n100\n1_000_000.2",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ a Double is a whole number value that can be negative as well as positive. Some examples are:\n5\n10\n-100\n1_000_000\n-500_000",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ a Double is a whole number value that can only be positive. Some examples are:\n5\n10\n0\n1_000_000\n500_000",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ a Double is a fractional number value that can be negative as well as positive. Its precision is 32 bits. Some examples are:\n3.14\n-532.6\n100\n1_000_000.2",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a Double?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ a Float is a fractional number value that can be negative as well as positive. Its precision is 32 bits. Some examples are:\n3.14\n-532.6\n100\n1_000_000.2",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ a Float is a fractional number value that can be negative as well as positive. Its precision is 64 bits. Some examples are:\n3.14\n-532.6\n100\n1_000_000.2",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ a Float is a whole number value that can be negative as well as positive. Some examples are:\n5\n10\n-100\n1_000_000\n-500_000",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ a Float is a whole number value that can only be positive. Some examples are:\n5\n10\n0\n1_000_000\n500_000",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a Float?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ A String is list of Characters listed in a specific order. Characters can be any character including letters, numbers, and symbols. Some examples are:\n\"Hello world!\"\n\"🤪\"\n\"1234567890\"\n\"Swift is awesome!\"",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ A String is a material consisting of thread",
+        "isCorrect" : false,
+        "reason" : "\/\/ This has nothing to do with programming!"
+      },
+      {
+        "answerText" : "\/\/ A String is a list of items strung together.",
+        "isCorrect" : false,
+        "reason" : "\/\/ Technically, this isn't wrong, but there's a better, more specific answer. (This one could also define an Array. String and Array are similar, but distinct from each other.)"
+      },
+      {
+        "answerText" : "\/\/ A String is a list of unique items containing no duplicates",
+        "isCorrect" : false,
+        "reason" : "\/\/ This would better define a Set than a String"
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a String?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ A boolean is a value that can either be `true` or `false`.",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ A boolean is a value that can either be `true`, `false`, or `maybe`.",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ A boolean is the source of all ghosts' spookiness",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a boolean (Bool)?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ An Array is an ordered list of items. It can be restricted to only allow a specific type or allow for Any type, depending on how you create it. \n\/\/ You can access a specific index of an array using a numerical value.\nlet myNewValue = myArray[5]",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ An array is a grouping of duplicates of the same item, organized in a circular fashion",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ An array is an unordered grouping of items. It can be restricted to only allow a specific type or allow for Any type, depending on how you create it.\n\/\/ You can access a specific item in an array by using a key to get its associated value\nlet myNewValue = myArray[\"name\"]",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ This answer is wrong!",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is an Array?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ A Dictionary is an unordered grouping of items. It can be restricted to only allow a specific type or allow for Any type, depending on how you create it.\n\/\/ You can access a specific item in an array by using a key to get its associated value\nlet myNewValue = myArray[\"name\"]",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ A Dictionary is an ordered list of items. It can be restricted to only allow a specific type or allow for Any type, depending on how you create it. \n\/\/ You can access a specific index of an array using a numerical value.\nlet myNewValue = myArray[5]",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ A Dictionary is book that defines words",
+        "isCorrect" : false,
+        "reason" : "\/\/ I mean, yeah, but that's not really relating to programming…"
+      },
+      {
+        "answerText" : "\/\/ This answer is wrong!",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a Dictionary?"
   }
 ]
