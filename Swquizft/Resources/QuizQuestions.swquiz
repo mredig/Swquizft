@@ -28,6 +28,10 @@
   {
     "answers" : [
       {
+        "answerText" : "\"Steve\"",
+        "isCorrect" : true
+      },
+      {
         "answerText" : "value",
         "isCorrect" : false
       },
@@ -38,15 +42,11 @@
       {
         "answerText" : "let",
         "isCorrect" : false
-      },
-      {
-        "answerText" : "\"Steve\"",
-        "isCorrect" : true
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
@@ -54,12 +54,12 @@
   {
     "answers" : [
       {
-        "answerText" : "value",
-        "isCorrect" : false
-      },
-      {
         "answerText" : "String",
         "isCorrect" : true
+      },
+      {
+        "answerText" : "value",
+        "isCorrect" : false
       },
       {
         "answerText" : "let",
@@ -71,11 +71,845 @@
       }
     ],
     "categoryTags" : [
-      "types",
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "theNumber",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 5",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
       "vocab",
       "syntax"
     ],
     "difficulty" : 0,
-    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet theNumber = 5\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 5",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "theNumber",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet theNumber = 5\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Int",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "theNumber",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Double",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 5",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet theNumber = 5\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "name",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\"Fred\"",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet name = \"Fred\"\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "String",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "name",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\"Fred\"",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet name = \"Fred\"\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\"Fred\"",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "name",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet name = \"Fred\"\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\"Lambda\"",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "school",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "school",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\"Lambda\"",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "vocab",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "String",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "school",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\"Lambda\"",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ constant",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ variable",
+        "isCorrect" : false,
+        "reason" : "\/\/ Not quite… the keyword `let` designates `example` as a constant"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Is the following a constant or a variable?\n\nlet example = \"choose correctly!\""
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ variable",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ constant",
+        "isCorrect" : false,
+        "reason" : "\/\/ Not quite… the keyword `var` designates `example` as a variable"
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Is the following a constant or a variable?\n\nvar example = \"choose correctly!\""
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 1000",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "stairs",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet stairs = 1000\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Int",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "stairs",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Float",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 1000",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet stairs = 1000\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "stairs",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 1000",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "vocab",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet stairs = 1000\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "score",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 0",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar score: Int = 0\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Int",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "score",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 0",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar score: Int = 0\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 0",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "score",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar score: Int = 0\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 3.14",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "pi",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Double",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar pi = Double(3.14)\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "pi",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : " 3.14",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Double",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar pi = Double(3.14)\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Double",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "pi",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 3.14",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar pi = Double(3.14)\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "inches",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : " 2.54",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Double",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar inches = 2.54\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Double",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "inches",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 2.54",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Float",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar inches = 2.54\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 2.54",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "inches",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Double",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "var",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar inches = 2.54\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 42.0 \/\/ floating point",
+        "isCorrect" : true,
+        "reason" : "\/\/ Being extremely technical, the value is still only `42`, but since it's being stored as a Float, the decimal makes the value more specific to the type."
+      },
+      {
+        "answerText" : " 42 \/\/ a whole number",
+        "isCorrect" : false,
+        "reason" : "\/\/ This is very close, but whole numbers are stored in memory as Int (or Integer) types. The question actually provides a floating point value, which is more specifically represented as \"42.0\""
+      },
+      {
+        "answerText" : "meaningOfLife",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Float",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "meaningOfLife",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : " 42.0 \/\/ floating point",
+        "isCorrect" : false,
+        "reason" : "\/\/ Being extremely technical, the value is still only `42`, but since it's being stored as a Float, the decimal makes the value more specific to the type. Either way, this isn't the name of the variable."
+      },
+      {
+        "answerText" : " 42 \/\/ a whole number",
+        "isCorrect" : false,
+        "reason" : "\/\/ This is very close to the value provided in the question, but whole numbers are stored in memory as Int (or Integer) types. The question actually provides a floating point value, which is more specifically represented as \"42.0\". Either way, this isn't the name of the variable."
+      },
+      {
+        "answerText" : "Float",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Float",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "meaningOfLife",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 42.0 \/\/ floating point",
+        "isCorrect" : false,
+        "reason" : "\/\/ Being extremely technical, the value is still only `42`, but since it's being stored as a Float, the decimal makes the value more specific to the type. Either way, `42.0` isn't the type of the variable."
+      },
+      {
+        "answerText" : " 42 \/\/ a whole number",
+        "isCorrect" : false,
+        "reason" : "\/\/ This is very close to the value provided in the question, but whole numbers are stored in memory as Int (or Integer) types. The question actually provides a floating point value, which is more specifically represented as \"42.0\". Either way, `42` isn't the type of the variable."
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Float",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "daysInYear",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 365.25",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet daysInYear: Float = 365.25\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "daysInYear",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "Float",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 365.25",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet daysInYear: Float = 365.25\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : " 365.25",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "daysInYear",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Float",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet daysInYear: Float = 365.25\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "true",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "understandsBinary",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Bool",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet understandsBinary = true\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "understandsBinary",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "true",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Bool",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet understandsBinary = true\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Bool",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "understandsBinary",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "true",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "let",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "vocab",
+      "types"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet understandsBinary = true\n"
   }
 ]
