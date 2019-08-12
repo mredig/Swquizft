@@ -129,6 +129,7 @@ class ViewController: NSViewController {
 	}
 }
 
+// MARK: - TableView stuff
 extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 	func numberOfRows(in tableView: NSTableView) -> Int {
 		return questionController.questionBank.count

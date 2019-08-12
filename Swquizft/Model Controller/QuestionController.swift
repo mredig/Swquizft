@@ -71,12 +71,14 @@ class QuestionController {
 
 	// MARK: - Question CRUD
 	func createQuestionWith(prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty) {
+		let answers = answers.sorted { $0.isCorrect != $1.isCorrect && $0.isCorrect == true }
 		let question = Question(prompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
 		questionBank.append(question)
 	}
 
 	func update(question: Question, withPrompt prompt: String, answers: [Answer], categoryTags: Set<Question.Category>, difficulty: Question.Difficulty) {
 		guard let questionIndex = questionBank.firstIndex(of: question) else { return }
+		let answers = answers.sorted { $0.isCorrect != $1.isCorrect && $0.isCorrect == true }
 		let updatedQuestion = Question(prompt: prompt, answers: answers, categoryTags: categoryTags, difficulty: difficulty)
 		questionBank[questionIndex] = updatedQuestion
 	}
