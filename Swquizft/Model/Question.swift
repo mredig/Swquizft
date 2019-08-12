@@ -12,7 +12,7 @@ struct Question: Codable, Equatable {
 	enum Category: String, Codable, CaseIterable {
 		case syntax
 		case types
-		case extensions
+		case functions
 		case vocab
 		case protocols
 		case codable
