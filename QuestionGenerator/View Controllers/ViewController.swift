@@ -317,4 +317,9 @@ extension ViewController {
 		questionTableView.reloadData()
 		updateViews()
 	}
+
+	@IBAction func deselectQuestion(_ sender: NSMenuItem) {
+		questionTableView.deselectRow(questionTableView.selectedRow)
+		updateViews()
+	}
 }

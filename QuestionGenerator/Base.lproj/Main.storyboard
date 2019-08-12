@@ -160,6 +160,11 @@
                                                 <action selector="delete:" target="Ady-hI-5gd" id="0Mk-Ml-PaM"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Deselect" keyEquivalent="d" id="tUI-cd-OET">
+                                            <connections>
+                                                <action selector="deselectQuestion:" target="Ady-hI-5gd" id="ali-IL-XMd"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Select All" keyEquivalent="a" id="Ruw-6m-B2m">
                                             <connections>
                                                 <action selector="selectAll:" target="Ady-hI-5gd" id="VNm-Mi-diN"/>
