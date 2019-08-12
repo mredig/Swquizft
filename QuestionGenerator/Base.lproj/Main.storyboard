@@ -706,19 +706,27 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="QuestionGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2869"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2933"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view translatesAutoresizingMaskIntoConstraints="NO" id="ogv-YT-MWr">
-                                <rect key="frame" x="0.0" y="0.0" width="1106" height="2869"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1106" height="2933"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="27" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-9T-Epn">
-                                        <rect key="frame" x="0.0" y="20" width="1106" height="2849"/>
+                                        <rect key="frame" x="0.0" y="20" width="1106" height="2913"/>
                                         <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7MV-dR-6FM">
+                                                <rect key="frame" x="18" y="2876" width="1070" height="17"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="076-X1-lyy">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
                                             <splitView dividerStyle="paneSplitter" translatesAutoresizingMaskIntoConstraints="NO" id="0LD-Qj-sWM">
                                                 <rect key="frame" x="0.0" y="402" width="1106" height="2447"/>
                                                 <subviews>
-                                                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="N1J-2v-Mqg">
+                                                    <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="N1J-2v-Mqg">
                                                         <rect key="frame" x="0.0" y="0.0" width="1106" height="1663"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <clipView key="contentView" id="KiK-2C-41Z">
@@ -1116,7 +1124,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableHeaderView>
                                                     </scrollView>
-                                                    <customView id="X4L-DH-XVV" customClass="SwiftCodeTextView" customModule="QuestionGenerator" customModuleProvider="target">
+                                                    <customView misplaced="YES" id="X4L-DH-XVV" customClass="SwiftCodeTextView" customModule="QuestionGenerator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="1673" width="1106" height="774"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
@@ -1254,8 +1262,11 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="7MV-dR-6FM" firstAttribute="leading" secondItem="5qy-9T-Epn" secondAttribute="leading" constant="20" id="2BQ-hZ-ve1"/>
+                                            <constraint firstAttribute="trailing" secondItem="7MV-dR-6FM" secondAttribute="trailing" constant="20" id="PzY-Dz-hWT"/>
                                             <constraint firstAttribute="trailing" secondItem="jjq-q2-UgI" secondAttribute="trailing" constant="20" id="cUP-Bj-9MT"/>
                                             <constraint firstItem="2MN-op-Luh" firstAttribute="width" secondItem="5qy-9T-Epn" secondAttribute="width" id="eax-K1-Tin"/>
+                                            <constraint firstItem="7MV-dR-6FM" firstAttribute="top" secondItem="5qy-9T-Epn" secondAttribute="top" constant="20" id="kaB-Sq-Aw1"/>
                                             <constraint firstItem="jjq-q2-UgI" firstAttribute="leading" secondItem="5qy-9T-Epn" secondAttribute="leading" constant="20" id="uc5-gB-LmL"/>
                                             <constraint firstAttribute="trailing" secondItem="gtw-KY-wZi" secondAttribute="trailing" constant="20" id="v9v-Cj-wRl"/>
                                             <constraint firstItem="0LD-Qj-sWM" firstAttribute="width" secondItem="5qy-9T-Epn" secondAttribute="width" id="wEF-r6-DY3"/>
@@ -1266,8 +1277,10 @@
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -1310,6 +1323,7 @@
                         <outlet property="reason2Column" destination="qlQ-C5-F4S" id="P47-0k-L72"/>
                         <outlet property="reason3Column" destination="1j3-Hf-FvN" id="ada-3C-ZCw"/>
                         <outlet property="reason4Column" destination="qFl-HV-0DZ" id="pK3-XQ-aSg"/>
+                        <outlet property="statisticsHeaderLabel" destination="7MV-dR-6FM" id="oIR-zS-q0f"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

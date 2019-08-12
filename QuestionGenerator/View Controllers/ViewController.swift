@@ -9,6 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
+	@IBOutlet var statisticsHeaderLabel: NSTextField!
 	@IBOutlet var questionTableView: NSTableView!
 	@IBOutlet var questionTextView: SwiftCodeTextView!
 
@@ -100,6 +101,7 @@ class ViewController: NSViewController {
 
 				self.questionController.questionBankURL = fileURL
 				self.questionTableView.reloadData()
+				self.updateViews()
 			}
 		}
 	}
@@ -237,7 +239,7 @@ extension ViewController {
 		updateViews()
 	}
 
-	func updateViews() {
+	private func updateViews() {
 		clearQuestionFields()
 		let selection = questionTableView.selectedRow
 		switch selection {
@@ -256,6 +258,18 @@ extension ViewController {
 				addAnswerToStack(dummyAnswer)
 			}
 		}
+		statisticsHeaderLabel.stringValue = generateStatistics()
+	}
+
+	private func generateStatistics() -> String {
+		var catStats = ["Total: \(questionController.questionBank.count)"]
+		for cat in Question.Category.allCases {
+			let count = questionController.questionBank.filter { $0.categoryTags.contains(cat) }
+			let value = "\(cat.rawValue.capitalized): \(count.count)"
+			catStats.append(value)
+		}
+
+		return catStats.joined(separator: " | ")
 	}
 }
 
@@ -290,6 +304,7 @@ extension ViewController {
 
 		questionController.createQuestionWith(prompt: parts.prompt, answers: parts.answers, categoryTags: parts.categoryTags, difficulty: parts.difficulty)
 		questionTableView.reloadData()
+		updateViews()
 	}
 
 	@IBAction func updateQuestionPressed(_ sender: NSButton) {
@@ -300,5 +315,6 @@ extension ViewController {
 		let oldQuestion = questionController.questionBank[selectedItem]
 		questionController.update(question: oldQuestion, withPrompt: parts.prompt, answers: parts.answers, categoryTags: parts.categoryTags, difficulty: parts.difficulty)
 		questionTableView.reloadData()
+		updateViews()
 	}
 }
