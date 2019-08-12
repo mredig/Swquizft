@@ -13,8 +13,7 @@ class ViewController: NSViewController {
 	@IBOutlet var questionTableView: NSTableView!
 	@IBOutlet var questionTextView: SwiftCodeTextView!
 
-	@IBOutlet var answerStackView: NSStackView!
-	@IBOutlet var answerScrollView: NSScrollView!
+	@IBOutlet var answerSplitView: NSSplitView!
 
 	@IBOutlet var difficultySegments: NSSegmentedControl!
 	@IBOutlet var categoriesCollectionView: NSCollectionView!
@@ -45,8 +44,6 @@ class ViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		setupStackScrollView()
-
 		questionTextView.isEditable = true
 
 		questionTableView.delegate = self
@@ -65,18 +62,6 @@ class ViewController: NSViewController {
 
 	deinit {
 		tableSelectionChangeNotification = nil
-	}
-
-	private func setupStackScrollView() {
-		answerScrollView.contentView.addSubview(answerStackView)
-		answerStackView.translatesAutoresizingMaskIntoConstraints = false
-		answerStackView.leadingAnchor.constraint(equalTo: answerScrollView.contentView.leadingAnchor).isActive = true
-		answerStackView.trailingAnchor.constraint(equalTo: answerScrollView.contentView.trailingAnchor).isActive = true
-		answerStackView.topAnchor.constraint(equalTo: answerScrollView.contentView.topAnchor).isActive = true
-		let bottomAnchor = answerStackView.bottomAnchor.constraint(equalTo: answerScrollView.contentView.bottomAnchor)
-		bottomAnchor.priority = .defaultHigh
-		bottomAnchor.isActive = true
-		answerStackView.widthAnchor.constraint(equalTo: answerScrollView.contentView.widthAnchor).isActive = true
 	}
 
 	private func labelHeaders() {
@@ -224,7 +209,7 @@ extension ViewController {
 	}
 
 	private func clearAnswers() {
-		for answerView in answerStackView.arrangedSubviews {
+		for answerView in answerSplitView.arrangedSubviews {
 			answerView.removeFromSuperview()
 		}
 	}
@@ -233,7 +218,7 @@ extension ViewController {
 		let answerView = CreateAnswerView(frame: CGRect(origin: .zero, size: NSSize(width: view.frame.size.width, height: 20)))
 		answerView.answer = answer
 		answerView.layer = CALayer()
-		answerStackView.addArrangedSubview(answerView)
+		answerSplitView.addArrangedSubview(answerView)
 	}
 
 	func selectedQuestionChanged() {
@@ -292,7 +277,7 @@ extension ViewController {
 			let difficulty = Question.Difficulty(rawValue: difficultySegments.selectedSegment) else { return nil }
 
 		var answers = [Answer]()
-		for view in answerStackView.arrangedSubviews {
+		for view in answerSplitView.arrangedSubviews {
 			if let answerView = view as? CreateAnswerView, let answer = answerView.answer {
 				answers.append(answer)
 			}

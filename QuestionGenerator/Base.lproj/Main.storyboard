@@ -711,7 +711,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="QuestionGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2570"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2656"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view translatesAutoresizingMaskIntoConstraints="NO" id="ogv-YT-MWr">
@@ -732,14 +732,14 @@
                                                 <rect key="frame" x="0.0" y="125" width="1106" height="2447"/>
                                                 <subviews>
                                                     <scrollView misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="N1J-2v-Mqg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1106" height="1855"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2009"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <clipView key="contentView" id="KiK-2C-41Z">
-                                                            <rect key="frame" x="1" y="0.0" width="1104" height="1854"/>
+                                                            <rect key="frame" x="1" y="0.0" width="1104" height="2008"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Z9F-pJ-jaD" viewBased="YES" id="v0O-Cd-epZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="1104" height="1829"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="1104" height="1983"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1130,37 +1130,16 @@
                                                         </tableHeaderView>
                                                     </scrollView>
                                                     <customView misplaced="YES" id="X4L-DH-XVV" customClass="SwiftCodeTextView" customModule="QuestionGenerator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1865" width="1106" height="298"/>
+                                                        <rect key="frame" x="0.0" y="2019" width="1106" height="322"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="J0u-AU-m8i"/>
                                                         </constraints>
                                                     </customView>
-                                                    <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="2MN-op-Luh">
-                                                        <rect key="frame" x="0.0" y="2173" width="1106" height="274"/>
+                                                    <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="paneSplitter" id="7oK-o5-7cj">
+                                                        <rect key="frame" x="0.0" y="2351" width="1106" height="96"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <clipView key="contentView" id="6q0-Lp-Ulr">
-                                                            <rect key="frame" x="1" y="1" width="1089" height="257"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <subviews>
-                                                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qrm-UK-lVk">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="1074" height="242"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                </view>
-                                                            </subviews>
-                                                        </clipView>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="EMK-mf-rzC"/>
-                                                        </constraints>
-                                                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="2ey-qG-GF2">
-                                                            <rect key="frame" x="1" y="258" width="1089" height="15"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </scroller>
-                                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="XHB-gV-Zi4">
-                                                            <rect key="frame" x="1090" y="1" width="15" height="257"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </scroller>
-                                                    </scrollView>
+                                                    </splitView>
                                                 </subviews>
                                                 <holdingPriorities>
                                                     <real value="250"/>
@@ -1312,8 +1291,7 @@
                         <outlet property="answer2Column" destination="mMQ-rx-47T" id="4SB-Vl-h6a"/>
                         <outlet property="answer3Column" destination="Vfe-FY-i9y" id="1Wl-Qy-jdT"/>
                         <outlet property="answer4Column" destination="as8-hc-a0v" id="uV9-Ig-5iC"/>
-                        <outlet property="answerScrollView" destination="2MN-op-Luh" id="wMl-cN-Yvb"/>
-                        <outlet property="answerStackView" destination="zhq-g4-OOj" id="xdu-Oi-xgI"/>
+                        <outlet property="answerSplitView" destination="7oK-o5-7cj" id="lmq-w2-Fsb"/>
                         <outlet property="categoriesCollectionView" destination="NI7-Mj-3uX" id="moP-fR-c7X"/>
                         <outlet property="categoriesColumn" destination="pQV-r3-Z0r" id="1RU-Gp-REF"/>
                         <outlet property="createNewButton" destination="uoN-Qb-cRS" id="ea4-Dv-qHq"/>
@@ -1331,10 +1309,6 @@
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="zhq-g4-OOj">
-                    <rect key="frame" x="0.0" y="0.0" width="628" height="425"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </stackView>
             </objects>
             <point key="canvasLocation" x="-1072" y="980"/>
         </scene>
