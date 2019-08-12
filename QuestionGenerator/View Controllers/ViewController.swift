@@ -133,19 +133,18 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 	}
 
 	func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-//		let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("LabelView"), owner: self) as? NSTableCellView
-//		let swiftCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("SwiftView"), owner: self) as? SwiftTableCellView
-
 		guard let column = tableColumn else { return nil }
 		let question = questionController.questionBank[row]
 
 		var text = ""
 		let answerCount = question.answers.count
 		var textColor = NSColor.white
+		var highlightSyntax = false
 
 		switch column {
 		case questionColumn:
 			text = question.prompt
+			highlightSyntax = true
 		case answer1Column:
 			guard answerCount >= 1 else { break }
 			text = question.answers[0].answerText
@@ -153,6 +152,7 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 		case reason1Column:
 			guard answerCount >= 1 else { break }
 			text = question.answers[0].reason ?? ""
+			highlightSyntax = true
 		case answer2Column:
 			guard answerCount >= 2 else { break }
 			text = question.answers[1].answerText
@@ -160,6 +160,7 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 		case reason2Column:
 			guard answerCount >= 2 else { break }
 			text = question.answers[1].reason ?? ""
+			highlightSyntax = true
 		case answer3Column:
 			guard answerCount >= 3 else { break }
 			text = question.answers[2].answerText
@@ -167,6 +168,7 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 		case reason3Column:
 			guard answerCount >= 3 else { break }
 			text = question.answers[2].reason ?? ""
+			highlightSyntax = true
 		case answer4Column:
 			guard answerCount >= 4 else { break }
 			text = question.answers[3].answerText
@@ -174,6 +176,7 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 		case reason4Column:
 			guard answerCount >= 4 else { break }
 			text = question.answers[3].reason ?? ""
+			highlightSyntax = true
 		case difficultyColumn:
 			text = question.difficulty.stringValue
 		case categoriesColumn:
@@ -183,10 +186,9 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 		}
 
 		let cell: NSTableCellView?
-		if textColor == .white {
+		if highlightSyntax {
 			let swiftCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("SwiftView"), owner: self) as? SwiftTableCellView
 			swiftCell?.swiftCodeView.text = text
-//			let theme = SourceCodeTheem
 			swiftCell?.swiftCodeView.theme = SmallerTheme()
 			cell = swiftCell
 		} else {
@@ -194,7 +196,6 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
 			cell?.textField?.stringValue = text
 			cell?.textField?.textColor = textColor
 		}
-
 
 		return cell
 	}
