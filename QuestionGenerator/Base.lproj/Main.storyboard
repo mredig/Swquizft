@@ -711,15 +711,21 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="QuestionGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2656"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1106" height="2664"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view translatesAutoresizingMaskIntoConstraints="NO" id="ogv-YT-MWr">
-                                <rect key="frame" x="0.0" y="0.0" width="1106" height="2656"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1106" height="2664"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="27" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-9T-Epn">
-                                        <rect key="frame" x="0.0" y="20" width="1106" height="2636"/>
+                                        <rect key="frame" x="0.0" y="20" width="1106" height="2644"/>
                                         <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="GHR-Mi-fbQ">
+                                                <rect key="frame" x="0.0" y="2643" width="1106" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="C5D-qg-YLZ"/>
+                                                </constraints>
+                                            </customView>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7MV-dR-6FM">
                                                 <rect key="frame" x="18" y="2599" width="1070" height="17"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="076-X1-lyy">
@@ -859,7 +865,7 @@
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                             <prototypeCellViews>
                                                                                 <tableCellView id="YfD-Jf-BK5">
-                                                                                    <rect key="frame" x="304.5" y="1" width="100" height="17"/>
+                                                                                    <rect key="frame" x="305" y="1" width="100" height="17"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <subviews>
                                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-bj-FLQ">
@@ -892,7 +898,7 @@
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                             <prototypeCellViews>
                                                                                 <tableCellView id="dSQ-ZC-v5c">
-                                                                                    <rect key="frame" x="407.5" y="1" width="94" height="17"/>
+                                                                                    <rect key="frame" x="408" y="1" width="94" height="17"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <subviews>
                                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSM-1J-fhP">
@@ -1115,6 +1121,7 @@
                                                         </clipView>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="K3v-Bp-ocg"/>
+                                                            <constraint firstAttribute="height" constant="250" placeholder="YES" id="xEH-5r-XV5"/>
                                                         </constraints>
                                                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="8d7-dz-DJf">
                                                             <rect key="frame" x="1" y="426" width="626" height="15"/>
@@ -1130,14 +1137,14 @@
                                                         </tableHeaderView>
                                                     </scrollView>
                                                     <customView misplaced="YES" id="X4L-DH-XVV" customClass="SwiftCodeTextView" customModule="QuestionGenerator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="2019" width="1106" height="322"/>
+                                                        <rect key="frame" x="0.0" y="2019" width="1106" height="222"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="J0u-AU-m8i"/>
                                                         </constraints>
                                                     </customView>
                                                     <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="paneSplitter" id="7oK-o5-7cj">
-                                                        <rect key="frame" x="0.0" y="2351" width="1106" height="96"/>
+                                                        <rect key="frame" x="0.0" y="2251" width="1106" height="196"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     </splitView>
                                                 </subviews>
@@ -1249,9 +1256,9 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="7MV-dR-6FM" firstAttribute="leading" secondItem="5qy-9T-Epn" secondAttribute="leading" constant="20" id="2BQ-hZ-ve1"/>
+                                            <constraint firstItem="GHR-Mi-fbQ" firstAttribute="width" secondItem="5qy-9T-Epn" secondAttribute="width" id="C5q-dz-byk"/>
                                             <constraint firstAttribute="trailing" secondItem="7MV-dR-6FM" secondAttribute="trailing" constant="20" id="PzY-Dz-hWT"/>
                                             <constraint firstAttribute="trailing" secondItem="jjq-q2-UgI" secondAttribute="trailing" constant="20" id="cUP-Bj-9MT"/>
-                                            <constraint firstItem="7MV-dR-6FM" firstAttribute="top" secondItem="5qy-9T-Epn" secondAttribute="top" constant="20" id="kaB-Sq-Aw1"/>
                                             <constraint firstItem="jjq-q2-UgI" firstAttribute="leading" secondItem="5qy-9T-Epn" secondAttribute="leading" constant="20" id="uc5-gB-LmL"/>
                                             <constraint firstAttribute="trailing" secondItem="gtw-KY-wZi" secondAttribute="trailing" constant="20" id="v9v-Cj-wRl"/>
                                             <constraint firstItem="0LD-Qj-sWM" firstAttribute="width" secondItem="5qy-9T-Epn" secondAttribute="width" id="wEF-r6-DY3"/>
@@ -1262,8 +1269,10 @@
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -1310,7 +1319,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1072" y="980"/>
+            <point key="canvasLocation" x="-1072" y="1212.5"/>
         </scene>
     </scenes>
 </document>
