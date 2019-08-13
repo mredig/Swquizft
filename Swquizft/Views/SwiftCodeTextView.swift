@@ -24,6 +24,14 @@ class SwiftCodeTextView: SyntaxTextView {
 		}
 	}
 
+	#if os(iOS)
+	func requiredHeight(for width: CGFloat) -> CGFloat {
+		let buffer = (theme?.font.lineHeight ?? 0) * 1.5
+		let thisWidth = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+		return contentTextView.sizeThatFits(thisWidth).height + buffer
+	}
+	#endif
+
 	private let swiftLexer = SwiftLexer()
 	var heightConstraint: NSLayoutConstraint?
 

@@ -20,7 +20,7 @@ class AnswerView: UIView {
 	@IBOutlet private var stackTopConstraint: NSLayoutConstraint!
 	@IBOutlet private var stackLeadingConstraint: NSLayoutConstraint!
 	@IBOutlet private var stackTrailingConstraint: NSLayoutConstraint!
-	@IBOutlet private(set) var answerView: SwiftCodeTextView!
+	@IBOutlet private(set) var swiftyAnswerView: SwiftCodeTextView!
 	@IBOutlet private(set) var correctnessLabel: UILabel!
 	@IBOutlet private(set) var reasonView: SwiftCodeTextView!
 	private var answerHeight: NSLayoutConstraint?
@@ -64,9 +64,9 @@ class AnswerView: UIView {
 		contentView.frame = bounds
 		addSubview(contentView)
 
-		answerHeight = answerView.heightAnchor.constraint(equalToConstant: 20.5)
+		answerHeight = swiftyAnswerView.heightAnchor.constraint(equalToConstant: 20.5)
 		answerHeight?.isActive = true
-		answerView.isUserInteractionEnabled = false
+		swiftyAnswerView.isUserInteractionEnabled = false
 
 		updateViews()
 		reasonView.isHidden = true
@@ -80,18 +80,12 @@ class AnswerView: UIView {
 		stackTrailingConstraint.constant = edgeInsets.right
 
 		guard let answer = answer else { return }
-		answerView.text = answer.answerText
-		answerView.contentTextView.sizeToFit()
-		answerHeight?.constant = heightFor(answerView: answerView)
+		swiftyAnswerView.text = answer.answerText
+		answerHeight?.constant = swiftyAnswerView.requiredHeight(for: frame.size.width)
 		let correctnessString = answer.isCorrect ? "Yep!" : "Nope 🥺"
 		correctnessLabel.text = correctnessString
 		correctnessLabel.textColor = answer.isCorrect ? .green : .red
 		reasonView.text = answer.reason ?? ""
-	}
-
-	private func heightFor(answerView: SwiftCodeTextView) -> CGFloat {
-		let thisWidth = CGSize(width: frame.size.width, height: CGFloat.greatestFiniteMagnitude)
-		return answerView.contentTextView.sizeThatFits(thisWidth).height
 	}
 
 	@IBAction func answerViewTapped(_ sender: UITapGestureRecognizer) {
@@ -99,7 +93,7 @@ class AnswerView: UIView {
 			self.correctnessLabel.isHidden.toggle()
 			self.reasonView.isHidden = self.correctnessLabel.isHidden
 			if !self.reasonView.isHidden && !self.reasonView.text.isEmpty {
-				self.reasonView.heightConstraint = self.reasonView.heightAnchor.constraint(equalToConstant: self.heightFor(answerView: self.reasonView))
+				self.reasonView.heightConstraint = self.reasonView.heightAnchor.constraint(equalToConstant: self.reasonView.requiredHeight(for: self.frame.size.width))
 				self.reasonView.heightConstraint?.isActive = true
 			} else {
 				self.reasonView.heightConstraint?.isActive = false
