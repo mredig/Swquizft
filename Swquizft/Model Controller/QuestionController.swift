@@ -55,8 +55,18 @@ class QuestionController {
 	// MARK: - Quiz Controlling
 	/// Filter through all available questions, selecting only ones that conform to the matching selected categories, then compile a reasonable amount of them into `currentQuestions`
 	func prepareCurrentQuizQuestions() {
-		// FIXME: needs full implementation - this is just a hacky test value
-		currentQuestions = questionBank
+		currentQuestions = questionBank.filter {
+			for category in $0.categoryTags {
+				if selectedCategories.contains(category) {
+					return true
+				}
+			}
+			return false
+		}
+		currentQuestions.shuffle()
+		while currentQuestions.count > 20 {
+			currentQuestions.removeLast()
+		}
 	}
 
 	func question(_ question: Question, answeredCorrectly correct: Bool) {
