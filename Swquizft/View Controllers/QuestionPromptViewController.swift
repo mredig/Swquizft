@@ -16,6 +16,7 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	}
 	
 	@IBOutlet var questionTextView: SwiftCodeTextView!
+	@IBOutlet var questionHeightConstraint: NSLayoutConstraint!
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var answerStackView: UIStackView!
 	@IBOutlet var nextButton: UIBarButtonItem!
@@ -64,6 +65,9 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 		guard let question = question else { return }
 		loadViewIfNeeded()
 		questionTextView.text = question.prompt
+
+		questionHeightConstraint.constant = questionTextView.requiredHeight(for: view.frame.width)
+
 		navigationItem.title = quizCoordinator?.generateVCTitle()
 		nextButton.title = quizCoordinator?.generateNextButtonText()
 	}
