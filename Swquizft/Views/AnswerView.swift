@@ -82,11 +82,16 @@ class AnswerView: UIView {
 		guard let answer = answer else { return }
 		answerView.text = answer.answerText
 		answerView.contentTextView.sizeToFit()
-		answerHeight?.constant = answerView.contentTextView.frame.size.height
+		answerHeight?.constant = heightFor(answerView: answerView)
 		let correctnessString = answer.isCorrect ? "Yep!" : "Nope 🥺"
 		correctnessLabel.text = correctnessString
 		correctnessLabel.textColor = answer.isCorrect ? .green : .red
 		reasonView.text = answer.reason ?? ""
+	}
+
+	private func heightFor(answerView: SwiftCodeTextView) -> CGFloat {
+		let thisWidth = CGSize(width: frame.size.width, height: CGFloat.greatestFiniteMagnitude)
+		return answerView.contentTextView.sizeThatFits(thisWidth).height
 	}
 
 	@IBAction func answerViewTapped(_ sender: UITapGestureRecognizer) {
@@ -94,9 +99,7 @@ class AnswerView: UIView {
 			self.correctnessLabel.isHidden.toggle()
 			self.reasonView.isHidden = self.correctnessLabel.isHidden
 			if !self.reasonView.isHidden && !self.reasonView.text.isEmpty {
-				self.reasonView.contentTextView.sizeToFit()
-				self.reasonView.sizeToFit()
-				self.reasonView.heightConstraint = self.reasonView.heightAnchor.constraint(equalToConstant: self.reasonView.contentTextView.frame.size.height)
+				self.reasonView.heightConstraint = self.reasonView.heightAnchor.constraint(equalToConstant: self.heightFor(answerView: self.reasonView))
 				self.reasonView.heightConstraint?.isActive = true
 			} else {
 				self.reasonView.heightConstraint?.isActive = false
