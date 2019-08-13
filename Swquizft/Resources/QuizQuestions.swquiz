@@ -19,8 +19,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
@@ -45,8 +45,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet value = String(\"Steve\")\n"
@@ -71,8 +71,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "vocab",
+      "syntax",
       "types"
     ],
     "difficulty" : 0,
@@ -98,8 +98,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -124,8 +124,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -150,9 +150,9 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
       "types",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -177,8 +177,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet name = \"Fred\"\n"
@@ -230,8 +230,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet name = \"Fred\"\n"
@@ -256,8 +256,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
@@ -398,9 +398,9 @@
       }
     ],
     "categoryTags" : [
-      "types",
+      "syntax",
       "vocab",
-      "syntax"
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet stairs = 1000\n"
@@ -425,8 +425,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet stairs = 1000\n"
@@ -451,8 +451,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar score: Int = 0\n"
@@ -477,9 +477,9 @@
       }
     ],
     "categoryTags" : [
+      "types",
       "syntax",
-      "vocab",
-      "types"
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar score: Int = 0\n"
@@ -530,8 +530,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -582,9 +582,9 @@
       }
     ],
     "categoryTags" : [
+      "types",
       "syntax",
-      "vocab",
-      "types"
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -635,8 +635,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "vocab",
+      "syntax",
       "types"
     ],
     "difficulty" : 0,
@@ -662,8 +662,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar centimeters = 2.54\n"
@@ -690,9 +690,9 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
       "types",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -719,8 +719,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -748,8 +748,8 @@
     ],
     "categoryTags" : [
       "types",
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -774,8 +774,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "types",
+      "syntax",
       "vocab"
     ],
     "difficulty" : 0,
@@ -879,8 +879,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet understandsBinary = true\n"
@@ -936,8 +936,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ When in doubt, what is the best practice when it comes to using `let` and `var`?\nvar myDudes\nlet myDudettes"
@@ -1016,8 +1016,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a constant is mutable"
@@ -1056,8 +1056,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a constant is immutable"
@@ -1094,8 +1094,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is \"mutability\"?"
@@ -1120,8 +1120,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What does it mean if an item is \"mutable\"?"
@@ -1146,8 +1146,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What does it mean if an item is \"immutable\"?"
@@ -1174,8 +1174,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ If you were told to create a new integer called \"hours\" with a value of 24, how would you do that?"
@@ -1325,8 +1325,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is an integer (Int)?"
@@ -1377,8 +1377,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a Float?"
@@ -1428,8 +1428,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a boolean (Bool)?"
@@ -1454,8 +1454,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is an Array?"
@@ -1486,5 +1486,416 @@
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a Dictionary?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ When the programmer creates a new type to better represent some data or provide custom functionality. It can be a class, struct, or enum.",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ When you create a new value for any of the primitive types (Int, Double, Float, Bool, String, etc), you've customized it and therefore it's a \"custom type\".",
+        "isCorrect" : false,
+        "reason" : "\/\/ This would actually be a \"custom value\", but that's not really a term. Pretty much every value is custom."
+      },
+      {
+        "answerText" : "\/\/ When the programmer extends the functionality of a type with an `extension`",
+        "isCorrect" : false,
+        "reason" : "\/\/ This is actually just called an `extension`"
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is a custom type?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ When a value might not have been assigned yet, it could be `nil`. This can cause stability issues if the software assumes that a value is there when it isn't, so an optional let's the compiler know it MIGHT not be there. This allows the compiler to perform optimizations and safely execute the code, even if there might be `nil` values!",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ When you have the option to continue doing your homework or not.",
+        "isCorrect" : false,
+        "reason" : "\/\/ Nice try! DO YOUR HOMEWORK!"
+      },
+      {
+        "answerText" : "\/\/ When a value might be 0",
+        "isCorrect" : false,
+        "reason" : "\/\/ Close…"
+      },
+      {
+        "answerText" : "\/\/ When you have the option to write code multiple different ways, it is \"optional\" to do it in a specific way.",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "types",
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What is an optional?"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "false",
+        "isCorrect" : true,
+        "reason" : "\/\/ 0 means a value of 0. nil means \"the absense of a value\".\n\n\/\/ Think of a scenario where you ask someone else for a note. They could then give you a blank note. Well, it's empty, but you now have a value of nothing, but if they never gave you anything, you have a complete absense of any value."
+      },
+      {
+        "answerText" : "true",
+        "isCorrect" : false,
+        "reason" : "\/\/ 0 means a value of 0. nil means \"the absense of a value\".\n\n\/\/ Think of a scenario where you ask someone else for a note. They could then give you a blank note. Well, it's empty, but you now have a value of nothing, but if they never gave you anything, you have a complete absense of any value."
+      }
+    ],
+    "categoryTags" : [
+      "vocab"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ nil and 0 are the same thing"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "add",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "func add",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "addendOne",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "-> Int",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the function name in the following code:\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "addendOne\n\/\/ and\naddendTwo",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "number\n\/\/ and\nnumber2",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "add\n\/\/ and\nInt",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func\n\/\/ and\nreturn",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the parameter names in the following code:\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "number\n\/\/ and\nnumber2",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "addendOne\n\/\/ and\naddendTwo",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "add\n\/\/ and\nInt",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func\n\/\/ and\nreturn",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the parameter labels in the following code:\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Int",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "return",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "add",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the return type in the following code:\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "String",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "Int",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "Int and String",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the return type in the following code:\n\nfunc stringify(number1: Int, number2: Int) -> String {\n\treturn \"\\(number1) + \\(number2) is equal to \\(number1 + number2)\"\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "stringify",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "number1",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func stringify(number1: Int, number2: Int) -> String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "-> String",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the function name in the following code:\n\nfunc stringify(number1: Int, number2: Int) -> String {\n\treturn \"\\(number1) + \\(number2) is equal to \\(number1 + number2)\"\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ the number 7 would print out to the console",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : " 7",
+        "isCorrect" : false,
+        "reason" : "\/\/ while the function would end up returning the value 7, it's not the whole story of what's happening on line 7"
+      },
+      {
+        "answerText" : "\/\/ \"add(number: 3, number2: 4)\" would print out to the console",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 12",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If you were to run the following code, what would the result of line 7 be?\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}\n\nprint(add(number: 3, number2: 4))"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ the constant\nmathStatement\n\/\/ would be of type String with the value\n\"5 + 20 is equal to 25\"",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ \"5 + 20 is equal to 25\" would print out to the console",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ \"20 + 5 is equal to 25\" would print out to the console",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : " 25",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions",
+      "syntax"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ If you were to run the following code, what would the result of line 7 be?\n\nfunc stringify(number1: Int, number2: Int) -> String {\n\treturn \"\\(number1) + \\(number2) is equal to \\(number1 + number2)\"\n}\n\nlet mathStatement = stringify(number1: 5, number2: 20)"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ 4",
+        "isCorrect" : true,
+        "reason" : "value1, value2, valueFour, and here"
+      },
+      {
+        "answerText" : "\/\/ 6",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ 5",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ 3",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ How many parameters are in the following function?\n\nfunc aLongFunction(_ value1: Int, value2: String, valueFour: Double, withAnotherValue here: Bool) {\n\tprint(\"Well don't you feel foolish now, passing so many arguments into a function that only prints out an insulting message?!\")\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "Void",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "print()",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the return type in the following code:\n\nfunc say(myName: String) {\n\tprint(myName)\n}\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "say",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "myName",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the function in the following code:\n\nfunc say(myName: String) {\n\tprint(myName)\n}\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "myName",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "say",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the parameter in the following code:\n\nfunc say(myName: String) {\n\tprint(myName)\n}\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "myName",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "say",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "String",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "func",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "syntax",
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Identify the name of the argument in the following code:\n\nfunc say(myName: String) {\n\tprint(myName)\n}\n"
   }
 ]
