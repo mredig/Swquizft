@@ -49,6 +49,7 @@ class ResultsViewController: UIViewController {
 	}
 
 	@IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+		quizCoordinator.quitQuiz()
 	}
 }
 
@@ -77,7 +78,18 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 		default:
 			let tracker = allTimeStatisticsCache[indexPath.row]
 			cell.textLabel?.text = tracker.category.rawValue
-			cell.detailTextLabel?.text = infoString(from: tracker.tracking)
+			let info = self.info(from: tracker.tracking)
+			cell.detailTextLabel?.text = info.string
+			switch info.percentage {
+			case 0.95...Double.greatestFiniteMagnitude:
+				cell.detailTextLabel?.textColor = .green
+			case 0.8..<0.95:
+				cell.detailTextLabel?.textColor = .yellow
+			case 0.7..<0.8:
+				cell.detailTextLabel?.textColor = .orange
+			default:
+				cell.detailTextLabel?.textColor = .red
+			}
 		}
 
 		return cell
@@ -92,15 +104,16 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 		}
 	}
 
-	private func infoString(from categoryTracking: CategoryStatistics.CategoryTracking) -> String {
+	private func info(from categoryTracking: CategoryStatistics.CategoryTracking) -> (string: String, percentage: Double) {
+		guard categoryTracking.presented != 0 else { return ("0/0 (0%)", 0) }
 		let percentage = Double(categoryTracking.correct) / Double(categoryTracking.presented)
 
 		let numberFormatter = NumberFormatter()
 		numberFormatter.numberStyle = .percent
 		numberFormatter.maximumFractionDigits = 1
-		guard let percentString = numberFormatter.string(from: percentage as NSNumber) else { return "fail" }
+		guard let percentString = numberFormatter.string(from: percentage as NSNumber) else { return ("fail", 0) }
 		let fraction = "\(categoryTracking.correct)/\(categoryTracking.presented) (\(percentString))"
 
-		return fraction
+		return (fraction, percentage)
 	}
 }
