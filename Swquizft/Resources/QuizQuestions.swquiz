@@ -71,8 +71,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
       "syntax",
+      "vocab",
       "types"
     ],
     "difficulty" : 0,
@@ -98,8 +98,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -151,8 +151,8 @@
     ],
     "categoryTags" : [
       "types",
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet theNumber = 5\n"
@@ -203,8 +203,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
       "vocab",
+      "syntax",
       "types"
     ],
     "difficulty" : 0,
@@ -230,8 +230,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet name = \"Fred\"\n"
@@ -282,8 +282,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
@@ -308,8 +308,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet school: String = \"Lambda\"\n"
@@ -477,9 +477,9 @@
       }
     ],
     "categoryTags" : [
+      "vocab",
       "types",
-      "syntax",
-      "vocab"
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar score: Int = 0\n"
@@ -530,8 +530,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -556,8 +556,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -582,9 +582,9 @@
       }
     ],
     "categoryTags" : [
+      "vocab",
       "types",
-      "syntax",
-      "vocab"
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nvar pi = Double(3.14)\n"
@@ -609,8 +609,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nvar centimeters = 2.54\n"
@@ -635,8 +635,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
       "syntax",
+      "vocab",
       "types"
     ],
     "difficulty" : 0,
@@ -662,8 +662,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nvar centimeters = 2.54\n"
@@ -690,9 +690,9 @@
       }
     ],
     "categoryTags" : [
+      "vocab",
       "types",
-      "syntax",
-      "vocab"
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -719,8 +719,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet meaningOfLife = Float(42)\n"
@@ -774,9 +774,9 @@
       }
     ],
     "categoryTags" : [
-      "types",
       "syntax",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the type of the variable in the following code:\n\nlet daysInYear: Float = 365.25\n"
@@ -853,8 +853,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the value of the variable in the following code:\n\nlet understandsBinary = true\n"
@@ -879,8 +879,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the variable in the following code:\n\nlet understandsBinary = true\n"
@@ -996,8 +996,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a variable and how would you create one?\n\/\/ hint: read the answers *very* closely"
@@ -1016,8 +1016,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ a constant is mutable"
@@ -1120,8 +1120,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What does it mean if an item is \"mutable\"?"
@@ -1174,8 +1174,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "syntax"
+      "syntax",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ If you were told to create a new integer called \"hours\" with a value of 24, how would you do that?"
@@ -1202,8 +1202,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ If you were told to create a new integer called \"theMeaningOfLife\" with a value of 42, how would you do that?"
@@ -1230,8 +1230,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "vocab"
+      "vocab",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ If you were told to create a new string called `bestProgrammingLanguage` with a value of \"Swift\", how would you do that?"
@@ -1298,9 +1298,9 @@
       }
     ],
     "categoryTags" : [
+      "types",
       "syntax",
-      "vocab",
-      "types"
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ If you were told to create a new array called `originalTrilogy` listing the titles of the original Star Wars films, how would you do that?\n\n\/\/ (for those of you who may not be a jedi, the films are \"A New Hope\", \"Empire Strikes Back\", and \"Return of the Jedi\"."
@@ -1325,8 +1325,8 @@
       }
     ],
     "categoryTags" : [
-      "vocab",
-      "types"
+      "types",
+      "vocab"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is an integer (Int)?"
@@ -1351,8 +1351,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a Double?"
@@ -1406,8 +1406,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a String?"
@@ -1481,8 +1481,8 @@
       }
     ],
     "categoryTags" : [
-      "types",
-      "vocab"
+      "vocab",
+      "types"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ What is a Dictionary?"
@@ -1578,8 +1578,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "functions"
+      "functions",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the function name in the following code:\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}"
@@ -1604,8 +1604,8 @@
       }
     ],
     "categoryTags" : [
-      "functions",
-      "syntax"
+      "syntax",
+      "functions"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the parameter names in the following code:\n\nfunc add(number addendOne: Int, number2 addendTwo: Int) -> Int {\n\treturn addendOne + addendTwo\n}"
@@ -1798,7 +1798,8 @@
     "answers" : [
       {
         "answerText" : "Void",
-        "isCorrect" : true
+        "isCorrect" : true,
+        "reason" : "\/\/ When a function doesn't explicitly state its return value, it implicitly returns `Void`"
       },
       {
         "answerText" : "String",
@@ -1814,8 +1815,8 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "functions"
+      "functions",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the return type in the following code:\n\nfunc say(myName: String) {\n\tprint(myName)\n}\n"
@@ -1892,10 +1893,164 @@
       }
     ],
     "categoryTags" : [
-      "syntax",
-      "functions"
+      "functions",
+      "syntax"
     ],
     "difficulty" : 0,
     "prompt" : "\/\/ Identify the name of the argument in the following code:\n\nfunc say(myName: String) {\n\tprint(myName)\n}\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ Calculate an the mode for all the numbers in the array",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ Determines if each item in the array is even",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ Provide a total for all the items in the array",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ Print out the mode for all numbers in the array",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions"
+    ],
+    "difficulty" : 1,
+    "prompt" : "\/\/ What does the mystery function do?\n\nfunc mysteryFunction(array: [Int]) -> Double {\n\tguard array.count > 0 else { return 0 }\n\tlet array = array.sorted()\n\tif array.count.isMultiple(of: 2) {\n\t\tlet valueIndex = array.count \/ 2\n\t\tlet value1 = Double(array[valueIndex])\n\t\tlet value2 = Double(array[valueIndex - 1])\n\t\treturn (value1 + value2) \/ 2.0\n\t} else {\n\t\tlet index = array.count \/ 2\n\t\treturn Double(array[index])\n\t}\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ Prints \"My name\" twice.",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ Vocally states \"My name\" through speakers, twice.",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ Prints \"My name\".",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ Prints \"say\" twice.",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What does the mystery function do?\n\nfunc say() {\n\tprint(\"My name\")\n}\n\nfunc mysteryFunction() {\n\tsay()\n\tsay()\n}\n"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ Calculate an the average (the mean) for all the numbers in the array",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "\/\/ Divides each value in the array by a count",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ Provide a total for all the items in the array",
+        "isCorrect" : false
+      },
+      {
+        "answerText" : "\/\/ Print out the average (the mean) for all numbers in the array",
+        "isCorrect" : false
+      }
+    ],
+    "categoryTags" : [
+      "functions"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ What does the mystery function do?\n\nfunc mysteryFunction(array: [Int]) -> Double {\n\tguard array.count > 0 else { return 0 }\n\n\tvar totalValue = 0\n\tfor number in array {\n\t\ttotalValue += number\n\t}\n\treturn Double(totalValue) \/ Double(array.count)\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "false",
+        "isCorrect" : true,
+        "reason" : "\/\/ The reverse is true, actually. All delegates are protocols."
+      },
+      {
+        "answerText" : "true",
+        "isCorrect" : false,
+        "reason" : "\/\/ The reverse is true, actually. All delegates are protocols."
+      }
+    ],
+    "categoryTags" : [
+      "protocols"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ All protocols are delegates"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "true",
+        "isCorrect" : true,
+        "reason" : "\/\/ Delegates are just a type of protocol."
+      },
+      {
+        "answerText" : "false",
+        "isCorrect" : false,
+        "reason" : "\/\/ Delegates are just a type of protocol."
+      }
+    ],
+    "categoryTags" : [
+      "protocols"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Boolean (true or false):\n\n\/\/ All delegates are protocols"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "struct Example: Codable {\n\tlet aString: String\n\tlet bNumber: Int\n}\n\/\/ and when you encode\/decode, use the `convertFromSnakeCase` option",
+        "isCorrect" : true
+      },
+      {
+        "answerText" : "struct Example: Codable {\n\tenum CodingKeys: String, CodingKey {\n\t\tcase aString = \"a_string\"\n\t\tcase bNumber = \"b_number\"\n\t}\n\tlet aString: String\n\tlet bNumber: Int\n}\n",
+        "isCorrect" : false,
+        "reason" : "\/\/ technically this isn't wrong, but this example is simple enough that a CodingKeys enum is unnecessary."
+      },
+      {
+        "answerText" : "struct Example: Codable {\n\tlet a_string: String\n\tlet b_number: Int\n}\n",
+        "isCorrect" : false,
+        "reason" : "\/\/ you don't want to use snake case in Swift. It's ugly. Other languages shouldn't use it either. No one should!"
+      },
+      {
+        "answerText" : "struct Example: Codable {\n\tlet bString: String\n\tlet aNumber: Int\n}\n",
+        "isCorrect" : false,
+        "reason" : "\/\/ take a close look at the variable names!"
+      }
+    ],
+    "categoryTags" : [
+      "codable"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ Which option would best represent this JSON using Codable in Swift?\n\n{\n    \"a_string\": \"foo\",\n    \"b_number\": 847\n}"
+  },
+  {
+    "answers" : [
+      {
+        "answerText" : "\/\/ this is the correct answer",
+        "isCorrect" : true
+      }
+    ],
+    "categoryTags" : [
+      "misc"
+    ],
+    "difficulty" : 0,
+    "prompt" : "\/\/ This is a free question!"
   }
 ]
