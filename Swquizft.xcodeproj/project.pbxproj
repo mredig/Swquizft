@@ -66,6 +66,8 @@
 		3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */; };
 		337BB5D32300B561001E913B /* SwiftTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337BB5D22300B561001E913B /* SwiftTableCellView.swift */; };
 		337BB5D62300B821001E913B /* SmallerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337BB5D52300B821001E913B /* SmallerTheme.swift */; };
+		337BB5D82303C687001E913B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337BB5D72303C687001E913B /* ResultsViewController.swift */; };
+		337BB5DA2303C69A001E913B /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 337BB5D92303C69A001E913B /* ResultsViewController.xib */; };
 		33B762D222F346B900395090 /* Sourceful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B762D122F346B900395090 /* Sourceful.framework */; };
 		33B762D422F3512C00395090 /* SwiftCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D322F3512C00395090 /* SwiftCodeTextView.swift */; };
 		33B762D622F4029800395090 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762D522F4029800395090 /* MainCoordinator.swift */; };
@@ -158,6 +160,8 @@
 		3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManagerViewController.swift; sourceTree = "<group>"; };
 		337BB5D22300B561001E913B /* SwiftTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTableCellView.swift; sourceTree = "<group>"; };
 		337BB5D52300B821001E913B /* SmallerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallerTheme.swift; sourceTree = "<group>"; };
+		337BB5D72303C687001E913B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		337BB5D92303C69A001E913B /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		33B762D122F346B900395090 /* Sourceful.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sourceful.framework; path = Carthage/Build/iOS/Sourceful.framework; sourceTree = "<group>"; };
 		33B762D322F3512C00395090 /* SwiftCodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCodeTextView.swift; sourceTree = "<group>"; };
 		33B762D522F4029800395090 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCoordinator.swift; path = Coordinator/MainCoordinator.swift; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 				3379F4BA22F0F72700339E62 /* RootTabViewController.swift */,
 				330842BE22EF932A00D62FFD /* MainViewController.swift */,
 				33506D2622F15D52008E906E /* QuestionPromptViewController.swift */,
+				337BB5D72303C687001E913B /* ResultsViewController.swift */,
+				337BB5D92303C69A001E913B /* ResultsViewController.xib */,
 				3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */,
 			);
 			path = "View Controllers";
@@ -511,6 +517,7 @@
 			files = (
 				3308434E22EFFB5000D62FFD /* Raleway 700italic.ttf in Resources */,
 				3308433722EFF84200D62FFD /* Pacifico regular.ttf in Resources */,
+				337BB5DA2303C69A001E913B /* ResultsViewController.xib in Resources */,
 				33506D2F22F24D35008E906E /* AnswerView.xib in Resources */,
 				3308435922EFFB5000D62FFD /* Raleway 200italic.ttf in Resources */,
 				330842C722EF932B00D62FFD /* LaunchScreen.storyboard in Resources */,
@@ -587,6 +594,7 @@
 				3379F4BB22F0F72700339E62 /* RootTabViewController.swift in Sources */,
 				330842FD22EFC15D00D62FFD /* QuestionController.swift in Sources */,
 				3308430522EFCDDD00D62FFD /* QuizCoordinator.swift in Sources */,
+				337BB5D82303C687001E913B /* ResultsViewController.swift in Sources */,
 				330842E422EF946900D62FFD /* Answer.swift in Sources */,
 				3379F4BF22F13C1400339E62 /* QuestionsManagerViewController.swift in Sources */,
 				3308430122EFCAD300D62FFD /* Coordinator.swift in Sources */,

@@ -42,10 +42,7 @@ class QuizCoordinator: NSObject, Coordinator {
 		case 0...lastQuestionIndex: // show next question, including the last question
 			showQuestionVC()
 		case resultsScreenIndex: // show results screen
-			if incrementingIndex {
-				currentQuestionIndex -= 1
-			}
-			break
+			showResultsVC()
 		case resultsScreenIndex + 1: // we are done!
 			quitQuiz()
 		default:
@@ -67,6 +64,11 @@ class QuizCoordinator: NSObject, Coordinator {
 		quizVC.questionController = questionController
 		quizVC.question = questionController.currentQuestions[currentQuestionIndex]
 		navigationController.pushViewController(quizVC, animated: true)
+	}
+
+	func showResultsVC() {
+		let resultsVC = ResultsViewController(quizCoordinator: self)
+		navigationController.pushViewController(resultsVC, animated: true)
 	}
 
 	func backButtonPressed() {
