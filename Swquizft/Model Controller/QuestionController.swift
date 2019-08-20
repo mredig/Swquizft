@@ -8,12 +8,20 @@
 
 import Foundation
 
+protocol QuestionControllerDelegate: AnyObject {
+	func questionControllerSelectedCategoriesChanged(_ questionController: QuestionController)
+}
+
 class QuestionController {
 	/// bank of all questions. Probably not a long term solution
 	var questionBank: [Question] = []
 	/// Set indicating selected categories. When a quiz is started, a random selection of questions pertaining only to
 	/// categories selected is pulled from the master list and presented to the user
-	private(set) var selectedCategories: Set<Question.Category> = []
+	private(set) var selectedCategories: Set<Question.Category> = [] {
+		didSet {
+			delegate?.questionControllerSelectedCategoriesChanged(self)
+		}
+	}
 
 	/// QuestionBank file location - when this gets set, it triggers a load from persistence, if the file already exists. If this value is being set with the intention to overwrite the existing file on disk, delete/rename the existing file before setting this value.
 	var questionBankURL: URL? {
@@ -31,6 +39,8 @@ class QuestionController {
 			saveCategoryStatistics()
 		}
 	}
+
+	weak var delegate: QuestionControllerDelegate?
 
 	init() {
 		loadCategoryStatistics()
@@ -64,7 +74,7 @@ class QuestionController {
 			return false
 		}
 		currentQuestions.shuffle()
-		while currentQuestions.count > 20 {
+		while currentQuestions.count > 10 {
 			currentQuestions.removeLast()
 		}
 	}

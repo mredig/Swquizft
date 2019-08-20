@@ -13,25 +13,25 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 	@IBOutlet var easyButton: UIButton!
 	@IBOutlet var mediumButton: UIButton!
 	@IBOutlet var hardButton: UIButton!
+	@IBOutlet var goButton: UIButton!
 	@IBOutlet var categoryCollection: UICollectionView!
-	var categoryDelegate: CategoryCollectionDelegate?
+	var categoryDelegate: CategoryCollectionSelector?
 
-	var questionsController: QuestionController?
+	var questionController: QuestionController?
 	var coordinator: Coordinator? {
 		didSet {
 			guard let quizCoordinator = mainCoordinator else { return }
-			questionsController = quizCoordinator.questionController
+			questionController = quizCoordinator.questionController
 		}
 	}
 	var mainCoordinator: MainCoordinator? {
 		return coordinator as? MainCoordinator
 	}
 
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		guard let questionsController = mainCoordinator?.questionController else { return }
-		categoryDelegate = CategoryCollectionDelegate(questionController: questionsController, categoryCollection: categoryCollection)
+		categoryDelegate = CategoryCollectionSelector(questionController: questionsController, categoryCollection: categoryCollection)
 		categoryCollection.delegate = categoryDelegate
 		categoryCollection.dataSource = categoryDelegate
 		categoryCollection.allowsMultipleSelection = true
@@ -39,6 +39,8 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 		setupDifficultyButtons()
 
 		difficultyButtons.first?.isSelected = true
+		questionsController.delegate = self
+		updateGoButton()
 	}
 
 	func setupDifficultyButtons() {
@@ -56,5 +58,14 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 	@IBAction func goButtonPressed(_ sender: UIButton) {
 		mainCoordinator?.startQuiz()
 	}
+
+	private func updateGoButton() {
+		goButton.isEnabled = questionController?.selectedCategories.isEmpty == false
+	}
 }
 
+extension MainViewController: QuestionControllerDelegate {
+	func questionControllerSelectedCategoriesChanged(_ questionController: QuestionController) {
+		updateGoButton()
+	}
+}

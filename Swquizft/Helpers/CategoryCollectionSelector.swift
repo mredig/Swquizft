@@ -1,5 +1,5 @@
 //
-//  CategoryCollectionDelegate.swift
+//  CategoryCollectionSelector.swift
 //  Swquizft
 //
 //  Created by Michael Redig on 7/29/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
+class CategoryCollectionSelector: NSObject {
 	let questionController: QuestionController
 	let categoryCollection: UICollectionView
 
@@ -16,7 +16,9 @@ class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 		self.questionController = questionController
 		self.categoryCollection = categoryCollection
 	}
+}
 
+extension CategoryCollectionSelector: UICollectionViewDataSource {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 2
 	}
@@ -55,16 +57,16 @@ class CategoryCollectionDelegate: NSObject, UICollectionViewDataSource {
 
 }
 
-extension CategoryCollectionDelegate: UICollectionViewDelegate {
+extension CategoryCollectionSelector: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		(collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell)?.toggleSelection()
 	}
 }
 
-extension CategoryCollectionDelegate: UICollectionViewDelegateFlowLayout {
+extension CategoryCollectionSelector: UICollectionViewDelegateFlowLayout {
 }
 
-extension CategoryCollectionDelegate: SelectionController {
+extension CategoryCollectionSelector: SelectionController {
 	func toggleAllSelection() {
 		if questionController.selectedCategories.count == Question.Category.allCases.count {
 			for category in Question.Category.allCases {

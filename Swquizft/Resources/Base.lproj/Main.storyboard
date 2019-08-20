@@ -260,6 +260,7 @@
                     <connections>
                         <outlet property="categoryCollection" destination="24N-Gh-krY" id="WM7-or-NqJ"/>
                         <outlet property="easyButton" destination="uqB-vc-rBj" id="ZOj-7v-i0L"/>
+                        <outlet property="goButton" destination="fZz-Ym-Lf7" id="aIV-90-xE7"/>
                         <outlet property="hardButton" destination="2wE-5N-gy8" id="NGK-Zx-pRk"/>
                         <outlet property="mediumButton" destination="vKc-q7-GYB" id="3t0-Q0-aHg"/>
                         <outletCollection property="difficultyButtons" destination="uqB-vc-rBj" collectionClass="NSMutableArray" id="ce6-cx-K5x"/>
