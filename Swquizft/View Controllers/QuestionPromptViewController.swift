@@ -88,7 +88,12 @@ class QuestionPromptViewController: UIViewController, CoordinatedStoryboard {
 	}
 
 	@IBAction func quitButtonPressed(_ sender: UIBarButtonItem) {
-		quizCoordinator?.quitQuiz()
+		let confirmationAlert = UIAlertController(title: "Are you sure you want to quit?", message: "Your quiz cannot be resumed at a later time if you leave.", preferredStyle: .alert)
+		confirmationAlert.addAction(UIAlertAction(title: "Quit", style: .destructive, handler: { [weak self] _ in
+			self?.quizCoordinator?.quitQuiz()
+		}))
+		confirmationAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+		present(confirmationAlert, animated: true)
 	}
 
 }
