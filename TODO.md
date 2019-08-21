@@ -5,5 +5,4 @@
 	* show results on final page - include statistics for run
 	* dismiss final page
 * confirm quiz quit
-* disable go button while no categories are selected
-
+* refactor out of storyboard

@@ -18,7 +18,14 @@ class ResultsViewController: UIViewController {
 
 	let quizCoordinator: QuizCoordinator
 	let questionController: QuestionController
-	let allTimeStatisticsCache: [(category: Question.Category, tracking: CategoryStatistics.CategoryTracking)]
+
+	typealias CategoryStat = (category: Question.Category, tracking: CategoryStatistics.CategoryTracking)
+	lazy var allTimeStatisticsCache: [CategoryStat] = {
+		return questionController.allTimeCategoryStatistics.statsticsArray
+	}()
+	lazy var thisTimeStatisticsCache: [CategoryStat] = {
+		return questionController.thisTimeCategoryStatistics?.statsticsArray ?? []
+	}()
 	
 
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -32,9 +39,6 @@ class ResultsViewController: UIViewController {
 	init(quizCoordinator: QuizCoordinator) {
 		self.quizCoordinator = quizCoordinator
 		self.questionController = quizCoordinator.questionController
-		self.allTimeStatisticsCache = quizCoordinator.questionController.categoryStatistics.statistics
-			.map { ($0.key, $0.value) }
-			.sorted { $0.category.rawValue < $1.category.rawValue }
 		super.init(nibName: nil, bundle: nil)
 		commonInit()
 	}
@@ -61,7 +65,7 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		switch section {
 		case 0:
-			return 0
+			return thisTimeStatisticsCache.count
 		default:
 			return allTimeStatisticsCache.count
 		}
@@ -72,24 +76,25 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 		if cell.detailTextLabel == nil {
 			cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
 		}
+		let tracker: CategoryStat
 		switch indexPath.section {
 		case 0:
-			break
+			tracker = thisTimeStatisticsCache[indexPath.row]
 		default:
-			let tracker = allTimeStatisticsCache[indexPath.row]
-			cell.textLabel?.text = tracker.category.rawValue
-			let info = self.info(from: tracker.tracking)
-			cell.detailTextLabel?.text = info.string
-			switch info.percentage {
-			case 0.95...Double.greatestFiniteMagnitude:
-				cell.detailTextLabel?.textColor = .green
-			case 0.8..<0.95:
-				cell.detailTextLabel?.textColor = .yellow
-			case 0.7..<0.8:
-				cell.detailTextLabel?.textColor = .orange
-			default:
-				cell.detailTextLabel?.textColor = .red
-			}
+			tracker = allTimeStatisticsCache[indexPath.row]
+		}
+		cell.textLabel?.text = tracker.category.rawValue
+		let info = self.info(from: tracker.tracking)
+		cell.detailTextLabel?.text = info.string
+		switch info.percentage {
+		case 0.95...Double.greatestFiniteMagnitude:
+			cell.detailTextLabel?.textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+		case 0.8..<0.95:
+			cell.detailTextLabel?.textColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+		case 0.7..<0.8:
+			cell.detailTextLabel?.textColor = .orange
+		default:
+			cell.detailTextLabel?.textColor = #colorLiteral(red: 0.7588853433, green: 0.04085438537, blue: 0.04085438537, alpha: 1)
 		}
 
 		return cell
@@ -106,14 +111,13 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 
 	private func info(from categoryTracking: CategoryStatistics.CategoryTracking) -> (string: String, percentage: Double) {
 		guard categoryTracking.presented != 0 else { return ("0/0 (0%)", 0) }
-		let percentage = Double(categoryTracking.correct) / Double(categoryTracking.presented)
 
 		let numberFormatter = NumberFormatter()
 		numberFormatter.numberStyle = .percent
 		numberFormatter.maximumFractionDigits = 1
-		guard let percentString = numberFormatter.string(from: percentage as NSNumber) else { return ("fail", 0) }
+		guard let percentString = numberFormatter.string(from: categoryTracking.percentage as NSNumber) else { return ("fail", 0) }
 		let fraction = "\(categoryTracking.correct)/\(categoryTracking.presented) (\(percentString))"
 
-		return (fraction, percentage)
+		return (fraction, categoryTracking.percentage)
 	}
 }

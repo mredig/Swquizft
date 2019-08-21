@@ -34,11 +34,12 @@ class QuestionController {
 	var currentQuestions: [Question] = []
 
 	/// Statistics tracker for performance within categories
-	private(set) var categoryStatistics = CategoryStatistics() {
+	private(set) var allTimeCategoryStatistics = CategoryStatistics() {
 		didSet {
 			saveCategoryStatistics()
 		}
 	}
+	private(set) var thisTimeCategoryStatistics: CategoryStatistics?
 
 	weak var delegate: QuestionControllerDelegate?
 
@@ -77,11 +78,13 @@ class QuestionController {
 		while currentQuestions.count > 10 {
 			currentQuestions.removeLast()
 		}
+		thisTimeCategoryStatistics = CategoryStatistics()
 	}
 
 	func question(_ question: Question, answeredCorrectly correct: Bool) {
 		for category in question.categoryTags {
-			categoryStatistics.presented(category: category, correct: correct)
+			allTimeCategoryStatistics.presented(category: category, correct: correct)
+			thisTimeCategoryStatistics?.presented(category: category, correct: correct)
 		}
 		if !correct {
 			// append to end of current question list for immediate review
@@ -133,7 +136,7 @@ class QuestionController {
 	private func saveCategoryStatistics() {
 		let encoder = PropertyListEncoder()
 		do {
-			let data = try encoder.encode(categoryStatistics)
+			let data = try encoder.encode(allTimeCategoryStatistics)
 			UserDefaults.standard.set(data, forKey: "categoryStatistics")
 		} catch {
 			NSLog("Statistics saving failed: \(error)")
@@ -145,7 +148,7 @@ class QuestionController {
 		let decoder = PropertyListDecoder()
 		do {
 			let stats = try decoder.decode(CategoryStatistics.self, from: data)
-			categoryStatistics = stats
+			allTimeCategoryStatistics = stats
 		} catch {
 			NSLog("Statistics loading failed: \(error)")
 		}
