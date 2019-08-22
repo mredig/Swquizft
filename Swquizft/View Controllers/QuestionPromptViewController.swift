@@ -61,6 +61,8 @@ class QuestionPromptViewController: UIViewController {
 		quizChangedNotification = NotificationCenter.default.addObserver(forName: .quizIndexChanged, object: nil, queue: nil) { _ in
 			self.updateViews()
 		}
+
+		view.tintColor = UIColor(named: "swiftlikeOrange")
 	}
 
 	deinit {
