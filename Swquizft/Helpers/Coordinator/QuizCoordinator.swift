@@ -80,8 +80,9 @@ class QuizCoordinator: NSObject, Coordinator {
 		rootTabController?.dismiss(animated: true)
 	}
 
-	func generateVCTitle() -> String {
-		return "\(currentQuestionIndex + 1) / \(questionController.currentQuestions.count)"
+	func generateVCTitle(at index: Int?) -> String {
+		let indexValue = index ?? currentQuestionIndex
+		return "\(indexValue + 1) / \(questionController.currentQuestions.count)"
 	}
 
 	func generateNextButtonText() -> String {

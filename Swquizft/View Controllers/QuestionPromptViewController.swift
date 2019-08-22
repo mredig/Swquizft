@@ -88,7 +88,8 @@ class QuestionPromptViewController: UIViewController {
 
 		questionHeightConstraint.constant = questionTextView.requiredHeight(for: view.frame.width)
 
-		navigationItem.title = quizCoordinator.generateVCTitle()
+		let indexValue = navigationController?.viewControllers.firstIndex(of: self)
+		navigationItem.title = quizCoordinator.generateVCTitle(at: indexValue)
 		nextButton.title = quizCoordinator.generateNextButtonText()
 	}
 
