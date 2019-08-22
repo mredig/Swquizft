@@ -157,6 +157,7 @@
 		333D8C43230F202D0078B2C4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		333D8C45230F266D0078B2C4 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		333D8C47230F27650078B2C4 /* SelectAllCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectAllCollectionViewCell.xib; sourceTree = "<group>"; };
+		333D8C49230F2F040078B2C4 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		33506D2022F15B92008E906E /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
 		33506D2622F15D52008E906E /* QuestionPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPromptViewController.swift; sourceTree = "<group>"; };
 		33506D2C22F24D27008E906E /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
@@ -207,6 +208,7 @@
 		330842B022EF932A00D62FFD = {
 			isa = PBXGroup;
 			children = (
+				333D8C49230F2F040078B2C4 /* Readme.md */,
 				33B762DA22F4153F00395090 /* TODO.md */,
 				33506D2022F15B92008E906E /* cartfile */,
 				330842BB22EF932A00D62FFD /* Swquizft */,
