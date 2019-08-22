@@ -60,7 +60,7 @@ class QuizCoordinator: NSObject, Coordinator {
 	}
 
 	func showQuestionVC() {
-		let quizVC = QuestionPromptViewController.instantiate(coordinator: self)
+		let quizVC = QuestionPromptViewController(quizCoordinator: self)
 		quizVC.questionController = questionController
 		quizVC.question = questionController.currentQuestions[currentQuestionIndex]
 		navigationController.pushViewController(quizVC, animated: true)

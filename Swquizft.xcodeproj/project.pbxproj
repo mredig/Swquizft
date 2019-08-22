@@ -54,6 +54,7 @@
 		331D8235230077D200C9E74B /* CategoriesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D8234230077D200C9E74B /* CategoriesCollectionController.swift */; };
 		331D82382300793100C9E74B /* CategoriesCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D82362300793100C9E74B /* CategoriesCollectionViewItem.swift */; };
 		331D82392300793100C9E74B /* CategoriesCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331D82372300793100C9E74B /* CategoriesCollectionViewItem.xib */; };
+		333D8C42230DF08D0078B2C4 /* QuestionPromptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333D8C41230DF08D0078B2C4 /* QuestionPromptViewController.xib */; };
 		33506D2722F15D52008E906E /* QuestionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2622F15D52008E906E /* QuestionPromptViewController.swift */; };
 		33506D2D22F24D27008E906E /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33506D2C22F24D27008E906E /* AnswerView.swift */; };
 		33506D2F22F24D35008E906E /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33506D2E22F24D35008E906E /* AnswerView.xib */; };
@@ -149,6 +150,7 @@
 		331D8234230077D200C9E74B /* CategoriesCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionController.swift; sourceTree = "<group>"; };
 		331D82362300793100C9E74B /* CategoriesCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewItem.swift; sourceTree = "<group>"; };
 		331D82372300793100C9E74B /* CategoriesCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewItem.xib; sourceTree = "<group>"; };
+		333D8C41230DF08D0078B2C4 /* QuestionPromptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionPromptViewController.xib; sourceTree = "<group>"; };
 		33506D2022F15B92008E906E /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
 		33506D2622F15D52008E906E /* QuestionPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPromptViewController.swift; sourceTree = "<group>"; };
 		33506D2C22F24D27008E906E /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				3379F4BA22F0F72700339E62 /* RootTabViewController.swift */,
 				330842BE22EF932A00D62FFD /* MainViewController.swift */,
 				33506D2622F15D52008E906E /* QuestionPromptViewController.swift */,
+				333D8C41230DF08D0078B2C4 /* QuestionPromptViewController.xib */,
 				337BB5D72303C687001E913B /* ResultsViewController.swift */,
 				337BB5D92303C69A001E913B /* ResultsViewController.xib */,
 				3379F4BE22F13C1400339E62 /* QuestionsManagerViewController.swift */,
@@ -519,6 +522,7 @@
 				3308433722EFF84200D62FFD /* Pacifico regular.ttf in Resources */,
 				337BB5DA2303C69A001E913B /* ResultsViewController.xib in Resources */,
 				33506D2F22F24D35008E906E /* AnswerView.xib in Resources */,
+				333D8C42230DF08D0078B2C4 /* QuestionPromptViewController.xib in Resources */,
 				3308435922EFFB5000D62FFD /* Raleway 200italic.ttf in Resources */,
 				330842C722EF932B00D62FFD /* LaunchScreen.storyboard in Resources */,
 				3308434D22EFFB5000D62FFD /* Raleway 200.ttf in Resources */,
