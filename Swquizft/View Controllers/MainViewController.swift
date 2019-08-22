@@ -8,38 +8,58 @@
 
 import UIKit
 
-class MainViewController: UIViewController, CoordinatedStoryboard {
+class MainViewController: UIViewController {
 	@IBOutlet var difficultyButtons: [UIButton]!
 	@IBOutlet var easyButton: UIButton!
 	@IBOutlet var mediumButton: UIButton!
 	@IBOutlet var hardButton: UIButton!
 	@IBOutlet var goButton: UIButton!
-	@IBOutlet var categoryCollection: UICollectionView!
-	var categoryDelegate: CategoryCollectionSelector?
-
-	var questionController: QuestionController?
-	var coordinator: Coordinator? {
-		didSet {
-			guard let quizCoordinator = mainCoordinator else { return }
-			questionController = quizCoordinator.questionController
+	@IBOutlet private var _tabBarItemInXib: UITabBarItem!
+	override var tabBarItem: UITabBarItem! {
+		get {
+			return _tabBarItemInXib
+		}
+		set {
+			_tabBarItemInXib = newValue
 		}
 	}
-	var mainCoordinator: MainCoordinator? {
-		return coordinator as? MainCoordinator
+	@IBOutlet var categoryCollection: UICollectionView!
+	var categoryDelegate: CategoryCollectionSelector?
+	
+	let questionController: QuestionController
+	let mainCoordinator: MainCoordinator
+
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+		fatalError("init(nibName etc not implemented)")
 	}
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		guard let questionsController = mainCoordinator?.questionController else { return }
-		categoryDelegate = CategoryCollectionSelector(questionController: questionsController, categoryCollection: categoryCollection)
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	init(mainCoordinator: MainCoordinator) {
+		self.mainCoordinator = mainCoordinator
+		self.questionController = mainCoordinator.questionController
+		super.init(nibName: nil, bundle: nil)
+		commonInit()
+	}
+
+	private func commonInit() {
+		let nib = UINib(nibName: "MainViewController", bundle: nil)
+		nib.instantiate(withOwner: self, options: nil)
+
+		categoryDelegate = CategoryCollectionSelector(questionController: questionController, categoryCollection: categoryCollection)
 		categoryCollection.delegate = categoryDelegate
 		categoryCollection.dataSource = categoryDelegate
 		categoryCollection.allowsMultipleSelection = true
 
+		categoryCollection.register(SelectAllCollectionViewCell.self, forCellWithReuseIdentifier: "SelectAllCollectionViewCell")
+		categoryCollection.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategorySelectionCell")
+
 		setupDifficultyButtons()
 
 		difficultyButtons.first?.isSelected = true
-		questionsController.delegate = self
+		questionController.delegate = self
 		updateGoButton()
 	}
 
@@ -56,11 +76,11 @@ class MainViewController: UIViewController, CoordinatedStoryboard {
 	}
 
 	@IBAction func goButtonPressed(_ sender: UIButton) {
-		mainCoordinator?.startQuiz()
+		mainCoordinator.startQuiz()
 	}
 
 	private func updateGoButton() {
-		goButton.isEnabled = questionController?.selectedCategories.isEmpty == false
+		goButton.isEnabled = questionController.selectedCategories.isEmpty == false
 	}
 }
 

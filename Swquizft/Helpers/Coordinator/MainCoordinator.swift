@@ -21,8 +21,7 @@ class MainCoordinator: NSObject, Coordinator {
 	}
 
 	func start() {
-		let vc = MainViewController.instantiate(coordinator: self)
-		vc.coordinator = self
+		let vc = MainViewController(mainCoordinator: self)
 		navigationController.pushViewController(vc, animated: false)
 	}
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway 600.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectAllCollectionViewCell" customModule="Swquizft" customModuleProvider="target">
+            <connections>
+                <outlet property="contentsContainer" destination="Rrx-qM-nag" id="lsi-hR-79n"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rrx-qM-nag">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URv-dZ-f1D">
+                    <rect key="frame" x="168.5" y="432" width="77" height="32"/>
+                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
+                    <state key="normal" title="Select All"/>
+                    <connections>
+                        <action selector="selectAllButtonPressed:" destination="-1" eventType="touchUpInside" id="cmd-e6-SB4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="URv-dZ-f1D" firstAttribute="centerY" secondItem="Rrx-qM-nag" secondAttribute="centerY" id="I6B-CG-vUC"/>
+                <constraint firstItem="URv-dZ-f1D" firstAttribute="centerX" secondItem="Rrx-qM-nag" secondAttribute="centerX" id="mjp-tE-5yi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Qnb-y1-VId"/>
+        </view>
+    </objects>
+</document>

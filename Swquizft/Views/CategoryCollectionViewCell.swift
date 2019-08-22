@@ -26,8 +26,27 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 		set {} // do nothing
 	}
 
-	override func awakeFromNib() {
-		super.awakeFromNib()
+	override init(frame: CGRect) {
+		super.init(frame: frame)
+		commonInit()
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		commonInit()
+	}
+
+	private func commonInit() {
+		let nib = UINib(nibName: "CategoryCollectionViewCell", bundle: nil)
+		nib.instantiate(withOwner: self, options: nil)
+
+		addSubview(contentsContainer)
+		contentsContainer.translatesAutoresizingMaskIntoConstraints = false
+		contentsContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
+		contentsContainer.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+		contentsContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+		contentsContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+
 		contentsContainer.layer.borderColor = UIColor.gray.cgColor
 		contentsContainer.layer.borderWidth = 1
 		contentsContainer.layer.cornerRadius = 10
