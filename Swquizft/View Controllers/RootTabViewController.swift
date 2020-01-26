@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RootTabViewController: UITabBarController, Storyboarded {
+class RootTabViewController: UITabBarController {
 
 	let questionsController: QuestionController
 
